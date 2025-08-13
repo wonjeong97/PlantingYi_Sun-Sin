@@ -20,7 +20,7 @@ public class FadeManager : MonoBehaviour
             Debug.LogError("[FadeManager] Fade Image is not assigned.");
             return;
         }
-        SetAlpha(0f);
+        SetAlpha(1f);
     }
 
     public void FadeIn(float duration, Action onComplete = null)

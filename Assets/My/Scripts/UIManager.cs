@@ -4,12 +4,14 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Events;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class UIManager : MonoBehaviour
 {
@@ -20,6 +22,13 @@ public class UIManager : MonoBehaviour
     // Addressables.InstantiateAsync로 만든 동적 오브젝트 추적
     private readonly List<GameObject> addrInstances = new List<GameObject>();
 
+    private float inactivityTime = 100f;
+    public float InactivityTime
+    {
+        get => inactivityTime;
+        set => inactivityTime = Mathf.Max(0f, value);
+    }
+
     private Settings jsonSetting;
 
     public Settings JsonSetting
@@ -27,6 +36,9 @@ public class UIManager : MonoBehaviour
         get => jsonSetting;
         private set => jsonSetting = value;
     }
+
+    [HideInInspector] public GameObject mainBackground;
+
 
     private void Awake()
     {
@@ -55,10 +67,11 @@ public class UIManager : MonoBehaviour
         else
         {
             JsonSetting = JsonLoader.Instance.Settings;
-
+            inactivityTime = JsonSetting.inactivityTime;
             try
             {
                 await InitUI();
+                await FadeManager.Instance.FadeInAsync(JsonSetting.fadeTime);
             }
             catch (OperationCanceledException)
             {
@@ -69,6 +82,11 @@ public class UIManager : MonoBehaviour
                 Debug.LogError($"[UIManager] UI initialization failed: {e}");
             }
         }
+    }
+
+    private void Update()
+    {
+
     }
 
     private void OnDestroy()
@@ -90,16 +108,33 @@ public class UIManager : MonoBehaviour
         addrInstances.Clear();
     }
 
-    private async Task InitUI(CancellationToken token = default)
+    public async Task InitUI(CancellationToken token = default)
     {
         var ct = MergeToken(token);
 
-        GameObject canvas = null;
-        GameObject titleBG = null;
+        try
+        {
+            GameObject canvas = await CreateCanvasAsync(ct);
+            mainBackground = await CreateBackgroundImageAsync(JsonSetting.mainBackground, canvas, ct);
+            GameObject idlePage = await CreatePageAsync(JsonSetting.idlePage, mainBackground, ct);
+            if (idlePage)
+            {
+                idlePage.AddComponent<IdlePage>();
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            Debug.LogWarning("[UIManager] InitUI canceled.");
+            throw;
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"[UIManager] InitUI failed: {e}");
+            throw;
+        }
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode) { }
-    private void Update() { }
 
     #region Public API
     public Task CreatePopupAsync(PopupSetting setting, GameObject parent, UnityAction<GameObject> onClose = null, CancellationToken token = default)
@@ -111,8 +146,9 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Addressables.InstantiateAsync로 동적으로 생성된 모든 GameObject를 해제하고 목록을 비움
     /// </summary>
-    public void ClearAllDynamic() // 필요
+    public async Task ClearAllDynamic() // 필요
     {
+        await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
         for (int i = addrInstances.Count - 1; i >= 0; --i)
         {
             var go = addrInstances[i];
@@ -122,6 +158,8 @@ public class UIManager : MonoBehaviour
             }
         }
         addrInstances.Clear(); // 목록 초기화
+        await InitUI();
+        await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
     }
 
     /// <summary>
@@ -208,7 +246,7 @@ public class UIManager : MonoBehaviour
     /// <param name="parent">생성된 이미지의 부모 GameObject</param>
     /// <param name="token">작업 도중 최소를 위한 토큰</param>
     /// <returns></returns>
-    private async Task<GameObject> CreateImageAsync(ImageSetting setting, GameObject parent, CancellationToken token)
+    public async Task<GameObject> CreateImageAsync(ImageSetting setting, GameObject parent, CancellationToken token)
     {
         // 1. Addressables를 통해 ImagePrefab 인스턴스 생성
         var go = await InstantiateAsync("Prefabs/ImagePrefab.prefab", parent.transform, token);
@@ -269,7 +307,7 @@ public class UIManager : MonoBehaviour
     /// <param name="parent">생성된 텍스트의 부모 GameObject</param>
     /// <param name="token">작업 도중 취소를 위한 토큰</param>
     /// <returns></returns>
-    private async Task CreateSingleTextAsync(TextSetting setting, GameObject parent, CancellationToken token)
+    public async Task CreateSingleTextAsync(TextSetting setting, GameObject parent, CancellationToken token)
     {
         // Text 프리팹 생성 (Addressables)
         var go = await InstantiateAsync("Prefabs/TextPrefab.prefab", parent.transform, token);
@@ -300,6 +338,22 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public async Task<List<(GameObject button, GameObject addImage)>> CreateButtonsAsync(
+        ButtonSetting[] settings, GameObject parent, CancellationToken token)
+    {
+        var results = new List<(GameObject button, GameObject addImage)>();
+        if (settings == null || settings.Length == 0)
+            return results;
+
+        var tasks = new List<Task<(GameObject button, GameObject addImage)>>(settings.Length);
+        foreach (var setting in settings)
+            tasks.Add(CreateSingleButtonAsync(setting, parent, token));
+
+        var created = await Task.WhenAll(tasks);
+        results.AddRange(created);
+        return results;
+    }
+
     /// <summary>
     /// ButtonSetting 정보를 기반으로 버튼 UI를 동적으로 생성하고 설정합니다.
     /// </summary>
@@ -307,39 +361,79 @@ public class UIManager : MonoBehaviour
     /// <param name="parent">생성한 버튼을 부착할 부모 GameObject</param>
     /// <param name="token">작업 도중 취소할 수 있는 CancellationToken</param>
     /// <returns></returns>
-    public async Task<(GameObject button, GameObject addImage)> CreateButtonAsync(ButtonSetting setting, GameObject parent, CancellationToken token)
+    public async Task<(GameObject button, GameObject addImage)> CreateSingleButtonAsync(
+     ButtonSetting setting, GameObject parent, CancellationToken token)
     {
-        // 1. 버튼 프리팹 인스턴스 생성
+        // 1) 버튼 프리팹 인스턴스
         var go = await InstantiateAsync("Prefabs/ButtonPrefab.prefab", parent.transform, token);
         if (!go) return (null, null);
-
         go.name = setting.name;
 
-        // 2. 배경 이미지 설정
-        if (go.TryGetComponent<Image>(out var bgImage) && setting.buttonBackgroundImage != null)
+        // 2) 프리팹 컴포넌트 참조
+        var rtBtn = go.GetComponent<RectTransform>();
+        var raw = go.GetComponent<RawImage>();       // 배경은 RawImage
+        var vp = go.GetComponent<VideoPlayer>();    // 배경 비디오
+        var btn = go.GetComponent<Button>();
+        var audio = go.GetComponent<AudioSource>() ?? go.AddComponent<AudioSource>();
+
+        // 3) 버튼 크기/위치/회전 먼저 적용
+        if (rtBtn)
         {
-            var tex = LoadTexture(setting.buttonBackgroundImage.sourceImage);
-            if (tex)
-                bgImage.sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
-            bgImage.color = setting.buttonBackgroundImage.color;
-            bgImage.type = (Image.Type)setting.buttonBackgroundImage.type;
+            rtBtn.sizeDelta = setting.size;
+            rtBtn.anchoredPosition = new Vector2(setting.position.x, -setting.position.y);
+            rtBtn.localRotation = Quaternion.Euler(setting.rotation);
         }
 
-        // 3. 버튼 텍스트 설정
-        var textComp = go.GetComponentInChildren<TextMeshProUGUI>();
+        // 4) 배경: 비디오가 있으면 우선, 실패/미지정이면 이미지
+        bool videoApplied = false;
+        
+        if (vp != null && setting.buttonBackgroundVideo != null && !string.IsNullOrEmpty(setting.buttonBackgroundVideo.fileName))
+        {
+            // 버튼 크기에 맞는 RenderTexture를 만들고 연결
+            VideoManager.Instance.WireRawImageAndRenderTexture(
+                vp, raw,
+                new Vector2Int(Mathf.RoundToInt(setting.size.x), Mathf.RoundToInt(setting.size.y))
+            );
+
+            // webm 우선, Windows 등에서 안되면 mp4로 자동 폴백
+            string url = VideoManager.Instance.ResolvePlayableUrl(setting.buttonBackgroundVideo.fileName);
+
+            bool ok = await VideoManager.Instance.PrepareAndPlayAsync(
+                vp, url, audio, setting.buttonBackgroundVideo.volume, token);
+
+            if (!ok)
+            {
+                Debug.LogError($"[Button Video] prepare failed: {url}");
+            }
+            else
+            {
+                videoApplied = true;
+            }
+        }
+
+        // 비디오가 없거나 실패했다면 이미지 사용
+        if (!videoApplied && raw != null && setting.buttonBackgroundImage != null)
+        {
+            var tex = LoadTexture(setting.buttonBackgroundImage.sourceImage);
+            if (tex) raw.texture = tex;
+            raw.color = setting.buttonBackgroundImage.color;
+            // RawImage는 Image.Type이 없으니 type은 별도 처리 불가
+        }
+
+        // 5) 텍스트 (비디오는 배경이므로 텍스트는 그 위에 오도록 그대로 두면 됨)
+        var textComp = go.GetComponentInChildren<TextMeshProUGUI>(true);
         if (textComp != null && setting.buttonText != null && !string.IsNullOrEmpty(setting.buttonText.text))
         {
-            // 폰트 및 텍스트 속성 적용
             await LoadFontAndApplyAsync(
                 textComp,
                 setting.buttonText.fontName,
                 setting.buttonText.text,
                 setting.buttonText.fontSize,
                 setting.buttonText.fontColor,
-                TextAlignmentOptions.Center, token
-                );
+                TextAlignmentOptions.Center,
+                token
+            );
 
-            // 텍스트 위치/회전 적용
             if (textComp.TryGetComponent<RectTransform>(out var textRT))
             {
                 textRT.anchoredPosition = new Vector2(setting.buttonText.position.x, setting.buttonText.position.y);
@@ -347,14 +441,7 @@ public class UIManager : MonoBehaviour
             }
         }
 
-        // 4. 버튼 크기 및 위치 설정
-        if (go.TryGetComponent<RectTransform>(out var rt))
-        {
-            rt.sizeDelta = setting.size;
-            rt.anchoredPosition = new Vector2(setting.position.x, -setting.position.y);
-        }
-
-        // 5. 추가 이미지 생성(옵션)
+        // 6) 추가 이미지 (옵션)
         GameObject addImgGO = null;
         if (setting.buttonAdditionalImage != null && !string.IsNullOrEmpty(setting.buttonAdditionalImage.sourceImage))
         {
@@ -366,21 +453,76 @@ public class UIManager : MonoBehaviour
             }
         }
 
-        // 6. 버튼 클릭 사운드 설정(옵션)
-        if (go.TryGetComponent<Button>(out var button))
+        // 7) 클릭 사운드
+        if (btn)
         {
             var soundKey = setting.buttonSound;
             if (!string.IsNullOrEmpty(soundKey))
-            {
-                button.onClick.AddListener(() =>
-                {
-                    AudioManager.Instance?.Play(soundKey);
-                });
-            }
+                btn.onClick.AddListener(() => AudioManager.Instance?.Play(soundKey));
         }
 
-        // 7. 버튼과 추가 이미지 반환
         return (go, addImgGO);
+    }
+
+    /// <summary>
+    /// VideoSetting 데이터를 기반으로 부모 객체 아래에 VideoPlayer 프리팹을 생성하고 재생
+    /// </summary>
+    /// <param name="setting">비디오 설정 데이터</param>
+    /// <param name="parent">생성된 VideoPlayer의 부모 GameObject</param>
+    /// <param name="token">작업 도중 취소할 수 있는 CancellationToken</param>
+    /// <returns>생성된 VideoPlayer GameObject</returns>
+    public async Task<GameObject> CreateVideoPlayerAsync(VideoSetting setting, GameObject parent, CancellationToken token)
+    {
+        if (setting == null || string.IsNullOrEmpty(setting.fileName))
+        {
+            Debug.LogWarning("[UIManager] CreateVideoPlayerAsync: invalid setting");
+            return null;
+        }
+
+        // 1. 비디오 플레이어 프리팹 로드
+        var go = await InstantiateAsync("Prefabs/VideoPlayerPrefab.prefab", parent.transform, token);
+        if (!go) return null;
+        go.name = setting.name;
+
+        // 2. 컴포넌트 참조
+        var vp = go.GetComponent<VideoPlayer>();
+        var raw = go.GetComponent<UnityEngine.UI.RawImage>();
+        var audio = go.GetComponent<AudioSource>() ?? go.AddComponent<AudioSource>();
+
+        if (!vp)
+        {
+            Debug.LogError("[UIManager] Video prefab does not contain VideoPlayer component");
+            return go;
+        }
+
+        // 3. RectTransform 위치, 크기, 회전 적용
+        if (go.TryGetComponent<RectTransform>(out var rt))
+        {
+            rt.anchoredPosition = new Vector2(setting.position.x, -setting.position.y);
+            rt.sizeDelta = setting.size;
+            rt.localRotation = Quaternion.Euler(0, 0, 0);
+        }
+
+        // 4. RenderTexture 연결
+        VideoManager.Instance.WireRawImageAndRenderTexture(
+            vp, raw,
+            new Vector2Int(Mathf.RoundToInt(setting.size.x), Mathf.RoundToInt(setting.size.y))
+        );
+
+        // 5. URL 결정
+        string url = VideoManager.Instance.ResolvePlayableUrl(setting.fileName);
+
+        // 6. 준비 및 재생
+        bool ok = await VideoManager.Instance.PrepareAndPlayAsync(
+            vp, url, audio, setting.volume, token
+        );
+
+        if (!ok)
+        {
+            Debug.LogError($"[UIManager] Failed to prepare video: {url}");
+        }
+
+        return go;
     }
 
     /// <summary>
@@ -409,7 +551,7 @@ public class UIManager : MonoBehaviour
         await Task.WhenAll(allTasks);
 
         // 3. 닫기 버튼 생성
-        var (btnGO, _) = await CreateButtonAsync(setting.popupButton, popupBG, token);
+        var (btnGO, _) = await CreateSingleButtonAsync(setting.popupButton, popupBG, token);
         if (btnGO && btnGO.TryGetComponent<Button>(out var btn))
         {
             // 버튼 클릭 시 팝업 제거 + 콜백 호출
@@ -463,12 +605,11 @@ public class UIManager : MonoBehaviour
         rt.anchoredPosition = new Vector2(page.position.x, -page.position.y);
         rt.sizeDelta = page.size;
 
-        pageRoot.AddComponent<CanvasGroup>();
-
         // 3. 병렬 실행할 작업 목록 준비
         var jobs = new List<Task>(4);
         jobs.Add(CreateTextsAsync(page.texts, pageRoot, token));        // 텍스트 생성
         jobs.Add(CreatePopupImagesAsync(page.images, pageRoot, token)); // 이미지 생성
+        jobs.Add(CreateButtonsAsync(page.buttons, pageRoot, token));    // 버튼 생성
         // TODO: CreateKeyboardsAsync(page.keyboards, pageRoot, token)  // 키보드 UI 생성
         // TODO: CreateVideosAsync(page.videos, pageRoot, token)        // 비디오 UI 생성
 
@@ -729,7 +870,7 @@ public class UIManager : MonoBehaviour
     /// </summary>
     /// <param name="external">외부에서 전달된 CancellationToken</param>
     /// <returns>병합된 CancellationToken</returns>
-    private CancellationToken MergeToken(CancellationToken external)
+    public CancellationToken MergeToken(CancellationToken external)
     {
         if (cts == null) return external; // 내부 토큰이 없으면 외부 토큰 그대로 사용
 

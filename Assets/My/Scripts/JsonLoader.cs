@@ -41,7 +41,7 @@ public class JsonLoader : MonoBehaviour
         if (Settings == null) return;
     }
 
-    private T LoadJsonData<T>(string fileName)
+    public T LoadJsonData<T>(string fileName)
     {
         string filePath = Path.Combine(Application.streamingAssetsPath, fileName).Replace("\\", "/");
 
@@ -52,7 +52,7 @@ public class JsonLoader : MonoBehaviour
         }
 
         string json = File.ReadAllText(filePath);
-        Debug.Log("[JsonLoader] JSON load complete: " + json);
+        //Debug.Log($"[JsonLoader] {fileName} load complete: \n" + json);
 
         return JsonUtility.FromJson<T>(json);
     }
@@ -78,8 +78,8 @@ public class ImageSetting
     public Vector2 size;
     public Vector3 rotation;
     public string sourceImage;         
-    public Color color;
-    public UIImageType type;
+    public Color color = Color.white;
+    public UIImageType type = UIImageType.Simple;
 }
 [Serializable]
 public class TextSetting
@@ -134,10 +134,12 @@ public class KeyboardSetting
 public class PageSetting
 {
     public string name;
+    public ImageSetting pageBackground;
     public Vector2 position;
-    public Vector2 size;
+    public Vector2 size = new Vector2(1920, 1080);
     public TextSetting[] texts;
     public ImageSetting[] images;
+    public ButtonSetting[] buttons;
     public VideoSetting[] videos;
     public KeyboardSetting[] keyboards;
 }
@@ -159,6 +161,7 @@ public class ButtonSetting
     public Vector2 size;
     public Vector3 rotation;
     public ImageSetting buttonBackgroundImage;
+    public VideoSetting buttonBackgroundVideo;
     public ImageSetting buttonAdditionalImage;
     public TextSetting buttonText;
     public string buttonSound;
@@ -175,24 +178,14 @@ public class PopupSetting
 }
 
 [Serializable]
-public class CanvasSetting
-{
-    public string name;
-    public string settingPath;
-    public ImageSetting backgroundImage;
-    public TextSetting[] texts;
-    public ImageSetting[] images;
-    public VideoSetting[] videos;
-    public ButtonSetting[] buttons;
-}
-
-[Serializable]
 public class Settings
 {
     public float inactivityTime; // 입력이 없을 시 타이틀로 되돌아가는 시간
+    public float fadeTime;
     public CloseSetting closeSetting;
     public FontMaps fontMap;
     public SoundSetting[] sounds;
-    public CanvasSetting[] canvases;
+    public ImageSetting mainBackground;
+    public PageSetting idlePage;
 }
 #endregion

@@ -1,0 +1,160 @@
+{
+  "backgroundImage": {
+    "name": "PrimeOfLifePageBackground",
+    "size": { "x": 1920, "y": 1080 },
+    "sourceImage": "Image/Background/1_White.png",
+    "color": { "r": 1, "g": 1, "b": 1, "a": 0.0 }
+  },
+  "backToIdleButton": {
+    "name": "Button_BackToIdle",
+    "size": { "x": 176, "y": 157 },
+    "position": { "x": 1770, "y": 100 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Button/1_GoTitle.png"
+    }
+  },
+  "backButton": {
+    "name": "Button_Back",
+    "size": { "x": 300, "y": 100 },
+    "position": { "x": 960, "y": 150 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Button/1_Button.png"
+    }
+  },
+  "primeOfLifeImage": {
+    "name": "Image_PrimeOfLifeImage",
+    "size": { "x": 150, "y": 150 },
+    "position": { "x": 400, "y": 275 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "primeOfLifeExplainImage": {
+    "name": "Image_PrimeOfLifeExplainImage",
+    "size": { "x": 650, "y": 400 },
+    "position": { "x": 400, "y": 600 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "primeOfLife_1": {
+    "name": "Button_PrimeOfLife_1",
+    "size": { "x": 800, "y": 50 },
+    "position": { "x": 1220, "y": 125 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "primeOfLife_2": {
+    "name": "Button_PrimeOfLife_2",
+    "size": { "x": 800, "y": 50 },
+    "position": { "x": 1220, "y": 185 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "primeOfLife_3": {
+    "name": "Button_PrimeOfLife_3",
+    "size": { "x": 800, "y": 50 },
+    "position": { "x": 1220, "y": 245 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "primeOfLife_4": {
+    "name": "Button_PrimeOfLife_4",
+    "size": { "x": 800, "y": 50 },
+    "position": { "x": 1220, "y": 305 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "primeOfLife_5": {
+    "name": "Button_PrimeOfLife_5",
+    "size": { "x": 800, "y": 50 },
+    "position": { "x": 1220, "y": 365 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "primeOfLife_6": {
+    "name": "Button_PrimeOfLife_6",
+    "size": { "x": 800, "y": 50 },
+    "position": { "x": 1220, "y": 425 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "primeOfLife_7": {
+    "name": "Button_PrimeOfLife_7",
+    "size": { "x": 800, "y": 50 },
+    "position": { "x": 1220, "y": 485 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "primeOfLife_8": {
+    "name": "Button_PrimeOfLife_8",
+    "size": { "x": 800, "y": 50 },
+    "position": { "x": 1220, "y": 545 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "primeOfLife_9": {
+    "name": "Button_PrimeOfLife_9",
+    "size": { "x": 800, "y": 50 },
+    "position": { "x": 1220, "y": 605 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "primeOfLife_10": {
+    "name": "Button_PrimeOfLife_10",
+    "size": { "x": 800, "y": 50 },
+    "position": { "x": 1220, "y": 665 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "primeOfLife_11": {
+    "name": "Button_PrimeOfLife_11",
+    "size": { "x": 800, "y": 50 },
+    "position": { "x": 1220, "y": 725 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "primeOfLife_12": {
+    "name": "Button_PrimeOfLife_12",
+    "size": { "x": 800, "y": 50 },
+    "position": { "x": 1220, "y": 785 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "primeOfLife_13": {
+    "name": "Button_PrimeOfLife_13",
+    "size": { "x": 800, "y": 50 },
+    "position": { "x": 1220, "y": 845 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "primeOfLife_14": {
+    "name": "Button_PrimeOfLife_14",
+    "size": { "x": 800, "y": 50 },
+    "position": { "x": 1220, "y": 905 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "primeOfLife_15": {
+    "name": "Button_PrimeOfLife_15",
+    "size": { "x": 800, "y": 50 },
+    "position": { "x": 1220, "y": 965 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  }
+}

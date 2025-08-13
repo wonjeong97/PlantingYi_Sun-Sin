@@ -1,0 +1,112 @@
+{
+  "backgroundImage": {
+    "name": "LastPageBackground",
+    "size": { "x": 1920, "y": 1080 },
+    "sourceImage": "Image/Background/1_White.png",
+    "color": { "r": 1, "g": 1, "b": 1, "a": 0.0 }
+  },
+  "backToIdleButton": {
+    "name": "Button_BackToIdle",
+    "size": { "x": 176, "y": 157 },
+    "position": { "x": 1770, "y": 100 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Button/1_GoTitle.png"
+    }
+  },
+  "backButton": {
+    "name": "Button_Back",
+    "size": { "x": 300, "y": 100 },
+    "position": { "x": 960, "y": 150 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Button/1_Button.png"
+    }
+  },
+  "lastImage": {
+    "name": "Image_LastImage",
+    "size": { "x": 150, "y": 150 },
+    "position": { "x": 400, "y": 275 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "lastExplainImage": {
+    "name": "Image_LastExplainImage",
+    "size": { "x": 650, "y": 400 },
+    "position": { "x": 400, "y": 600 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "last_1": {
+    "name": "Button_Last_1",
+    "size": { "x": 800, "y": 65 },
+    "position": { "x": 1220, "y": 180 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "last_2": {
+    "name": "Button_Last_2",
+    "size": { "x": 800, "y": 65 },
+    "position": { "x": 1220, "y": 270 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "last_3": {
+    "name": "Button_Last_3",
+    "size": { "x": 800, "y": 65 },
+    "position": { "x": 1220, "y": 360 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "last_4": {
+    "name": "Button_Last_4",
+    "size": { "x": 800, "y": 65 },
+    "position": { "x": 1220, "y": 450 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "last_5": {
+    "name": "Button_Last_5",
+    "size": { "x": 800, "y": 65 },
+    "position": { "x": 1220, "y": 540 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "last_6": {
+    "name": "Button_Last_6",
+    "size": { "x": 800, "y": 65 },
+    "position": { "x": 1220, "y": 630 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "last_7": {
+    "name": "Button_Last_7",
+    "size": { "x": 800, "y": 65 },
+    "position": { "x": 1220, "y": 720 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "last_8": {
+    "name": "Button_Last_8",
+    "size": { "x": 800, "y": 65 },
+    "position": { "x": 1220, "y": 810 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "last_9": {
+    "name": "Button_Last_9",
+    "size": { "x": 800, "y": 65 },
+    "position": { "x": 1220, "y": 900 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  }
+}

@@ -7,8 +7,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Reporter reporter;
 
-    public event Action onReset;
-
     private void Awake()
     {
         if (Instance == null)
@@ -52,10 +50,5 @@ public class GameManager : MonoBehaviour
         {
             Instance = null;
         }
-    }
-
-    public void Reset()
-    {
-        onReset?.Invoke();
     }
 }

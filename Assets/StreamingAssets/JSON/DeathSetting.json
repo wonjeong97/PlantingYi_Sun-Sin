@@ -1,0 +1,104 @@
+{
+  "backgroundImage": {
+    "name": "DeathPageBackground",
+    "size": { "x": 1920, "y": 1080 },
+    "sourceImage": "Image/Background/1_White.png",
+    "color": { "r": 1, "g": 1, "b": 1, "a": 0.0 }
+  },
+  "backToIdleButton": {
+    "name": "Button_BackToIdle",
+    "size": { "x": 176, "y": 157 },
+    "position": { "x": 1770, "y": 100 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Button/1_GoTitle.png"
+    }
+  },
+  "backButton": {
+    "name": "Button_Back",
+    "size": { "x": 300, "y": 100 },
+    "position": { "x": 960, "y": 150 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Button/1_Button.png"
+    }
+  },
+  "deathImage": {
+    "name": "Image_DeathImage",
+    "size": { "x": 150, "y": 150 },
+    "position": { "x": 400, "y": 275 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "deathExplainImage": {
+    "name": "Image_DeathExplainImage",
+    "size": { "x": 650, "y": 400 },
+    "position": { "x": 400, "y": 600 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "death_1": {
+    "name": "Button_Death_1",
+    "size": { "x": 800, "y": 75 },
+    "position": { "x": 1220, "y": 200 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "death_2": {
+    "name": "Button_Death_2",
+    "size": { "x": 800, "y": 75 },
+    "position": { "x": 1220, "y": 300 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "death_3": {
+    "name": "Button_Death_3",
+    "size": { "x": 800, "y": 75 },
+    "position": { "x": 1220, "y": 400 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "death_4": {
+    "name": "Button_Death_4",
+    "size": { "x": 800, "y": 75 },
+    "position": { "x": 1220, "y": 500 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "death_5": {
+    "name": "Button_Death_5",
+    "size": { "x": 800, "y": 75 },
+    "position": { "x": 1220, "y": 600 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "death_6": {
+    "name": "Button_Death_6",
+    "size": { "x": 800, "y": 75 },
+    "position": { "x": 1220, "y": 700 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "death_7": {
+    "name": "Button_Death_7",
+    "size": { "x": 800, "y": 75 },
+    "position": { "x": 1220, "y": 800 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  },
+  "death_8": {
+    "name": "Button_Death_8",
+    "size": { "x": 800, "y": 75 },
+    "position": { "x": 1220, "y": 900 },
+    "buttonBackgroundImage": {
+      "sourceImage": "Image/Background/1_White.png"
+    }
+  }
+}

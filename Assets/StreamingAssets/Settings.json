@@ -1,48 +1,27 @@
 {
   "inactivityTime": 9990.0,
+  "fadeTime": 1.5,
   "closeSetting": {
-    "position": { "x": 1, "y": 1 },
+    "position": { "x": 1, "y": 0 },
     "numToClose": 10,
     "resetClickTime": 60,
     "imageAlpha": 0.1
   },
   "fontMap": {
-    "font1": "Fonts/TMPro/DungGeunMo SDF.asset",
+    "font1": "Fonts/TMPro/BlackHanSans-Regular SDF.asset",
     "font2": "Fonts/TMPro/NanumGothic-Regular SDF.asset"
   },
   "sounds": [
     { "key": "click1", "clipPath": "click1.wav", "volume": 1.0 },
     { "key": "click2", "clipPath": "click2.wav", "volume": 0.5 }
   ],
-  "testTitle": {
-    "titleBackground": {
-      "name": "testBackground",
-      "position": { "x": 0, "y": 0 },
-      "size": { "x": 1920, "y": 1080 },
-      "rotation": { "x": 0, "y": 0, "z": 0 },
-      "sourceImage": "Image/Background/1_Background.png",
-      "color": { "r": 1.0, "g": 1.0, "b": 1.0, "a": 1.0 },
-      "type": "Simple"
-    },
-    "startButton": {
-      "name": "startButton",
-      "position": { "x": 960, "y": 800 },
-      "size": { "x": 200, "y": 100 },
-      "rotation": { "x": 0, "y": 0, "z": 0 },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_Background.png",
-        "color": { "r": 1.0, "g": 1.0, "b": 1.0, "a": 1.0 },
-        "type": "Simple"
-      },
-      "buttonText": {
-        "name": "startButtonText",
-        "position": { "x": 0, "y": 0 },
-        "text": "Start",
-        "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": { "r": 0.0, "g": 0.0, "b": 0.0, "a": 1.0 },
-        "alignment": "Center"
-      }
-    }
+  "mainBackground": {
+    "name": "MainBackground",
+    "size": { "x": 1920, "y": 1080 },
+    "sourceImage": "Image/Background/1_White.png",
+    "color": { "r": 0.3, "g": 0.3, "b": 0.3, "a": 1.0 }
+  },
+  "idlePage": {
+    "name": "IdlePage"
   }
 }
