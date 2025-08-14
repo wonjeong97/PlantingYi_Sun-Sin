@@ -26,8 +26,11 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
             return;
-        }
+        }        
+    }
 
+    private void Start()
+    {
         StartCoroutine(LoadSoundsFromSettings());
     }
 
@@ -36,7 +39,7 @@ public class AudioManager : MonoBehaviour
     /// WAV/OGG/MP3 확장자 자동 판별.
     /// </summary>
     private IEnumerator LoadSoundsFromSettings()
-    {
+    {   
         soundMap.Clear();
         soundVolumeMap.Clear();
 

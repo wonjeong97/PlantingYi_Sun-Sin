@@ -20,7 +20,8 @@
     "buttonBackgroundVideo": {
       "fileName": "Video/Test/1_Mirror.webm",
       "volume": 0.5
-    }
+    },
+    "buttonSound": "click2"
   },
   "menuPage": {
     "name": "MenuPage"

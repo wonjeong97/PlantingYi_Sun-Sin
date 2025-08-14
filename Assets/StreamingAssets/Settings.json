@@ -1,6 +1,6 @@
 {
   "inactivityTime": 9990.0,
-  "fadeTime": 1.5,
+  "fadeTime": 1,
   "closeSetting": {
     "position": { "x": 1, "y": 0 },
     "numToClose": 10,

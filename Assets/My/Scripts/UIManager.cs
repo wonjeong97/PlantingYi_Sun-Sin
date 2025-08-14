@@ -468,7 +468,11 @@ public class UIManager : MonoBehaviour
         {
             var soundKey = setting.buttonSound;
             if (!string.IsNullOrEmpty(soundKey))
-                btn.onClick.AddListener(() => AudioManager.Instance?.Play(soundKey));
+                btn.onClick.AddListener(() =>
+                {
+                    AudioManager.Instance?.Play(soundKey);
+
+                    });
         }
 
         return (go, addImgGO);
