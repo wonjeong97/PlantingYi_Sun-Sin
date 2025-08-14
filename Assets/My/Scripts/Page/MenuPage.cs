@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,10 +27,12 @@ public class MenuSetting
     public PageSetting afterDeathPage;   // 사후 페이지
 }
 
-public class MenuPage : MonoBehaviour, IUICreate
+public class MenuPage : BasePage<MenuSetting>
 {
-    [NonSerialized] public MenuSetting menuSetting;
+    // JSON 경로
+    protected override string JsonPath => "JSON/MenuSetting.json";
 
+    // 생성해 둔 하위 페이지 캐시
     private GameObject whatIsPage;
     private GameObject childhoodPage;
     private GameObject youthPage;
@@ -38,219 +41,128 @@ public class MenuPage : MonoBehaviour, IUICreate
     private GameObject deathPage;
     private GameObject afterDeathPage;
 
-    private async void Start()
+    protected override async Task BuildContentAsync()
     {
-        menuSetting = JsonLoader.Instance.LoadJsonData<MenuSetting>("JSON/MenuSetting.json");
-        if (menuSetting != null)
-        {
-            try
+        // 각 네비게이션 버튼 생성 및 와이어링
+        await WireNavButton(
+            Setting.whatIsButton,
+            () => whatIsPage,
+            go => whatIsPage = go,
+            Setting.whatIsPage,
+            pageGO =>
             {
-                await CreateUI();
-                await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
-            }
-            catch (OperationCanceledException)
+                var comp = pageGO.AddComponent<WhatIsPage>();
+                comp.menuPageInstance = this;
+            });
+
+        await WireNavButton(
+            Setting.childhoodButton,
+            () => childhoodPage,
+            go => childhoodPage = go,
+            Setting.childhoodPage,
+            pageGO =>
             {
-                Debug.LogWarning("[IdlePage] Start canceled.");
-                throw;
-            }
-            catch (Exception e)
+                var comp = pageGO.AddComponent<ChildhoodPage>();
+                comp.menuPageInstance = this;
+            });
+
+        await WireNavButton(
+            Setting.youthButton,
+            () => youthPage,
+            go => youthPage = go,
+            Setting.youthPage,
+            pageGO =>
             {
-                Debug.LogError($"[IdlePage] Start failed: {e}");
-                throw;
-            }
-        }
+                var comp = pageGO.AddComponent<YouthPage>();
+                comp.menuPageInstance = this;
+            });
+
+        await WireNavButton(
+            Setting.primeOfLifeButton,
+            () => primeOfLifePage,
+            go => primeOfLifePage = go,
+            Setting.primeOfLifePage,
+            pageGO =>
+            {
+                var comp = pageGO.AddComponent<PrimeOfLifePage>();
+                comp.menuPageInstance = this;
+            });
+
+        await WireNavButton(
+            Setting.lastButton,
+            () => lastPage,
+            go => lastPage = go,
+            Setting.lastPage,
+            pageGO =>
+            {
+                var comp = pageGO.AddComponent<LastPage>();
+                comp.menuPageInstance = this;
+            });
+
+        await WireNavButton(
+            Setting.deathButton,
+            () => deathPage,
+            go => deathPage = go,
+            Setting.deathPage,
+            pageGO =>
+            {
+                var comp = pageGO.AddComponent<DeathPage>();
+                comp.menuPageInstance = this;
+            });
+
+        await WireNavButton(
+            Setting.afterDeathButton,
+            () => afterDeathPage,
+            go => afterDeathPage = go,
+            Setting.afterDeathPage,
+            pageGO =>
+            {
+                var comp = pageGO.AddComponent<AfterDeathPage>();
+                comp.menuPageInstance = this;
+            });
     }
 
-    public async Task CreateUI()
+    /// <summary>
+    /// 공통 네비게이션 버튼 생성 및 핸들러 연결
+    /// 1) 버튼 생성
+    /// 2) 클릭 시 페이드 아웃 → 본인 비활성화 → 하위 페이지 생성/활성화 → 페이드 인
+    /// </summary>
+    private async Task WireNavButton(
+        ButtonSetting buttonSetting,
+        System.Func<GameObject> getCache,
+        System.Action<GameObject> setCache,
+        PageSetting targetPageSetting,
+        System.Action<GameObject> onCreatedAttach)
     {
-        await UIManager.Instance.CreateBackgroundImageAsync(menuSetting.backgroundImage, gameObject, default);
-        var (backtoIdleButton, _) = await UIManager.Instance.CreateSingleButtonAsync(menuSetting.backToIdleButton, gameObject, default);
-        if (backtoIdleButton != null && backtoIdleButton.TryGetComponent<Button>(out var idleBtn))
+        if (buttonSetting == null || targetPageSetting == null) return;
+
+        var createdBtn = await UIManager.Instance.CreateSingleButtonAsync(
+            buttonSetting, gameObject, default(CancellationToken));
+
+        var btnGO = createdBtn.button;
+        if (btnGO != null && btnGO.TryGetComponent<Button>(out var btn))
         {
-            idleBtn.onClick.AddListener(async () =>
+            btn.onClick.AddListener(async () =>
             {
-                await UIManager.Instance.ClearAllDynamic();
-            });
-        }
-
-        await CreatePageButton();
-    }
-
-    private async Task CreatePageButton()
-    {
-        GameObject parent = UIManager.Instance.mainBackground;
-
-        var (whatIsButton, _) = await UIManager.Instance.CreateSingleButtonAsync(menuSetting.whatIsButton, gameObject, default);       
-        if (whatIsButton != null && whatIsButton.TryGetComponent<Button>(out var button))
-        {
-            button.onClick.AddListener(async () =>
-            {
+                // 1) 페이드 아웃 및 메뉴 비활성화
                 await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
                 gameObject.SetActive(false);
 
-                if (whatIsPage == null)
+                // 2) 페이지 생성 or 재활성화
+                var cached = getCache();
+                if (cached == null)
                 {
-                    whatIsPage = await UIManager.Instance.CreatePageAsync(menuSetting.whatIsPage, parent);
-                    if (whatIsPage != null)
+                    GameObject parent = UIManager.Instance.mainBackground;
+                    var pageGO = await UIManager.Instance.CreatePageAsync(targetPageSetting, parent);
+                    if (pageGO != null)
                     {
-                        whatIsPage.AddComponent<WhatIsPage>();
-                        whatIsPage.GetComponent<WhatIsPage>().menuPageInstance = this;
+                        onCreatedAttach?.Invoke(pageGO);
+                        setCache(pageGO);
                     }
                 }
                 else
                 {
-                    whatIsPage.SetActive(true);
-                    await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                }
-            });
-        }
-
-        var (childhoodButton, _) = await UIManager.Instance.CreateSingleButtonAsync(menuSetting.childhoodButton, gameObject, default);
-        if (childhoodButton != null && childhoodButton.TryGetComponent<Button>(out var childhoodBtn))
-        {
-            childhoodBtn.onClick.AddListener(async () =>
-            {
-                await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                gameObject.SetActive(false);
-
-                if (childhoodPage == null)
-                {
-                    childhoodPage = await UIManager.Instance.CreatePageAsync(menuSetting.childhoodPage, parent);
-                    if (childhoodPage != null)
-                    {
-                        childhoodPage.AddComponent<ChildhoodPage>();
-                        childhoodPage.GetComponent<ChildhoodPage>().menuPageInstance = this;
-                    }
-                }
-                else
-                {
-                    childhoodPage.SetActive(true);
-                    await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                }
-            });
-        }
-
-        var (youthButton, _) = await UIManager.Instance.CreateSingleButtonAsync(menuSetting.youthButton, gameObject, default);
-        if (youthButton != null && youthButton.TryGetComponent<Button>(out var youthBtn))
-        {
-            youthBtn.onClick.AddListener(async () =>
-            {
-                await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                gameObject.SetActive(false);
-
-                if (youthPage == null)
-                {
-                    youthPage = await UIManager.Instance.CreatePageAsync(menuSetting.youthPage, parent);
-                    if (youthPage != null)
-                    {
-                        youthPage.AddComponent<YouthPage>();
-                        youthPage.GetComponent<YouthPage>().menuPageInstance = this;
-                    }
-                }
-                else
-                {
-                    youthPage.SetActive(true);
-                    await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                }
-            });
-        }
-
-        var (primeOfLifeButton, _) = await UIManager.Instance.CreateSingleButtonAsync(menuSetting.primeOfLifeButton, gameObject, default);
-        if (primeOfLifeButton != null && primeOfLifeButton.TryGetComponent<Button>(out var primeBtn))
-        {
-            primeBtn.onClick.AddListener(async () =>
-            {
-                await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                gameObject.SetActive(false);
-
-                if (primeOfLifePage == null)
-                {
-                    primeOfLifePage = await UIManager.Instance.CreatePageAsync(menuSetting.primeOfLifePage, parent);
-                    if (primeOfLifePage != null)
-                    {
-                        primeOfLifePage.AddComponent<PrimeOfLifePage>();
-                        primeOfLifePage.GetComponent<PrimeOfLifePage>().menuPageInstance = this;
-                    }
-                }
-                else
-                {
-                    primeOfLifePage.SetActive(true);
-                    await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                }
-
-            });
-        }
-
-        var (lastButton, _) = await UIManager.Instance.CreateSingleButtonAsync(menuSetting.lastButton, gameObject, default);
-        if (lastButton != null && lastButton.TryGetComponent<Button>(out var lastBtn))
-        {
-            lastBtn.onClick.AddListener(async () =>
-            {
-                await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                gameObject.SetActive(false);
-
-                if (lastPage == null)
-                {
-                    lastPage = await UIManager.Instance.CreatePageAsync(menuSetting.lastPage, parent);
-                    if (lastPage != null)
-                    {
-                        lastPage.AddComponent<LastPage>();
-                        lastPage.GetComponent<LastPage>().menuPageInstance = this;
-                    }
-                }
-                else
-                {
-                    lastPage.SetActive(true);
-                    await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                }
-            });
-        }
-
-        var (deathButton, _) = await UIManager.Instance.CreateSingleButtonAsync(menuSetting.deathButton, gameObject, default);
-        if (deathButton != null && deathButton.TryGetComponent<Button>(out var deathBtn))
-        {
-            deathBtn.onClick.AddListener(async () =>
-            {
-                await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                gameObject.SetActive(false);
-
-                if (deathPage == null)
-                {
-                    deathPage = await UIManager.Instance.CreatePageAsync(menuSetting.deathPage, parent);
-                    if (deathPage != null)
-                    {
-                        deathPage.AddComponent<DeathPage>();
-                        deathPage.GetComponent<DeathPage>().menuPageInstance = this;
-                    }
-                }
-                else
-                {
-                    deathPage.SetActive(true);
-                    await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                }
-            });
-        }
-
-        var (afterDeathButton, _) = await UIManager.Instance.CreateSingleButtonAsync(menuSetting.afterDeathButton, gameObject, default);
-        if (afterDeathButton != null && afterDeathButton.TryGetComponent<Button>(out var afterDeathBtn))
-        {
-            afterDeathBtn.onClick.AddListener(async () =>
-            {
-                await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                gameObject.SetActive(false);
-
-                if (afterDeathPage == null)
-                {
-                    afterDeathPage = await UIManager.Instance.CreatePageAsync(menuSetting.afterDeathPage, parent);
-                    if (afterDeathPage != null)
-                    {
-                        afterDeathPage.AddComponent<AfterDeathPage>();
-                        afterDeathPage.GetComponent<AfterDeathPage>().menuPageInstance = this;
-                    }
-                }
-                else
-                {
-                    afterDeathPage.SetActive(true);
+                    cached.SetActive(true);
                     await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
                 }
             });

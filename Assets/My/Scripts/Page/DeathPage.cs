@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,138 +24,41 @@ public class DeathSetting
     public ButtonSetting death_8; 
 }
 
-public class DeathPage : MonoBehaviour, IUICreate
+public class DeathPage : BasePage<DeathSetting>
 {
-    [NonSerialized] public DeathSetting deathSetting;
-    [HideInInspector] public MenuPage menuPageInstance;
+    protected override string JsonPath => "JSON/DeathSetting.json";
 
-    private async void Start()
+    protected override async Task BuildContentAsync()
     {
-        deathSetting = JsonLoader.Instance.LoadJsonData<DeathSetting>("JSON/DeathSetting.json");
-        if (deathSetting != null)
-        {
-            try
-            {
-                await CreateUI();
-                await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
-            }
-            catch (OperationCanceledException)
-            {
-                Debug.LogWarning("[DeathPage] Start canceled.");
-                throw;
-            }
-            catch (Exception e)
-            {
-                Debug.LogError($"[DeathPage] Start failed: {e}");
-                throw;
-            }
-        }
+        // 전용 이미지
+        if (Setting.deathImage != null)
+            await UIManager.Instance.CreateImageAsync(Setting.deathImage, gameObject, default(CancellationToken));
+
+        if (Setting.deathExplainImage != null)
+            await UIManager.Instance.CreateImageAsync(Setting.deathExplainImage, gameObject, default(CancellationToken));
+
+        // 전용 버튼들
+        await WireButton(Setting.death_1, "[DeathPage] death_1 clicked");
+        await WireButton(Setting.death_2, "[DeathPage] death_2 clicked");
+        await WireButton(Setting.death_3, "[DeathPage] death_3 clicked");
+        await WireButton(Setting.death_4, "[DeathPage] death_4 clicked");
+        await WireButton(Setting.death_5, "[DeathPage] death_5 clicked");
+        await WireButton(Setting.death_6, "[DeathPage] death_6 clicked");
+        await WireButton(Setting.death_7, "[DeathPage] death_7 clicked");
+        await WireButton(Setting.death_8, "[DeathPage] death_8 clicked");
     }
 
-    public async Task CreateUI()
+    private async Task WireButton(ButtonSetting bs, string logMessage)
     {
-        await UIManager.Instance.CreateBackgroundImageAsync(deathSetting.backgroundImage, gameObject, default);
-        await UIManager.Instance.CreateImageAsync(deathSetting.deathImage, gameObject, default);
-        await UIManager.Instance.CreateImageAsync(deathSetting.deathExplainImage, gameObject, default);
+        if (bs == null) return;
 
-        var (backToIdleButton, _) = await UIManager.Instance.CreateSingleButtonAsync(deathSetting.backToIdleButton, gameObject, default);
-        if (backToIdleButton != null && backToIdleButton.TryGetComponent<Button>(out var button))
-        {
-            button.onClick.AddListener(async () =>
-            {
-                await UIManager.Instance.ClearAllDynamic();
-            });
-        }
+        var created = await UIManager.Instance.CreateSingleButtonAsync(
+            bs, gameObject, default(CancellationToken));
 
-        var (backButton, _) = await UIManager.Instance.CreateSingleButtonAsync(deathSetting.backButton, gameObject, default);
-        if (backButton != null && backButton.TryGetComponent<Button>(out var backBtn))
+        var go = created.button;
+        if (go != null && go.TryGetComponent<Button>(out var btn))
         {
-            backBtn.onClick.AddListener(async () =>
-            {
-                await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                gameObject.SetActive(false);
-                if (menuPageInstance != null)
-                {
-                    menuPageInstance.gameObject.SetActive(true);
-                    await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                }
-            });
-        }
-
-        await CreatePageButton();
-    }
-
-    private async Task CreatePageButton()
-    {
-        var (death_1, _) = await UIManager.Instance.CreateSingleButtonAsync(deathSetting.death_1, gameObject, default);
-        if (death_1 != null && death_1.TryGetComponent<Button>(out var button1))
-        {
-            button1.onClick.AddListener(() =>
-            {
-                Debug.Log("Death 1 button clicked");
-            });
-        }
-        var (death_2, _) = await UIManager.Instance.CreateSingleButtonAsync(deathSetting.death_2, gameObject, default);
-        if (death_2 != null && death_2.TryGetComponent<Button>(out var button2))
-        {
-            button2.onClick.AddListener(() =>
-            {
-                Debug.Log("Death 2 button clicked");
-            });
-        }
-
-        var (death_3, _) = await UIManager.Instance.CreateSingleButtonAsync(deathSetting.death_3, gameObject, default);
-        if (death_3 != null && death_3.TryGetComponent<Button>(out var button3))
-        {
-            button3.onClick.AddListener(() =>
-            {
-                Debug.Log("Death 3 button clicked");
-            });
-        }
-
-        var (death_4, _) = await UIManager.Instance.CreateSingleButtonAsync(deathSetting.death_4, gameObject, default);
-        if (death_4 != null && death_4.TryGetComponent<Button>(out var button4))
-        {
-            button4.onClick.AddListener(() =>
-            {
-                Debug.Log("Death 4 button clicked");
-            });
-        }
-
-        var (death_5, _) = await UIManager.Instance.CreateSingleButtonAsync(deathSetting.death_5, gameObject, default);
-        if (death_5 != null && death_5.TryGetComponent<Button>(out var button5))
-        {
-            button5.onClick.AddListener(() =>
-            {
-                Debug.Log("Death 5 button clicked");
-            });
-        }
-
-        var (death_6, _) = await UIManager.Instance.CreateSingleButtonAsync(deathSetting.death_6, gameObject, default);
-        if (death_6 != null && death_6.TryGetComponent<Button>(out var button6))
-        {
-            button6.onClick.AddListener(() =>
-            {
-                Debug.Log("Death 6 button clicked");
-            });
-        }
-
-        var (death_7, _) = await UIManager.Instance.CreateSingleButtonAsync(deathSetting.death_7, gameObject, default);
-        if (death_7 != null && death_7.TryGetComponent<Button>(out var button7))
-        {
-            button7.onClick.AddListener(() =>
-            {
-                Debug.Log("Death 7 button clicked");
-            });
-        }
-
-        var (death_8, _) = await UIManager.Instance.CreateSingleButtonAsync(deathSetting.death_8, gameObject, default);
-        if (death_8 != null && death_8.TryGetComponent<Button>(out var button8))
-        {
-            button8.onClick.AddListener(() =>
-            {
-                Debug.Log("Death 8 button clicked");
-            });
+            btn.onClick.AddListener(() => Debug.Log(logMessage));
         }
     }
 }

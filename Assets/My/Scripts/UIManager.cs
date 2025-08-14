@@ -4,7 +4,6 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Events;
@@ -17,17 +16,15 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; }
 
+    private float inactivityTimer;
+    private float inactivityThreshold = 60f; // 입력이 없는 경우 타이틀로 되돌아가는 시간
+
+    private GameObject idlePage;
+
     private CancellationTokenSource cts;
 
     // Addressables.InstantiateAsync로 만든 동적 오브젝트 추적
     private readonly List<GameObject> addrInstances = new List<GameObject>();
-
-    private float inactivityTime = 100f;
-    public float InactivityTime
-    {
-        get => inactivityTime;
-        set => inactivityTime = Mathf.Max(0f, value);
-    }
 
     private Settings jsonSetting;
 
@@ -67,11 +64,10 @@ public class UIManager : MonoBehaviour
         else
         {
             JsonSetting = JsonLoader.Instance.Settings;
-            inactivityTime = JsonSetting.inactivityTime;
+            inactivityThreshold = JsonSetting.inactivityTime;
             try
             {
                 await InitUI();
-                await FadeManager.Instance.FadeInAsync(JsonSetting.fadeTime);
             }
             catch (OperationCanceledException)
             {
@@ -84,9 +80,23 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private void Update()
+    private async void Update()
     {
+        if (idlePage != null && !idlePage.activeInHierarchy)
+        {
+            inactivityTimer += Time.deltaTime;
 
+            if (inactivityTimer >= inactivityThreshold)
+            {
+                inactivityTimer = 0f;
+                await ClearAllDynamic();
+            }
+
+            if (Input.anyKeyDown || Input.touchCount > 0 || Input.GetMouseButtonDown(0))
+            {
+                inactivityTimer = 0f;
+            }
+        }
     }
 
     private void OnDestroy()
@@ -116,8 +126,8 @@ public class UIManager : MonoBehaviour
         {
             GameObject canvas = await CreateCanvasAsync(ct);
             mainBackground = await CreateBackgroundImageAsync(JsonSetting.mainBackground, canvas, ct);
-            GameObject idlePage = await CreatePageAsync(JsonSetting.idlePage, mainBackground, ct);
-            if (idlePage)
+            idlePage = await CreatePageAsync(JsonSetting.idlePage, mainBackground, ct);
+            if (idlePage != null)
             {
                 idlePage.AddComponent<IdlePage>();
             }
@@ -159,7 +169,7 @@ public class UIManager : MonoBehaviour
         }
         addrInstances.Clear(); // 목록 초기화
         await InitUI();
-        await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
+      //  await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
     }
 
     /// <summary>

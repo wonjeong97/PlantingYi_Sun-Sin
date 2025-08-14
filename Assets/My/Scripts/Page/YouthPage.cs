@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,93 +18,34 @@ public class YouthSetting
     public ButtonSetting youth_2;
     public ButtonSetting youth_3;
 }
-public class YouthPage : MonoBehaviour, IUICreate
+public class YouthPage : BasePage<YouthSetting>
 {
-    [NonSerialized] public YouthSetting youthSetting;
-    [HideInInspector] public MenuPage menuPageInstance;
+    protected override string JsonPath => "JSON/YouthSetting.json";
 
-    private async void Start()
+    protected override async Task BuildContentAsync()
     {
-        youthSetting = JsonLoader.Instance.LoadJsonData<YouthSetting>("JSON/YouthSetting.json");
-        if (youthSetting != null)
-        {
-            try
-            {
-                await CreateUI();
-                await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
-            }
-            catch (OperationCanceledException)
-            {
-                Debug.LogWarning("[YouthPage] Start canceled.");
-                throw;
-            }
-            catch (Exception e)
-            {
-                Debug.LogError($"[YouthPage] Start failed: {e}");
-                throw;
-            }
-        }
+        // 페이지 전용 이미지
+        if (Setting.youthImage != null)
+            await UIManager.Instance.CreateImageAsync(Setting.youthImage, gameObject, default(CancellationToken));
+
+        if (Setting.youthExplainImage != null)
+            await UIManager.Instance.CreateImageAsync(Setting.youthExplainImage, gameObject, default(CancellationToken));
+
+        // 페이지 전용 버튼들
+        await WireButton(Setting.youth_1, "[YouthPage] youth_1 clicked.");
+        await WireButton(Setting.youth_2, "[YouthPage] youth_2 clicked.");
+        await WireButton(Setting.youth_3, "[YouthPage] youth_3 clicked.");
     }
 
-    public async Task CreateUI()
+    private async Task WireButton(ButtonSetting bs, string logMessage)
     {
-        await UIManager.Instance.CreateBackgroundImageAsync(youthSetting.backgroundImage, gameObject, default);
-        await UIManager.Instance.CreateImageAsync(youthSetting.youthImage, gameObject, default);
-        await UIManager.Instance.CreateImageAsync(youthSetting.youthExplainImage, gameObject, default);
+        if (bs == null) return;
 
-        var (backToIdleButton, _) = await UIManager.Instance.CreateSingleButtonAsync(youthSetting.backToIdleButton, gameObject, default);
-        if (backToIdleButton != null && backToIdleButton.TryGetComponent<Button>(out var button))
+        var created = await UIManager.Instance.CreateSingleButtonAsync(bs, gameObject, default(CancellationToken));
+        var go = created.button;
+        if (go != null && go.TryGetComponent<Button>(out var btn))
         {
-            button.onClick.AddListener(async () =>
-            {
-                await UIManager.Instance.ClearAllDynamic();
-            });
-        }
-
-        var (backButton, _) = await UIManager.Instance.CreateSingleButtonAsync(youthSetting.backButton, gameObject, default);
-        if (backButton != null && backButton.TryGetComponent<Button>(out var backBtn))
-        {
-            backBtn.onClick.AddListener(async () =>
-            {
-                await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                gameObject.SetActive(false);
-                if (menuPageInstance != null)
-                {
-                    menuPageInstance.gameObject.SetActive(true);
-                    await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                }
-            });
-        }
-        await CreatePageButton();
-    }
-
-    private async Task CreatePageButton()
-    {
-        var (youth_1, _) = await UIManager.Instance.CreateSingleButtonAsync(youthSetting.youth_1, gameObject, default);
-        if (youth_1 != null && youth_1.TryGetComponent<Button>(out var button1))
-        {
-            button1.onClick.AddListener(() =>
-            {
-                Debug.Log("[YouthPage] youth_1 clicked.");
-            });
-        }
-
-        var (youth_2, _) = await UIManager.Instance.CreateSingleButtonAsync(youthSetting.youth_2, gameObject, default);
-        if (youth_2 != null && youth_2.TryGetComponent<Button>(out var button2))
-        {
-            button2.onClick.AddListener(() =>
-            {
-                Debug.Log("[YouthPage] youth_2 clicked.");
-            });
-        }
-
-        var (youth_3, _) = await UIManager.Instance.CreateSingleButtonAsync(youthSetting.youth_3, gameObject, default);
-        if (youth_3 != null && youth_3.TryGetComponent<Button>(out var button3))
-        {
-            button3.onClick.AddListener(() =>
-            {
-                Debug.Log("[YouthPage] youth_3 clicked.");
-            });
+            btn.onClick.AddListener(() => Debug.Log(logMessage));
         }
     }
 }

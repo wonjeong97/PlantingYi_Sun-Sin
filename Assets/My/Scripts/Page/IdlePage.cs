@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,63 +13,39 @@ public class IdleSetting
     public PageSetting menuPage;
 }
 
-public class IdlePage : MonoBehaviour, IUICreate
+public class IdlePage : BasePage<IdleSetting>
 {
-    [NonSerialized] public IdleSetting idleSetting;
+    // JSON 경로만 지정
+    protected override string JsonPath => "JSON/IdleSetting.json";   
 
-    private async void Start()
+    // 페이지 전용 콘텐츠(타이틀 텍스트, 시작 버튼)만 구성
+    protected override async Task BuildContentAsync()
     {
-        idleSetting = JsonLoader.Instance.LoadJsonData<IdleSetting>("JSON/IdleSetting.json");
-        if (idleSetting != null)
-        {
-            try
-            {
-                await CreateUI();
-            }
-            catch (OperationCanceledException)
-            {
-                Debug.LogWarning("[IdlePage] Start canceled.");
-                throw;
-            }
-            catch (Exception e)
-            {
-                Debug.LogError($"[IdlePage] Start failed: {e}");
-                throw;
-            }
-        }
-    }
+        // 타이틀 텍스트
+        await UIManager.Instance.CreateSingleTextAsync(
+            Setting.titleText, gameObject, default(CancellationToken));
 
-    public async Task CreateUI()
-    {
-        try
+        // 시작 버튼
+        var created = await UIManager.Instance.CreateSingleButtonAsync(
+            Setting.startButton, gameObject, default(CancellationToken));
+
+        var startGO = created.button;
+        if (startGO != null && startGO.TryGetComponent<Button>(out var startBtn))
         {
-            await UIManager.Instance.CreateBackgroundImageAsync(idleSetting.backgroundImage, gameObject, default);
-            await UIManager.Instance.CreateSingleTextAsync(idleSetting.titleText, gameObject, default);
-            var (startButton, _) = await UIManager.Instance.CreateSingleButtonAsync(idleSetting.startButton, gameObject, default);
-            if (startButton != null && startButton.TryGetComponent<Button>(out var startBtn))
+            startBtn.onClick.AddListener(async () =>
             {
-                startBtn.onClick.AddListener(async () =>
+                // 페이드 아웃 후 IdlePage 비활성화
+                await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
+                gameObject.SetActive(false);
+
+                // 메뉴 페이지 생성 및 표시
+                GameObject parent = UIManager.Instance.mainBackground;
+                GameObject menuPage = await UIManager.Instance.CreatePageAsync(Setting.menuPage, parent);
+                if (menuPage != null)
                 {
-                    await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                    gameObject.SetActive(false);
-                    GameObject parent = UIManager.Instance.mainBackground;
-                    GameObject menuPage = await UIManager.Instance.CreatePageAsync(idleSetting.menuPage, parent);
-                    if (menuPage)
-                    {
-                        menuPage.AddComponent<MenuPage>();
-                    }
-                });
-            }
-        }
-        catch (OperationCanceledException)
-        {
-            Debug.LogWarning("[IdlePage] CreateUI canceled.");
-            throw;
-        }
-        catch (Exception e)
-        {
-            Debug.LogError($"[IdlePage] CreateUI failed: {e}");
-            throw;
+                    menuPage.AddComponent<MenuPage>();
+                }
+            });
         }
     }
 }
