@@ -5,19 +5,24 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// 모든 UI 페이지의 공통 기반 클래스.
+/// 제네릭으로 페이지별 Setting 타입을 지정하고,
+/// 공통 UI 생성 로직(배경, 뒤로가기, Idle 복귀 버튼 등)을 제공.
+/// </summary>
+/// <typeparam name="TSetting">각 페이지별 설정 데이터 클래스 타입</typeparam>
 public abstract class BasePage<TSetting> : MonoBehaviour, IUICreate where TSetting : class
 {
-    [NonSerialized] public TSetting Setting;
-    [HideInInspector] public MenuPage menuPageInstance;
+    [NonSerialized] public TSetting Setting;            // 페이지별 설정 데이터
+    [HideInInspector] public MenuPage menuPageInstance; // 메뉴 페이지 인스턴스 (뒤로가기 버튼에서 사용)
 
-    // 각 파생 페이지에서 JSON 경로만 지정
-    protected abstract string JsonPath { get; }
+    protected abstract string JsonPath { get; }     // 각 파생 페이지에서 JSON 경로만 지정
+    protected abstract Task BuildContentAsync();    // 각 파생 페이지의 전용 콘텐츠    
 
-    // 각 파생 페이지의 전용 콘텐츠
-    protected abstract Task BuildContentAsync();
-
+    // 페이지 시작 시 JSON 로드 → UI 생성 → 페이드 인 순서로 실행
     protected virtual async void Start()
     {
+        // JSON 데이터 로드
         Setting = JsonLoader.Instance.LoadJsonData<TSetting>(JsonPath);
         if (Setting == null)
         {
@@ -27,6 +32,7 @@ public abstract class BasePage<TSetting> : MonoBehaviour, IUICreate where TSetti
 
         try
         {
+            // UI 생성
             await CreateUI();
 
             // 공통 페이드 인
@@ -44,9 +50,10 @@ public abstract class BasePage<TSetting> : MonoBehaviour, IUICreate where TSetti
         }
     }
 
+    // 공통 UI 생성 로직
     public async Task CreateUI()
     {
-        // 1) 배경
+        // 1) 배경 생성
         var background = GetFieldOrProperty<ImageSetting>(Setting, "backgroundImage");
         if (background != null)
             await UIManager.Instance.CreateBackgroundImageAsync(background, gameObject, default(CancellationToken));
@@ -56,7 +63,7 @@ public abstract class BasePage<TSetting> : MonoBehaviour, IUICreate where TSetti
         if (backToIdle != null)
         {
             var created = await UIManager.Instance.CreateSingleButtonAsync(backToIdle, gameObject, default(CancellationToken));
-            var go = created.button; // 튜플 분해 대신 명시적 접근
+            var go = created.button;
             if (go != null && go.TryGetComponent<Button>(out var btn))
             {
                 btn.onClick.AddListener(async () =>
@@ -87,11 +94,14 @@ public abstract class BasePage<TSetting> : MonoBehaviour, IUICreate where TSetti
             }
         }
 
-        // 4) 각 페이지 전용 콘텐츠
+        // 4) 페이지별 전용 콘텐츠 생성
         await BuildContentAsync();
     }
 
-    // 공통 필드 추출 유틸: 필드/프로퍼티 둘 다 지원
+    /// <summary>
+    /// 지정한 이름의 필드나 프로퍼티 값을 가져오는 유틸 메서드
+    /// (JSON 세팅에서 필드/프로퍼티 구분 없이 접근 가능)
+    /// </summary>
     private static TField GetFieldOrProperty<TField>(object obj, string name) where TField : class
     {
         if (obj == null) return null;

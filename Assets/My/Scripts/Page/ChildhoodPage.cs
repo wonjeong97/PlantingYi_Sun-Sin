@@ -22,8 +22,10 @@ public class ChildhoodSetting
 
 public class ChildhoodPage : BasePage<ChildhoodSetting>
 {
+    // JSON 경로
     protected override string JsonPath => "JSON/ChildhoodSetting.json";
 
+    // 페이지 별 컨텐츠 생성
     protected override async Task BuildContentAsync()
     {
         // 페이지 전용 이미지
@@ -39,6 +41,8 @@ public class ChildhoodPage : BasePage<ChildhoodSetting>
         await WireButton(Setting.childhood_4, "[ChildhoodPage] childhood_4 clicked.");
     }
 
+    // 버튼 생성 및 이벤트 연결
+    // TODO: 향후 로그 메시지 대신 실제 페이지 전환 로직으로 변경 필요
     private async Task WireButton(ButtonSetting bs, string logMessage)
     {
         if (bs == null) return;

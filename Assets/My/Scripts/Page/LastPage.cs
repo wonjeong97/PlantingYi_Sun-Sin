@@ -50,6 +50,8 @@ public class LastPage : BasePage<LastPageSetting>
         await WireButton(Setting.last_9, "[LastPage] last_9 clicked");
     }
 
+    // 버튼 생성 및 이벤트 연결
+    // TODO: 향후 로그 메시지 대신 실제 페이지 전환 로직으로 변경 필요
     private async Task WireButton(ButtonSetting bs, string logMessage)
     {
         if (bs == null) return;

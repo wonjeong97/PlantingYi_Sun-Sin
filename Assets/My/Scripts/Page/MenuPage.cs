@@ -45,11 +45,11 @@ public class MenuPage : BasePage<MenuSetting>
     {
         // 각 네비게이션 버튼 생성 및 와이어링
         await WireNavButton(
-            Setting.whatIsButton,
-            () => whatIsPage,
-            go => whatIsPage = go,
-            Setting.whatIsPage,
-            pageGO =>
+            Setting.whatIsButton,       // 버튼 데이터
+            () => whatIsPage,           // 이미 생성된 페이지를 가져오는 함수
+            go => whatIsPage = go,      // 생성된 페이지를 저장하는 함수
+            Setting.whatIsPage,         // 생성할 하위 페이지의 설정
+            pageGO =>                   // 페이지 생성 후 추가 작업
             {
                 var comp = pageGO.AddComponent<WhatIsPage>();
                 comp.menuPageInstance = this;
@@ -128,20 +128,23 @@ public class MenuPage : BasePage<MenuSetting>
     /// 2) 클릭 시 페이드 아웃 → 본인 비활성화 → 하위 페이지 생성/활성화 → 페이드 인
     /// </summary>
     private async Task WireNavButton(
-        ButtonSetting buttonSetting,
-        System.Func<GameObject> getCache,
-        System.Action<GameObject> setCache,
-        PageSetting targetPageSetting,
-        System.Action<GameObject> onCreatedAttach)
+        ButtonSetting buttonSetting,        // 버튼 세팅 데이터
+        Func<GameObject> getCache,          // 이미 생성된 페이지를 가져오는 함수
+        Action<GameObject> setCache,        // 생성된 페이지를 저장하는 함수
+        PageSetting targetPageSetting,      // 생성할 하위 페이지의 설정
+        Action<GameObject> onCreatedAttach) // 페이지 생성 후 추가 작업
     {
+        // 버튼 또는 페이지 설정이 없으면 동작 안 함
         if (buttonSetting == null || targetPageSetting == null) return;
 
+        // UIManager를 통해 버튼 생성
         var createdBtn = await UIManager.Instance.CreateSingleButtonAsync(
             buttonSetting, gameObject, default(CancellationToken));
 
         var btnGO = createdBtn.button;
         if (btnGO != null && btnGO.TryGetComponent<Button>(out var btn))
         {
+            // 버튼 클릭 이벤트 등록
             btn.onClick.AddListener(async () =>
             {
                 // 1) 페이드 아웃 및 메뉴 비활성화
@@ -152,16 +155,19 @@ public class MenuPage : BasePage<MenuSetting>
                 var cached = getCache();
                 if (cached == null)
                 {
+                    // 페이지가 아직 없으면 새로 생성
                     GameObject parent = UIManager.Instance.mainBackground;
                     var pageGO = await UIManager.Instance.CreatePageAsync(targetPageSetting, parent);
                     if (pageGO != null)
                     {
+                        // 생성 직후 추가 작업 실행 (컴포넌트 부착 등)
                         onCreatedAttach?.Invoke(pageGO);
-                        setCache(pageGO);
+                        setCache(pageGO); // 캐시에 저장
                     }
                 }
                 else
                 {
+                    // 이미 생성된 페이지면 다시 활성화
                     cached.SetActive(true);
                     await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
                 }

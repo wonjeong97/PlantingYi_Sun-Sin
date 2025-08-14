@@ -82,6 +82,7 @@ public class UIManager : MonoBehaviour
 
     private async void Update()
     {
+        // IdlePage가 아니고, 일정시간 입력이 없을 시 초기화
         if (idlePage != null && !idlePage.activeInHierarchy)
         {
             inactivityTimer += Time.deltaTime;
@@ -156,7 +157,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Addressables.InstantiateAsync로 동적으로 생성된 모든 GameObject를 해제하고 목록을 비움
     /// </summary>
-    public async Task ClearAllDynamic() // 필요
+    public async Task ClearAllDynamic()
     {
         await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
         for (int i = addrInstances.Count - 1; i >= 0; --i)
@@ -168,8 +169,7 @@ public class UIManager : MonoBehaviour
             }
         }
         addrInstances.Clear(); // 목록 초기화
-        await InitUI();
-      //  await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
+        await InitUI();      
     }
 
     /// <summary>

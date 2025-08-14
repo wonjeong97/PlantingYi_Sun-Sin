@@ -16,7 +16,7 @@ public class ButtonManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private void Awake()
     {
         if (ease == null) ease = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
-        baseScale = transform.localScale; // 필요 시 초기 스케일 복원용
+        baseScale = transform.localScale; // 초기 스케일 복원용
         videoPlayer = GetComponent<VideoPlayer>();
     }
 

@@ -15,20 +15,21 @@ public class IdleSetting
 
 public class IdlePage : BasePage<IdleSetting>
 {
-    // JSON 경로만 지정
+    // JSON 경로
     protected override string JsonPath => "JSON/IdleSetting.json";   
 
     // 페이지 전용 콘텐츠(타이틀 텍스트, 시작 버튼)만 구성
     protected override async Task BuildContentAsync()
     {
-        // 타이틀 텍스트
+        // 타이틀 텍스트 생성
         await UIManager.Instance.CreateSingleTextAsync(
             Setting.titleText, gameObject, default(CancellationToken));
 
-        // 시작 버튼
+        // 시작 버튼 생성
         var created = await UIManager.Instance.CreateSingleButtonAsync(
             Setting.startButton, gameObject, default(CancellationToken));
 
+        // 생성된 오브젝트 중 button 오브젝트만 가져옴
         var startGO = created.button;
         if (startGO != null && startGO.TryGetComponent<Button>(out var startBtn))
         {
