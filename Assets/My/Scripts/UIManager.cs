@@ -4,6 +4,7 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Events;
@@ -80,7 +81,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private async void Update()
+    private void Update()
     {
         // IdlePage가 아니고, 일정시간 입력이 없을 시 초기화
         if (idlePage != null && !idlePage.activeInHierarchy)
@@ -90,7 +91,7 @@ public class UIManager : MonoBehaviour
             if (inactivityTimer >= inactivityThreshold)
             {
                 inactivityTimer = 0f;
-                await ClearAllDynamic();
+                ShowIdlePageOnly();
             }
 
             if (Input.anyKeyDown || Input.touchCount > 0 || Input.GetMouseButtonDown(0))
@@ -145,10 +146,31 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public async void ShowIdlePageOnly()
+    {
+        if (mainBackground == null || idlePage == null)
+        {
+            Debug.LogWarning("[UIManager] mainBackground or idlePage is not initialized.");
+            return;
+        }            
+
+        await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
+
+        // mainBackground 하위의 모든 Page를 비활성화
+        foreach (Transform child in mainBackground.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+
+        // IdlePage만 다시 활성화
+        idlePage.SetActive(true);
+        await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
+    }
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode) { }
 
     #region Public API
-    public Task CreatePopupAsync(PopupSetting setting, GameObject parent, UnityAction<GameObject> onClose = null, CancellationToken token = default)
+    public Task<GameObject> CreatePopupAsync(PopupSetting setting, GameObject parent, UnityAction<GameObject> onClose = null, CancellationToken token = default)
         => CreatePopupInternalAsync(setting, parent, onClose, MergeToken(token));
 
     public Task<GameObject> CreatePageAsync(PageSetting page, GameObject parent, CancellationToken token = default)
@@ -547,11 +569,17 @@ public class UIManager : MonoBehaviour
     /// <param name="onClose">팝업이 닫힐 때 호출할 콜백</param>
     /// <param name="token">작업 도중 취소할 수 있는 CancellationToken</param>
     /// <returns></returns>
-    private async Task CreatePopupInternalAsync(PopupSetting setting, GameObject parent, UnityAction<GameObject> onClose, CancellationToken token)
-    {
+    private async Task<GameObject> CreatePopupInternalAsync(PopupSetting setting, GameObject parent, UnityAction<GameObject> onClose, CancellationToken token)
+    {   
+        // 팝업 루트 생성
+        var popupRoot = new GameObject(string.IsNullOrEmpty(setting.name) ? "GeneratedPopup" : setting.name);
+        if (!popupRoot) return null;
+
+        popupRoot.transform.SetParent(parent.transform, false);
+
         // 1. 팝업 배경 생성
-        var popupBG = await CreateBackgroundImageAsync(setting.popupBackgroundImage, parent, token);
-        if (!popupBG) return;
+        var popupBG = await CreateBackgroundImageAsync(setting.popupBackgroundImage, popupRoot, token);
+        if (!popupBG) return popupRoot;
 
         // 다른 UI 위에 표시되도록 맨 뒤에서 앞으로 이동
         popupBG.transform.SetAsLastSibling();
@@ -571,10 +599,19 @@ public class UIManager : MonoBehaviour
             // 버튼 클릭 시 팝업 제거 + 콜백 호출
             btn.onClick.AddListener(() =>
             {
-                SafeReleaseInstance(popupBG);    // Addressables 인스턴스 해제
-                onClose?.Invoke(popupBG);        // 외부 콜백 실행
+                onClose?.Invoke(popupRoot);        // 외부 콜백 실행
+
+                // 팝업의 Addressables 자식 해제
+                foreach (Transform child in popupRoot.transform)
+                {
+                    SafeReleaseInstance(child.gameObject);
+                }
+
+                Destroy(popupRoot);                // 팝업 오브젝트 제거                
             });
         }
+
+        return popupRoot;
     }
 
     /// <summary>

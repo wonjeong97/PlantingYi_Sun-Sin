@@ -14,14 +14,8 @@ public class DeathSetting
     public ImageSetting deathImage;
     public ImageSetting deathExplainImage;
 
-    public ButtonSetting death_1;
-    public ButtonSetting death_2;
-    public ButtonSetting death_3;
-    public ButtonSetting death_4;
-    public ButtonSetting death_5;
-    public ButtonSetting death_6;
-    public ButtonSetting death_7;
-    public ButtonSetting death_8; 
+    public ButtonSetting[] deathBtns;
+    public PopupSetting[] deathPopups;     
 }
 
 public class DeathPage : BasePage<DeathSetting>
@@ -38,29 +32,9 @@ public class DeathPage : BasePage<DeathSetting>
             await UIManager.Instance.CreateImageAsync(Setting.deathExplainImage, gameObject, default(CancellationToken));
 
         // 전용 버튼들
-        await WireButton(Setting.death_1, "[DeathPage] death_1 clicked");
-        await WireButton(Setting.death_2, "[DeathPage] death_2 clicked");
-        await WireButton(Setting.death_3, "[DeathPage] death_3 clicked");
-        await WireButton(Setting.death_4, "[DeathPage] death_4 clicked");
-        await WireButton(Setting.death_5, "[DeathPage] death_5 clicked");
-        await WireButton(Setting.death_6, "[DeathPage] death_6 clicked");
-        await WireButton(Setting.death_7, "[DeathPage] death_7 clicked");
-        await WireButton(Setting.death_8, "[DeathPage] death_8 clicked");
-    }
-
-    // 버튼 생성 및 이벤트 연결
-    // TODO: 향후 로그 메시지 대신 실제 페이지 전환 로직으로 변경 필요
-    private async Task WireButton(ButtonSetting bs, string logMessage)
-    {
-        if (bs == null) return;
-
-        var created = await UIManager.Instance.CreateSingleButtonAsync(
-            bs, gameObject, default(CancellationToken));
-
-        var go = created.button;
-        if (go != null && go.TryGetComponent<Button>(out var btn))
+        for (int i = 0; i < Setting.deathBtns.Length; i++)
         {
-            btn.onClick.AddListener(() => Debug.Log(logMessage));
+            await WireButton(Setting.deathBtns[i], Setting.deathPopups[i], gameObject);
         }
     }
 }

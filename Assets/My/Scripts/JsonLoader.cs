@@ -14,7 +14,7 @@ public class JsonLoader : MonoBehaviour
         {
             if (_instance == null)
             {
-                _instance = FindObjectOfType<JsonLoader>() ?? new GameObject("JsonLoader").AddComponent<JsonLoader>();
+                _instance = FindFirstObjectByType<JsonLoader>() ?? new GameObject("JsonLoader").AddComponent<JsonLoader>();
             }
             return _instance;
         }

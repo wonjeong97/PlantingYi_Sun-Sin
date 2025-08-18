@@ -14,9 +14,8 @@ public class YouthSetting
     public ImageSetting youthImage;
     public ImageSetting youthExplainImage;
 
-    public ButtonSetting youth_1;
-    public ButtonSetting youth_2;
-    public ButtonSetting youth_3;
+    public ButtonSetting[] youthBtns;
+    public PopupSetting[] youthPopups;   
 }
 public class YouthPage : BasePage<YouthSetting>
 {
@@ -32,22 +31,9 @@ public class YouthPage : BasePage<YouthSetting>
             await UIManager.Instance.CreateImageAsync(Setting.youthExplainImage, gameObject, default(CancellationToken));
 
         // 페이지 전용 버튼들
-        await WireButton(Setting.youth_1, "[YouthPage] youth_1 clicked.");
-        await WireButton(Setting.youth_2, "[YouthPage] youth_2 clicked.");
-        await WireButton(Setting.youth_3, "[YouthPage] youth_3 clicked.");
-    }
-
-    // 버튼 생성 및 이벤트 연결
-    // TODO: 향후 로그 메시지 대신 실제 페이지 전환 로직으로 변경 필요
-    private async Task WireButton(ButtonSetting bs, string logMessage)
-    {
-        if (bs == null) return;
-
-        var created = await UIManager.Instance.CreateSingleButtonAsync(bs, gameObject, default(CancellationToken));
-        var go = created.button;
-        if (go != null && go.TryGetComponent<Button>(out var btn))
+        for (int i = 0; i < Setting.youthBtns.Length; i++)
         {
-            btn.onClick.AddListener(() => Debug.Log(logMessage));
+            await WireButton(Setting.youthBtns[i], Setting.youthPopups[i], gameObject);
         }
     }
 }

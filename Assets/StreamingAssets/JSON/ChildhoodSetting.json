@@ -21,6 +21,7 @@
       "sourceImage": "Image/Button/1_Button.png"
     }
   },
+
   "childhoodImage": {
     "name": "Image_ChildhoodImage",
     "size": { "x": 150, "y": 150 },
@@ -37,36 +38,153 @@
       "sourceImage": "Image/Background/1_White.png"
     }
   },
-  "childhood_1": {
-    "name": "Button_Childhood_1",
-    "size": { "x": 800, "y": 75 },
-    "position": { "x": 1220, "y": 340 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
+
+  "childhoodBtns": [
+    {
+      "name": "Button_Childhood_0",
+      "size": { "x": 800, "y": 75 },
+      "position": { "x": 1220, "y": 340 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "9. 이순신의 탄생과 아산 이주이야기",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_Childhood_1",
+      "size": { "x": 800, "y": 75 },
+      "position": { "x": 1220, "y": 440 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "10. 이순신 조상님에 대한 이야기",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_Childhood_2",
+      "size": { "x": 800, "y": 75 },
+      "position": { "x": 1220, "y": 540 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "11. 유년 시절의 이순신이야기",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_Childhood_3",
+      "size": { "x": 800, "y": 75 },
+      "position": { "x": 1220, "y": 640 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "13. 이순신의 가족이야기",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
     }
-  },
-  "childhood_2": {
-    "name": "Button_Childhood_2",
-    "size": { "x": 800, "y": 75 },
-    "position": { "x": 1220, "y": 440 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
+  ],
+  "childhoodPopups": [
+    {
+      "name": "Popup_Childhood_0",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_Childhood_1",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_Childhood_2",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_Childhood_3",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
     }
-  },
-  "childhood_3": {
-    "name": "Button_Childhood_3",
-    "size": { "x": 800, "y": 75 },
-    "position": { "x": 1220, "y": 540 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "childhood_4": {
-    "name": "Button_Childhood_4",
-    "size": { "x": 800, "y": 75 },
-    "position": { "x": 1220, "y": 640 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  }
+  ]
 }

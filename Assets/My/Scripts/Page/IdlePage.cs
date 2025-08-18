@@ -15,6 +15,8 @@ public class IdleSetting
 
 public class IdlePage : BasePage<IdleSetting>
 {
+    private GameObject menuPageObject;
+
     // JSON 경로
     protected override string JsonPath => "JSON/IdleSetting.json";   
 
@@ -39,13 +41,21 @@ public class IdlePage : BasePage<IdleSetting>
                 await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
                 gameObject.SetActive(false);
 
-                // 메뉴 페이지 생성 및 표시
-                GameObject parent = UIManager.Instance.mainBackground;
-                GameObject menuPage = await UIManager.Instance.CreatePageAsync(Setting.menuPage, parent);
-                if (menuPage != null)
+                if (menuPageObject == null)
                 {
-                    menuPage.AddComponent<MenuPage>();
+                    // 메뉴 페이지 생성 및 표시
+                    GameObject parent = UIManager.Instance.mainBackground;
+                    menuPageObject = await UIManager.Instance.CreatePageAsync(Setting.menuPage, parent);
+                    if (menuPageObject != null)
+                    {
+                        menuPageObject.AddComponent<MenuPage>();
+                    }
                 }
+                else
+                {
+                    menuPageObject.SetActive(true);
+                    await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
+                }                
             });
         }
     }

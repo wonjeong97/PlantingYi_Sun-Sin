@@ -37,76 +37,332 @@
       "sourceImage": "Image/Background/1_White.png"
     }
   },
-  "last_1": {
-    "name": "Button_Last_1",
-    "size": { "x": 800, "y": 65 },
-    "position": { "x": 1220, "y": 180 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
+  "lastBtns": [
+    {
+      "name": "Button_Last_0",
+      "size": { "x": 800, "y": 65 },
+      "position": { "x": 1220, "y": 180 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "20. 게바위 이야기",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_Last_1",
+      "size": { "x": 800, "y": 65 },
+      "position": { "x": 1220, "y": 270 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "27. 파직에서 전사까지",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_Last_2",
+      "size": { "x": 800, "y": 65 },
+      "position": { "x": 1220, "y": 360 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "29. 명량해전",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_Last_3",
+      "size": { "x": 800, "y": 65 },
+      "position": { "x": 1220, "y": 450 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "43. 두 번의 백의종군",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_Last_4",
+      "size": { "x": 800, "y": 65 },
+      "position": { "x": 1220, "y": 540 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "44. 해전 횟수",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_Last_5",
+      "size": { "x": 800, "y": 65 },
+      "position": { "x": 1220, "y": 630 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "45. 명량해전 철쇄 이야기",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_Last_6",
+      "size": { "x": 800, "y": 65 },
+      "position": { "x": 1220, "y": 720 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "47. 이순신과 원균의 갈등",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_Last_7",
+      "size": { "x": 800, "y": 65 },
+      "position": { "x": 1220, "y": 810 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "48. 이순신과 선조와의 애증",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_Last_8",
+      "size": { "x": 800, "y": 65 },
+      "position": { "x": 1220, "y": 900 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "49. 명나라 수군과의 관계",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
     }
-  },
-  "last_2": {
-    "name": "Button_Last_2",
-    "size": { "x": 800, "y": 65 },
-    "position": { "x": 1220, "y": 270 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
+  ],
+  "lastPopups": [
+    {
+      "name": "Popup_Last_0",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_Last_1",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_Last_2",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_Last_3",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_Last_4",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_Last_5",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_Last_6",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_Last_7",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_Last_8",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
     }
-  },
-  "last_3": {
-    "name": "Button_Last_3",
-    "size": { "x": 800, "y": 65 },
-    "position": { "x": 1220, "y": 360 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "last_4": {
-    "name": "Button_Last_4",
-    "size": { "x": 800, "y": 65 },
-    "position": { "x": 1220, "y": 450 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "last_5": {
-    "name": "Button_Last_5",
-    "size": { "x": 800, "y": 65 },
-    "position": { "x": 1220, "y": 540 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "last_6": {
-    "name": "Button_Last_6",
-    "size": { "x": 800, "y": 65 },
-    "position": { "x": 1220, "y": 630 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "last_7": {
-    "name": "Button_Last_7",
-    "size": { "x": 800, "y": 65 },
-    "position": { "x": 1220, "y": 720 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "last_8": {
-    "name": "Button_Last_8",
-    "size": { "x": 800, "y": 65 },
-    "position": { "x": 1220, "y": 810 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "last_9": {
-    "name": "Button_Last_9",
-    "size": { "x": 800, "y": 65 },
-    "position": { "x": 1220, "y": 900 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  }
+  ]
 }

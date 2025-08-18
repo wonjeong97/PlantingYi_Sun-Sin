@@ -37,124 +37,548 @@
       "sourceImage": "Image/Background/1_White.png"
     }
   },
-  "primeOfLife_1": {
-    "name": "Button_PrimeOfLife_1",
-    "size": { "x": 800, "y": 50 },
-    "position": { "x": 1220, "y": 125 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
+  "primeOfLifeBtns": [
+    {
+      "name": "Button_PrimeOfLife_0",
+      "size": { "x": 800, "y": 50 },
+      "position": { "x": 1220, "y": 125 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "21. 이순신 삶의 목표 충효",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_PrimeOfLife_1",
+      "size": { "x": 800, "y": 50 },
+      "position": { "x": 1220, "y": 185 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "22 효자 이순신",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_PrimeOfLife_2",
+      "size": { "x": 800, "y": 50 },
+      "position": { "x": 1220, "y": 245 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "23. 이순신 어머니이야기",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_PrimeOfLife_3",
+      "size": { "x": 800, "y": 50 },
+      "position": { "x": 1220, "y": 305 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "26. 전라좌수사에서 삼도수군통제사까지",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_PrimeOfLife_4",
+      "size": { "x": 800, "y": 50 },
+      "position": { "x": 1220, "y": 365 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "28.한산해전",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_PrimeOfLife_5",
+      "size": { "x": 800, "y": 50 },
+      "position": { "x": 1220, "y": 425 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "30. 거북선이야기",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_PrimeOfLife_6",
+      "size": { "x": 800, "y": 50 },
+      "position": { "x": 1220, "y": 485 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "31. 정철조총 개발",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_PrimeOfLife_7",
+      "size": { "x": 800, "y": 50 },
+      "position": { "x": 1220, "y": 545 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "32. 이순신 병법",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_PrimeOfLife_8",
+      "size": { "x": 800, "y": 50 },
+      "position": { "x": 1220, "y": 605 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "33. 이순신의 정보 전략",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_PrimeOfLife_9",
+      "size": { "x": 800, "y": 50 },
+      "position": { "x": 1220, "y": 665 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "34. 소통의 리더십",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_PrimeOfLife_10",
+      "size": { "x": 800, "y": 50 },
+      "position": { "x": 1220, "y": 725 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "35 이순신의 애민",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_PrimeOfLife_11",
+      "size": { "x": 800, "y": 50 },
+      "position": { "x": 1220, "y": 785 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "36. 이순신의 좌우명과 사생관",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_PrimeOfLife_12",
+      "size": { "x": 800, "y": 50 },
+      "position": { "x": 1220, "y": 845 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "40 조선 수군의 위상",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_PrimeOfLife_13",
+      "size": { "x": 800, "y": 50 },
+      "position": { "x": 1220, "y": 905 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "41. 류성룡, 이원익, 정탁",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_PrimeOfLife_14",
+      "size": { "x": 800, "y": 50 },
+      "position": { "x": 1220, "y": 965 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "42. 이순신의 부하들",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
     }
-  },
-  "primeOfLife_2": {
-    "name": "Button_PrimeOfLife_2",
-    "size": { "x": 800, "y": 50 },
-    "position": { "x": 1220, "y": 185 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
+  ],
+  "primeOfLifePopups": [
+    {
+      "name": "Popup_PrimeOfLife_0",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_PrimeOfLife_1",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_PrimeOfLife_2",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_PrimeOfLife_3",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_PrimeOfLife_4",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_PrimeOfLife_5",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_PrimeOfLife_6",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_PrimeOfLife_7",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_PrimeOfLife_8",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_PrimeOfLife_9",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_PrimeOfLife_10",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_PrimeOfLife_11",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_PrimeOfLife_12",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_PrimeOfLife_13",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_PrimeOfLife_14",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
     }
-  },
-  "primeOfLife_3": {
-    "name": "Button_PrimeOfLife_3",
-    "size": { "x": 800, "y": 50 },
-    "position": { "x": 1220, "y": 245 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "primeOfLife_4": {
-    "name": "Button_PrimeOfLife_4",
-    "size": { "x": 800, "y": 50 },
-    "position": { "x": 1220, "y": 305 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "primeOfLife_5": {
-    "name": "Button_PrimeOfLife_5",
-    "size": { "x": 800, "y": 50 },
-    "position": { "x": 1220, "y": 365 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "primeOfLife_6": {
-    "name": "Button_PrimeOfLife_6",
-    "size": { "x": 800, "y": 50 },
-    "position": { "x": 1220, "y": 425 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "primeOfLife_7": {
-    "name": "Button_PrimeOfLife_7",
-    "size": { "x": 800, "y": 50 },
-    "position": { "x": 1220, "y": 485 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "primeOfLife_8": {
-    "name": "Button_PrimeOfLife_8",
-    "size": { "x": 800, "y": 50 },
-    "position": { "x": 1220, "y": 545 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "primeOfLife_9": {
-    "name": "Button_PrimeOfLife_9",
-    "size": { "x": 800, "y": 50 },
-    "position": { "x": 1220, "y": 605 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "primeOfLife_10": {
-    "name": "Button_PrimeOfLife_10",
-    "size": { "x": 800, "y": 50 },
-    "position": { "x": 1220, "y": 665 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "primeOfLife_11": {
-    "name": "Button_PrimeOfLife_11",
-    "size": { "x": 800, "y": 50 },
-    "position": { "x": 1220, "y": 725 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "primeOfLife_12": {
-    "name": "Button_PrimeOfLife_12",
-    "size": { "x": 800, "y": 50 },
-    "position": { "x": 1220, "y": 785 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "primeOfLife_13": {
-    "name": "Button_PrimeOfLife_13",
-    "size": { "x": 800, "y": 50 },
-    "position": { "x": 1220, "y": 845 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "primeOfLife_14": {
-    "name": "Button_PrimeOfLife_14",
-    "size": { "x": 800, "y": 50 },
-    "position": { "x": 1220, "y": 905 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "primeOfLife_15": {
-    "name": "Button_PrimeOfLife_15",
-    "size": { "x": 800, "y": 50 },
-    "position": { "x": 1220, "y": 965 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  }
+  ]
 }

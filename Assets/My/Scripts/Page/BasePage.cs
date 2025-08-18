@@ -66,9 +66,9 @@ public abstract class BasePage<TSetting> : MonoBehaviour, IUICreate where TSetti
             var go = created.button;
             if (go != null && go.TryGetComponent<Button>(out var btn))
             {
-                btn.onClick.AddListener(async () =>
+                btn.onClick.AddListener(() =>
                 {
-                    await UIManager.Instance.ClearAllDynamic();
+                    UIManager.Instance.ShowIdlePageOnly();                    
                 });
             }
         }
@@ -96,6 +96,22 @@ public abstract class BasePage<TSetting> : MonoBehaviour, IUICreate where TSetti
 
         // 4) 페이지별 전용 콘텐츠 생성
         await BuildContentAsync();
+    }
+
+    // 버튼 생성 및 이벤트 연결
+    protected async Task WireButton(ButtonSetting bs, PopupSetting ps, GameObject parent)
+    {
+        if (bs == null || ps == null) return;
+
+        var created = await UIManager.Instance.CreateSingleButtonAsync(bs, parent, default(CancellationToken));
+        var go = created.button;
+        if (go != null && go.TryGetComponent<Button>(out var btn))
+        {
+            btn.onClick.AddListener(async () =>
+            {
+                await UIManager.Instance.CreatePopupAsync(ps, parent);
+            });
+        }
     }
 
     /// <summary>

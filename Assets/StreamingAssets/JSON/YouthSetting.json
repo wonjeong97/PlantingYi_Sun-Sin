@@ -37,28 +37,116 @@
       "sourceImage": "Image/Background/1_White.png"
     }
   },
-  "youth_1": {
-    "name": "Button_Youth_1",
-    "size": { "x": 800, "y": 75 },
-    "position": { "x": 1220, "y": 390 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
+  "youthBtns": [
+    {
+      "name": "Button_Youth_0",
+      "size": { "x": 800, "y": 75 },
+      "position": { "x": 1220, "y": 390 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "8. 이순신의 결혼과 신혼집이야기",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_Youth_1",
+      "size": { "x": 800, "y": 75 },
+      "position": { "x": 1220, "y": 540 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "12. 이순신의 무과급제 이야기",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
+    },
+    {
+      "name": "Button_Youth_2",
+      "size": { "x": 800, "y": 75 },
+      "position": { "x": 1220, "y": 690 },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Background/1_White.png"
+      },
+      "buttonText": {
+        "text": "25. 이순신의 초급 관리 시절 이야기",
+        "fontName": "font1",
+        "fontSize": 24,
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+      }
     }
-  },
-  "youth_2": {
-    "name": "Button_Youth_2",
-    "size": { "x": 800, "y": 75 },
-    "position": { "x": 1220, "y": 540 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
+  ],
+  "youthPopups": [
+    {
+      "name": "Popup_Youth_0",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_Youth_1",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
+    },
+    {
+      "name": "Popup_Youth_2",
+      "popupBackgroundImage": {
+        "size": { "x": 1920, "y": 1080 },
+        "sourceImage": "Image/Background/1_White.png",
+        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+      },
+      "popupButton": {
+        "position": { "x": 960, "y": 900 },
+        "size": { "x": 300, "y": 100 },
+        "buttonBackgroundImage": {
+          "sourceImage": "Image/Button/1_Button.png"
+        },
+        "buttonText": {
+          "text": "닫기",
+          "fontName": "font1",
+          "fontSize": 50,
+          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        },
+        "buttonSound": "click1"
+      }
     }
-  },
-  "youth_3": {
-    "name": "Button_Youth_3",
-    "size": { "x": 800, "y": 75 },
-    "position": { "x": 1220, "y": 690 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  }
+  ]
 }
