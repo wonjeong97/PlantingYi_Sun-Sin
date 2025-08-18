@@ -49,7 +49,8 @@
         "text": "20. 게바위 이야기",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "alignment": 513
       }
     },
     {
@@ -63,7 +64,8 @@
         "text": "27. 파직에서 전사까지",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "alignment": 513
       }
     },
     {
@@ -77,7 +79,8 @@
         "text": "29. 명량해전",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "alignment": 513
       }
     },
     {
@@ -91,7 +94,8 @@
         "text": "43. 두 번의 백의종군",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "alignment": 513
       }
     },
     {
@@ -105,7 +109,8 @@
         "text": "44. 해전 횟수",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "alignment": 513
       }
     },
     {
@@ -119,7 +124,8 @@
         "text": "45. 명량해전 철쇄 이야기",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "alignment": 513
       }
     },
     {
@@ -133,7 +139,8 @@
         "text": "47. 이순신과 원균의 갈등",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "alignment": 513
       }
     },
     {
@@ -147,7 +154,8 @@
         "text": "48. 이순신과 선조와의 애증",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "alignment": 513
       }
     },
     {
@@ -161,7 +169,8 @@
         "text": "49. 명나라 수군과의 관계",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
+        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "alignment": 513
       }
     }
   ],
@@ -179,12 +188,6 @@
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
-        "buttonText": {
-          "text": "닫기",
-          "fontName": "font1",
-          "fontSize": 50,
-          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
-        },
         "buttonSound": "click1"
       }
     },
@@ -200,12 +203,6 @@
         "size": { "x": 300, "y": 100 },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
-        },
-        "buttonText": {
-          "text": "닫기",
-          "fontName": "font1",
-          "fontSize": 50,
-          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
         },
         "buttonSound": "click1"
       }
@@ -223,12 +220,6 @@
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
-        "buttonText": {
-          "text": "닫기",
-          "fontName": "font1",
-          "fontSize": 50,
-          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
-        },
         "buttonSound": "click1"
       }
     },
@@ -244,12 +235,6 @@
         "size": { "x": 300, "y": 100 },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
-        },
-        "buttonText": {
-          "text": "닫기",
-          "fontName": "font1",
-          "fontSize": 50,
-          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
         },
         "buttonSound": "click1"
       }
@@ -267,12 +252,6 @@
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
-        "buttonText": {
-          "text": "닫기",
-          "fontName": "font1",
-          "fontSize": 50,
-          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
-        },
         "buttonSound": "click1"
       }
     },
@@ -288,12 +267,6 @@
         "size": { "x": 300, "y": 100 },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
-        },
-        "buttonText": {
-          "text": "닫기",
-          "fontName": "font1",
-          "fontSize": 50,
-          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
         },
         "buttonSound": "click1"
       }
@@ -311,12 +284,6 @@
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
-        "buttonText": {
-          "text": "닫기",
-          "fontName": "font1",
-          "fontSize": 50,
-          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
-        },
         "buttonSound": "click1"
       }
     },
@@ -333,12 +300,6 @@
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
-        "buttonText": {
-          "text": "닫기",
-          "fontName": "font1",
-          "fontSize": 50,
-          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
-        },
         "buttonSound": "click1"
       }
     },
@@ -354,12 +315,6 @@
         "size": { "x": 300, "y": 100 },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
-        },
-        "buttonText": {
-          "text": "닫기",
-          "fontName": "font1",
-          "fontSize": 50,
-          "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
         },
         "buttonSound": "click1"
       }

@@ -8,8 +8,8 @@
   "titleText": {
     "name": "IdlePageTitle",
     "position": { "x": 960, "y": 540 },
-    "text": "<b>Planting LeeSoonSin</b>",
-    "fontName": "font1",
+    "text": "<b>플랜팅 이순신</b>",
+    "fontName": "font2",
     "fontSize": 100,
     "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 }
   },

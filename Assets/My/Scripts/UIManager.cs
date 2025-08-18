@@ -4,12 +4,10 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Events;
 using UnityEngine.ResourceManagement.AsyncOperations;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
@@ -45,8 +43,7 @@ public class UIManager : MonoBehaviour
             Instance = this;
             //DontDestroyOnLoad(gameObject);
 
-            cts = new CancellationTokenSource();
-            SceneManager.sceneLoaded += OnSceneLoaded;
+            cts = new CancellationTokenSource();            
         }
         else if (Instance != this)
         {
@@ -103,7 +100,6 @@ public class UIManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
         try { cts?.Cancel(); } catch { }
         cts?.Dispose();
         cts = null;
@@ -146,6 +142,9 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// IdlePage를 제외한 모든 페이지를 비활성화함
+    /// </summary>
     public async void ShowIdlePageOnly()
     {
         if (mainBackground == null || idlePage == null)
@@ -166,8 +165,6 @@ public class UIManager : MonoBehaviour
         idlePage.SetActive(true);
         await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
     }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) { }
 
     #region Public API
     public Task<GameObject> CreatePopupAsync(PopupSetting setting, GameObject parent, UnityAction<GameObject> onClose = null, CancellationToken token = default)
@@ -462,7 +459,7 @@ public class UIManager : MonoBehaviour
                 setting.buttonText.text,
                 setting.buttonText.fontSize,
                 setting.buttonText.fontColor,
-                TextAlignmentOptions.Center,
+                setting.buttonText.alignment,
                 token
             );
 
