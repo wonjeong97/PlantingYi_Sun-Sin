@@ -45,83 +45,83 @@ public class MenuPage : BasePage<MenuSetting>
     {
         // 각 네비게이션 버튼 생성 및 와이어링
         await WireNavButton(
-            Setting.whatIsButton, // 버튼 데이터
+            setting.whatIsButton, // 버튼 데이터
             () => whatIsPage, // 이미 생성된 페이지를 가져오는 함수
             go => whatIsPage = go, // 생성된 페이지를 저장하는 함수
-            Setting.whatIsPage, // 생성할 하위 페이지의 설정
-            pageGO => // 페이지 생성 후 추가 작업
+            setting.whatIsPage, // 생성할 하위 페이지의 설정
+            pageGo => // 페이지 생성 후 추가 작업
             {
-                var comp = pageGO.AddComponent<WhatIsPage>();
+                var comp = pageGo.AddComponent<WhatIsPage>();
                 comp.menuPageInstance = this;
             });
 
         await WireNavButton(
-            Setting.childhoodButton,
+            setting.childhoodButton,
             () => childhoodPage,
             go => childhoodPage = go,
-            Setting.childhoodPage,
-            pageGO =>
+            setting.childhoodPage,
+            pageGo =>
             {
-                var comp = pageGO.AddComponent<ChildhoodPage>();
+                var comp = pageGo.AddComponent<ChildhoodPage>();
                 comp.menuPageInstance = this;
             });
 
         await WireNavButton(
-            Setting.youthButton,
+            setting.youthButton,
             () => youthPage,
             go => youthPage = go,
-            Setting.youthPage,
-            pageGO =>
+            setting.youthPage,
+            pageGo =>
             {
-                var comp = pageGO.AddComponent<YouthPage>();
+                var comp = pageGo.AddComponent<YouthPage>();
                 comp.menuPageInstance = this;
             });
 
         await WireNavButton(
-            Setting.primeOfLifeButton,
+            setting.primeOfLifeButton,
             () => primeOfLifePage,
             go => primeOfLifePage = go,
-            Setting.primeOfLifePage,
-            pageGO =>
+            setting.primeOfLifePage,
+            pageGo =>
             {
-                var comp = pageGO.AddComponent<PrimeOfLifePage>();
+                var comp = pageGo.AddComponent<PrimeOfLifePage>();
                 comp.menuPageInstance = this;
             });
 
         await WireNavButton(
-            Setting.lastButton,
+            setting.lastButton,
             () => lastPage,
             go => lastPage = go,
-            Setting.lastPage,
-            pageGO =>
+            setting.lastPage,
+            pageGo =>
             {
-                var comp = pageGO.AddComponent<LastPage>();
+                var comp = pageGo.AddComponent<LastPage>();
                 comp.menuPageInstance = this;
             });
 
         await WireNavButton(
-            Setting.deathButton,
+            setting.deathButton,
             () => deathPage,
             go => deathPage = go,
-            Setting.deathPage,
-            pageGO =>
+            setting.deathPage,
+            pageGo =>
             {
-                var comp = pageGO.AddComponent<DeathPage>();
+                var comp = pageGo.AddComponent<DeathPage>();
                 comp.menuPageInstance = this;
             });
 
         await WireNavButton(
-            Setting.afterDeathButton,
+            setting.afterDeathButton,
             () => afterDeathPage,
             go => afterDeathPage = go,
-            Setting.afterDeathPage,
-            pageGO =>
+            setting.afterDeathPage,
+            pageGo =>
             {
-                var comp = pageGO.AddComponent<AfterDeathPage>();
+                var comp = pageGo.AddComponent<AfterDeathPage>();
                 comp.menuPageInstance = this;
             });
     }
-
+    
     /// <summary>
     /// 공통 네비게이션 버튼 생성 및 핸들러 연결
     /// 1) 버튼 생성
@@ -140,8 +140,8 @@ public class MenuPage : BasePage<MenuSetting>
         var createdBtn = await UIManager.Instance.CreateSingleButtonAsync(
             buttonSetting, gameObject, CancellationToken.None);
 
-        var btnGO = createdBtn.button;
-        if (btnGO != null && btnGO.TryGetComponent<Button>(out var btn))
+        var btnGo = createdBtn.button;
+        if (btnGo != null && btnGo.TryGetComponent<Button>(out var btn))
         {
             // 버튼 클릭 이벤트 등록 (fire-and-forget 패턴)
             btn.onClick.AddListener(() => _ = HandleNavButtonClickedAsync(
@@ -169,11 +169,11 @@ public class MenuPage : BasePage<MenuSetting>
             if (cached == null)
             {
                 GameObject parent = UIManager.Instance.mainBackground;
-                var pageGO = await UIManager.Instance.CreatePageAsync(targetPageSetting, parent);
-                if (pageGO != null)
+                var pageGo = await UIManager.Instance.CreatePageAsync(targetPageSetting, parent);
+                if (pageGo != null)
                 {
-                    onCreatedAttach?.Invoke(pageGO);
-                    setCache(pageGO);
+                    onCreatedAttach?.Invoke(pageGo);
+                    setCache(pageGo);
                 }
             }
             else

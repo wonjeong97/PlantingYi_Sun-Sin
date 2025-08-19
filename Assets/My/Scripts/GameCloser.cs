@@ -7,9 +7,9 @@ public class GameCloser : MonoBehaviour
     [SerializeField] private RectTransform rectTransform;
     private CloseSetting closeSetting;
 
-    private int clickCount = 0;
-    private float timer = 0f;
-    private bool counting = false;
+    private int clickCount;
+    private float timer;
+    private bool counting;
 
     private void Start()
     {

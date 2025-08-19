@@ -22,15 +22,15 @@ public class LastPage : BasePage<LastPageSetting>
 
     protected override async Task BuildContentAsync()
     {
-        if (Setting.lastImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.lastImage, gameObject, CancellationToken.None);
+        if (setting.lastImage != null)
+            await UIManager.Instance.CreateImageAsync(setting.lastImage, gameObject, CancellationToken.None);
 
-        if (Setting.lastExplainImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.lastExplainImage, gameObject, CancellationToken.None);
+        if (setting.lastExplainImage != null)
+            await UIManager.Instance.CreateImageAsync(setting.lastExplainImage, gameObject, CancellationToken.None);
         
-        for (int i = 0; i < Setting.lastBtns.Length; i++)
+        for (int i = 0; i < setting.lastBtns.Length; i++)
         {
-            await WireButton(Setting.lastBtns[i], Setting.lastPopups[i], gameObject);
+            await WireButton(setting.lastBtns[i], setting.lastPopups[i], gameObject);
         }
     }
 }

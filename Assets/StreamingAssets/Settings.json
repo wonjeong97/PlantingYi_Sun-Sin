@@ -8,7 +8,7 @@
     "imageAlpha": 0.01
   },
   "fontMap": {
-    "font1": "Fonts/TMPro/BlackHanSans-Regular SDF.asset",
+    "font1": "Fonts/TMPro/EBS Saron SB SDF.asset",
     "font2": "Fonts/TMPro/NanumGothic-Regular SDF.asset"
   },
   "sounds": [
@@ -19,7 +19,7 @@
     "name": "MainBackground",
     "size": { "x": 1920, "y": 1080 },
     "sourceImage": "Image/Background/1_White.png",
-    "color": { "r": 0.3, "g": 0.3, "b": 0.3, "a": 1.0 }
+    "color": { "r": 0.3, "g": 0.3, "b": 0.3, "a": 0.0 }
   },
   "idlePage": {
     "name": "IdlePage"

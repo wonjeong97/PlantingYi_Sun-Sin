@@ -7,7 +7,7 @@ public class ButtonManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     [Header("Hover scale settings")]
     [SerializeField] private float hoverScale = 1.1f;      // 마우스 오버 시 목표 스케일(절대)
     [SerializeField] private float duration = 0.12f;       // 트윈 시간
-    [SerializeField] private AnimationCurve ease = null;   // 이징 커브
+    [SerializeField] private AnimationCurve ease;   // 이징 커브
 
     private Vector3 baseScale;
     private Coroutine tween;

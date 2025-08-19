@@ -22,16 +22,16 @@ public class YouthPage : BasePage<YouthSetting>
 
     protected override async Task BuildContentAsync()
     {
-        if (Setting.youthImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.youthImage, gameObject, CancellationToken.None);
+        if (setting.youthImage != null)
+            await UIManager.Instance.CreateImageAsync(setting.youthImage, gameObject, CancellationToken.None);
 
-        if (Setting.youthExplainImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.youthExplainImage, gameObject,
+        if (setting.youthExplainImage != null)
+            await UIManager.Instance.CreateImageAsync(setting.youthExplainImage, gameObject,
                 CancellationToken.None);
         
-        for (int i = 0; i < Setting.youthBtns.Length; i++)
+        for (int i = 0; i < setting.youthBtns.Length; i++)
         {
-            await WireButton(Setting.youthBtns[i], Setting.youthPopups[i], gameObject);
+            await WireButton(setting.youthBtns[i], setting.youthPopups[i], gameObject);
         }
     }
 }

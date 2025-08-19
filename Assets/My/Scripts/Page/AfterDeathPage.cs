@@ -22,15 +22,15 @@ public class AfterDeathPage : BasePage<AfterDeathSetting>
 
     protected override async Task BuildContentAsync()
     {
-        if (Setting.afterDeathImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.afterDeathImage, gameObject, CancellationToken.None);
+        if (setting.afterDeathImage != null)
+            await UIManager.Instance.CreateImageAsync(setting.afterDeathImage, gameObject, CancellationToken.None);
 
-        if (Setting.afterDeathExplainImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.afterDeathExplainImage, gameObject, CancellationToken.None);
+        if (setting.afterDeathExplainImage != null)
+            await UIManager.Instance.CreateImageAsync(setting.afterDeathExplainImage, gameObject, CancellationToken.None);
         
-        for (int i = 0; i < Setting.afterDeathBtns.Length; i++)
+        for (int i = 0; i < setting.afterDeathBtns.Length; i++)
         {
-            await WireButton(Setting.afterDeathBtns[i], Setting.afterDeathPopups[i], gameObject);
+            await WireButton(setting.afterDeathBtns[i], setting.afterDeathPopups[i], gameObject);
         }
     }
 }

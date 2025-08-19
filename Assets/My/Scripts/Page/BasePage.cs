@@ -10,10 +10,10 @@ using UnityEngine.UI;
 /// 제네릭으로 페이지별 Setting 타입을 지정하고,
 /// 공통 UI 생성 로직(배경, 뒤로가기, Idle 복귀 버튼 등)을 제공.
 /// </summary>
-/// <typeparam name="TSetting">각 페이지별 설정 데이터 클래스 타입</typeparam>
-public abstract class BasePage<TSetting> : MonoBehaviour, IUICreate where TSetting : class
+/// <typeparam name="T">각 페이지별 설정 데이터 클래스 타입</typeparam>
+public abstract class BasePage<T> : MonoBehaviour, IUICreate where T : class
 {
-    [NonSerialized] protected TSetting Setting; // 페이지별 설정 데이터
+    [NonSerialized] protected T setting; // 페이지별 설정 데이터
     [HideInInspector] public MenuPage menuPageInstance; // 메뉴 페이지 인스턴스 (뒤로가기 버튼에서 사용)
 
     protected abstract string JsonPath { get; } // 각 파생 페이지에서 JSON 경로만 지정
@@ -25,8 +25,8 @@ public abstract class BasePage<TSetting> : MonoBehaviour, IUICreate where TSetti
         try
         {
             // JSON 데이터 로드
-            Setting = JsonLoader.Instance.LoadJsonData<TSetting>(JsonPath);
-            if (Setting == null)
+            setting = JsonLoader.Instance.LoadJsonData<T>(JsonPath);
+            if (setting == null)
             {
                 Debug.LogError($"[{GetType().Name}] Settings not found at {JsonPath}");
                 return;
@@ -57,12 +57,12 @@ public abstract class BasePage<TSetting> : MonoBehaviour, IUICreate where TSetti
     public async Task CreateUI()
     {
         // 1) 배경 생성
-        var background = GetFieldOrProperty<ImageSetting>(Setting, "backgroundImage");
+        var background = GetFieldOrProperty<ImageSetting>(setting, "backgroundImage");
         if (background != null)
             await UIManager.Instance.CreateBackgroundImageAsync(background, gameObject, CancellationToken.None);
 
         // 2) 처음으로 버튼 (Idle 복귀)
-        var backToIdle = GetFieldOrProperty<ButtonSetting>(Setting, "backToIdleButton");
+        var backToIdle = GetFieldOrProperty<ButtonSetting>(setting, "backToIdleButton");
         if (backToIdle != null)
         {
             var created =
@@ -75,7 +75,7 @@ public abstract class BasePage<TSetting> : MonoBehaviour, IUICreate where TSetti
         }
 
         // 3) 뒤로가기 버튼 (메뉴 페이지 복귀)
-        var backButtonSetting = GetFieldOrProperty<ButtonSetting>(Setting, "backButton");
+        var backButtonSetting = GetFieldOrProperty<ButtonSetting>(setting, "backButton");
         if (backButtonSetting != null)
         {
             var created =

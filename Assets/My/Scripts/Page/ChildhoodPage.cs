@@ -25,14 +25,14 @@ public class ChildhoodPage : BasePage<ChildhoodSetting>
     protected override async Task BuildContentAsync()
     {
         // 페이지 전용 이미지
-        if (Setting.childhoodImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.childhoodImage, gameObject, CancellationToken.None);
-        if (Setting.childhoodExplainImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.childhoodExplainImage, gameObject, CancellationToken.None);
+        if (setting.childhoodImage != null)
+            await UIManager.Instance.CreateImageAsync(setting.childhoodImage, gameObject, CancellationToken.None);
+        if (setting.childhoodExplainImage != null)
+            await UIManager.Instance.CreateImageAsync(setting.childhoodExplainImage, gameObject, CancellationToken.None);
 
-        for (int i = 0; i < Setting.childhoodBtns.Length; i++)
+        for (int i = 0; i < setting.childhoodBtns.Length; i++)
         {
-            await WireButton(Setting.childhoodBtns[i], Setting.childhoodPopups[i], gameObject);
+            await WireButton(setting.childhoodBtns[i], setting.childhoodPopups[i], gameObject);
         }
     }
 }

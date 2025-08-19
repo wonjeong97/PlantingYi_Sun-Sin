@@ -23,7 +23,7 @@ public class WhatIsPage : BasePage<WhatIsSetting>
     protected override async Task BuildContentAsync()
     {
         videoPlayer = await UIManager.Instance.CreateVideoPlayerAsync(
-            Setting.video, gameObject, CancellationToken.None);
+            setting.video, gameObject, CancellationToken.None);
     }
 
     private void OnEnable()
