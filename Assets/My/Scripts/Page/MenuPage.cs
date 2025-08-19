@@ -10,29 +10,29 @@ public class MenuSetting
     public ImageSetting backgroundImage;
     public ButtonSetting backToIdleButton;
 
-    public ButtonSetting whatIsButton;       // ÇÃ·£ÆÃ ÀÌ¼ø½ÅÀÌ¶õ
-    public ButtonSetting childhoodButton;    // À¯³â
-    public ButtonSetting youthButton;        // Ã»³â
-    public ButtonSetting primeOfLifeButton;  // Àå³â
-    public ButtonSetting lastButton;         // ¸»³â
-    public ButtonSetting deathButton;        // Á×À½
-    public ButtonSetting afterDeathButton;   // »çÈÄ
+    public ButtonSetting whatIsButton;      // í”ŒëœíŒ… ì´ìˆœì‹ ì´ë€
+    public ButtonSetting childhoodButton;   // ìœ ë…„
+    public ButtonSetting youthButton;       // ì²­ë…„
+    public ButtonSetting primeOfLifeButton; // ì¥ë…„
+    public ButtonSetting lastButton;        // ë§ë…„
+    public ButtonSetting deathButton;       // ì£½ìŒ
+    public ButtonSetting afterDeathButton;  // ì‚¬í›„
 
-    public PageSetting whatIsPage;       // ÇÃ·£ÆÃ ÀÌ¼ø½ÅÀÌ¶õ ÆäÀÌÁö
-    public PageSetting childhoodPage;    // À¯³â ÆäÀÌÁö
-    public PageSetting youthPage;        // Ã»³â ÆäÀÌÁö
-    public PageSetting primeOfLifePage;  // Àå³â ÆäÀÌÁö    
-    public PageSetting lastPage;         // ¸»³â ÆäÀÌÁö
-    public PageSetting deathPage;        // Á×À½ ÆäÀÌÁö
-    public PageSetting afterDeathPage;   // »çÈÄ ÆäÀÌÁö
+    public PageSetting whatIsPage;          // í”ŒëœíŒ… ì´ìˆœì‹ ì´ë€ í˜ì´ì§€
+    public PageSetting childhoodPage;       // ìœ ë…„ í˜ì´ì§€
+    public PageSetting youthPage;           // ì²­ë…„ í˜ì´ì§€
+    public PageSetting primeOfLifePage;     // ì¥ë…„ í˜ì´ì§€    
+    public PageSetting lastPage;            // ë§ë…„ í˜ì´ì§€
+    public PageSetting deathPage;           // ì£½ìŒ í˜ì´ì§€
+    public PageSetting afterDeathPage;      // ì‚¬í›„ í˜ì´ì§€
 }
 
 public class MenuPage : BasePage<MenuSetting>
 {
-    // JSON °æ·Î
+    // JSON ê²½ë¡œ
     protected override string JsonPath => "JSON/MenuSetting.json";
 
-    // »ı¼ºÇØ µĞ ÇÏÀ§ ÆäÀÌÁö Ä³½Ã
+    // ìƒì„±í•´ ë‘” í•˜ìœ„ í˜ì´ì§€ ìºì‹œ
     private GameObject whatIsPage;
     private GameObject childhoodPage;
     private GameObject youthPage;
@@ -43,13 +43,13 @@ public class MenuPage : BasePage<MenuSetting>
 
     protected override async Task BuildContentAsync()
     {
-        // °¢ ³×ºñ°ÔÀÌ¼Ç ¹öÆ° »ı¼º ¹× ¿ÍÀÌ¾î¸µ
+        // ê° ë„¤ë¹„ê²Œì´ì…˜ ë²„íŠ¼ ìƒì„± ë° ì™€ì´ì–´ë§
         await WireNavButton(
-            Setting.whatIsButton,       // ¹öÆ° µ¥ÀÌÅÍ
-            () => whatIsPage,           // ÀÌ¹Ì »ı¼ºµÈ ÆäÀÌÁö¸¦ °¡Á®¿À´Â ÇÔ¼ö
-            go => whatIsPage = go,      // »ı¼ºµÈ ÆäÀÌÁö¸¦ ÀúÀåÇÏ´Â ÇÔ¼ö
-            Setting.whatIsPage,         // »ı¼ºÇÒ ÇÏÀ§ ÆäÀÌÁöÀÇ ¼³Á¤
-            pageGO =>                   // ÆäÀÌÁö »ı¼º ÈÄ Ãß°¡ ÀÛ¾÷
+            Setting.whatIsButton, // ë²„íŠ¼ ë°ì´í„°
+            () => whatIsPage, // ì´ë¯¸ ìƒì„±ëœ í˜ì´ì§€ë¥¼ ê°€ì ¸ì˜¤ëŠ” í•¨ìˆ˜
+            go => whatIsPage = go, // ìƒì„±ëœ í˜ì´ì§€ë¥¼ ì €ì¥í•˜ëŠ” í•¨ìˆ˜
+            Setting.whatIsPage, // ìƒì„±í•  í•˜ìœ„ í˜ì´ì§€ì˜ ì„¤ì •
+            pageGO => // í˜ì´ì§€ ìƒì„± í›„ ì¶”ê°€ ì‘ì—…
             {
                 var comp = pageGO.AddComponent<WhatIsPage>();
                 comp.menuPageInstance = this;
@@ -123,55 +123,68 @@ public class MenuPage : BasePage<MenuSetting>
     }
 
     /// <summary>
-    /// °øÅë ³×ºñ°ÔÀÌ¼Ç ¹öÆ° »ı¼º ¹× ÇÚµé·¯ ¿¬°á
-    /// 1) ¹öÆ° »ı¼º
-    /// 2) Å¬¸¯ ½Ã ÆäÀÌµå ¾Æ¿ô ¡æ º»ÀÎ ºñÈ°¼ºÈ­ ¡æ ÇÏÀ§ ÆäÀÌÁö »ı¼º/È°¼ºÈ­ ¡æ ÆäÀÌµå ÀÎ
+    /// ê³µí†µ ë„¤ë¹„ê²Œì´ì…˜ ë²„íŠ¼ ìƒì„± ë° í•¸ë“¤ëŸ¬ ì—°ê²°
+    /// 1) ë²„íŠ¼ ìƒì„±
+    /// 2) í´ë¦­ ì‹œ í˜ì´ë“œ ì•„ì›ƒ â†’ ë³¸ì¸ ë¹„í™œì„±í™” â†’ í•˜ìœ„ í˜ì´ì§€ ìƒì„±/í™œì„±í™” â†’ í˜ì´ë“œ ì¸
     /// </summary>
     private async Task WireNavButton(
-        ButtonSetting buttonSetting,        // ¹öÆ° ¼¼ÆÃ µ¥ÀÌÅÍ
-        Func<GameObject> getCache,          // ÀÌ¹Ì »ı¼ºµÈ ÆäÀÌÁö¸¦ °¡Á®¿À´Â ÇÔ¼ö
-        Action<GameObject> setCache,        // »ı¼ºµÈ ÆäÀÌÁö¸¦ ÀúÀåÇÏ´Â ÇÔ¼ö
-        PageSetting targetPageSetting,      // »ı¼ºÇÒ ÇÏÀ§ ÆäÀÌÁöÀÇ ¼³Á¤
-        Action<GameObject> onCreatedAttach) // ÆäÀÌÁö »ı¼º ÈÄ Ãß°¡ ÀÛ¾÷
+        ButtonSetting buttonSetting, // ë²„íŠ¼ ì„¸íŒ… ë°ì´í„°
+        Func<GameObject> getCache, // ì´ë¯¸ ìƒì„±ëœ í˜ì´ì§€ë¥¼ ê°€ì ¸ì˜¤ëŠ” í•¨ìˆ˜
+        Action<GameObject> setCache, // ìƒì„±ëœ í˜ì´ì§€ë¥¼ ì €ì¥í•˜ëŠ” í•¨ìˆ˜
+        PageSetting targetPageSetting, // ìƒì„±í•  í•˜ìœ„ í˜ì´ì§€ì˜ ì„¤ì •
+        Action<GameObject> onCreatedAttach) // í˜ì´ì§€ ìƒì„± í›„ ì¶”ê°€ ì‘ì—…
     {
-        // ¹öÆ° ¶Ç´Â ÆäÀÌÁö ¼³Á¤ÀÌ ¾øÀ¸¸é µ¿ÀÛ ¾È ÇÔ
         if (buttonSetting == null || targetPageSetting == null) return;
 
-        // UIManager¸¦ ÅëÇØ ¹öÆ° »ı¼º
+        // UIManagerë¥¼ í†µí•´ ë²„íŠ¼ ìƒì„±
         var createdBtn = await UIManager.Instance.CreateSingleButtonAsync(
-            buttonSetting, gameObject, default(CancellationToken));
+            buttonSetting, gameObject, CancellationToken.None);
 
         var btnGO = createdBtn.button;
         if (btnGO != null && btnGO.TryGetComponent<Button>(out var btn))
         {
-            // ¹öÆ° Å¬¸¯ ÀÌº¥Æ® µî·Ï
-            btn.onClick.AddListener(async () =>
-            {
-                // 1) ÆäÀÌµå ¾Æ¿ô ¹× ¸Ş´º ºñÈ°¼ºÈ­
-                await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                gameObject.SetActive(false);
+            // ë²„íŠ¼ í´ë¦­ ì´ë²¤íŠ¸ ë“±ë¡ (fire-and-forget íŒ¨í„´)
+            btn.onClick.AddListener(() => _ = HandleNavButtonClickedAsync(
+                getCache, setCache, targetPageSetting, onCreatedAttach));
+        }
+    }
 
-                // 2) ÆäÀÌÁö »ı¼º or ÀçÈ°¼ºÈ­
-                var cached = getCache();
-                if (cached == null)
+    /// <summary>
+    /// ë„¤ë¹„ê²Œì´ì…˜ ë²„íŠ¼ í´ë¦­ ì‹œ ì‹¤í–‰ë˜ëŠ” ì²˜ë¦¬
+    /// </summary>
+    private async Task HandleNavButtonClickedAsync(
+        Func<GameObject> getCache,
+        Action<GameObject> setCache,
+        PageSetting targetPageSetting,
+        Action<GameObject> onCreatedAttach)
+    {
+        try
+        {
+            // 1) í˜ì´ë“œ ì•„ì›ƒ ë° ë©”ë‰´ ë¹„í™œì„±í™”
+            await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.settings.fadeTime, true);
+            gameObject.SetActive(false);
+
+            // 2) í˜ì´ì§€ ìƒì„± or ì¬í™œì„±í™”
+            var cached = getCache();
+            if (cached == null)
+            {
+                GameObject parent = UIManager.Instance.mainBackground;
+                var pageGO = await UIManager.Instance.CreatePageAsync(targetPageSetting, parent);
+                if (pageGO != null)
                 {
-                    // ÆäÀÌÁö°¡ ¾ÆÁ÷ ¾øÀ¸¸é »õ·Î »ı¼º
-                    GameObject parent = UIManager.Instance.mainBackground;
-                    var pageGO = await UIManager.Instance.CreatePageAsync(targetPageSetting, parent);
-                    if (pageGO != null)
-                    {
-                        // »ı¼º Á÷ÈÄ Ãß°¡ ÀÛ¾÷ ½ÇÇà (ÄÄÆ÷³ÍÆ® ºÎÂø µî)
-                        onCreatedAttach?.Invoke(pageGO);
-                        setCache(pageGO); // Ä³½Ã¿¡ ÀúÀå
-                    }
+                    onCreatedAttach?.Invoke(pageGO);
+                    setCache(pageGO);
                 }
-                else
-                {
-                    // ÀÌ¹Ì »ı¼ºµÈ ÆäÀÌÁö¸é ´Ù½Ã È°¼ºÈ­
-                    cached.SetActive(true);
-                    await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                }
-            });
+            }
+            else
+            {
+                cached.SetActive(true);
+                await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.settings.fadeTime, true);
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"[MenuPage] Navigation button click failed: {e}");
         }
     }
 }

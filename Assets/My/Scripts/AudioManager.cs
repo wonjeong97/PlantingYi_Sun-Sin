@@ -35,15 +35,15 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// JSON(Settings.sounds) ±âÁØÀ¸·Î StreamingAssets/Audio¿¡¼­ »ç¿îµå »çÀü ·Îµù.
-    /// WAV/OGG/MP3 È®ÀåÀÚ ÀÚµ¿ ÆÇº°.
+    /// JSON(Settings.sounds) ê¸°ì¤€ìœ¼ë¡œ StreamingAssets/Audioì—ì„œ ì‚¬ìš´ë“œ ì‚¬ì „ ë¡œë”©.
+    /// WAV/OGG/MP3 í™•ì¥ì ìë™ íŒë³„.
     /// </summary>
     private IEnumerator LoadSoundsFromSettings()
     {   
         soundMap.Clear();
         soundVolumeMap.Clear();
 
-        var settings = JsonLoader.Instance.Settings;
+        var settings = JsonLoader.Instance.settings;
         if (settings == null || settings.sounds == null) yield break;
 
         foreach (var entry in settings.sounds)
@@ -75,7 +75,7 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// °£´Ü Àç»ı API: Å°·Î µî·ÏµÈ Å¬¸³À» PlayOneShot.
+    /// ê°„ë‹¨ ì¬ìƒ API: í‚¤ë¡œ ë“±ë¡ëœ í´ë¦½ì„ PlayOneShot.
     /// </summary>
     public bool Play(string key, float? volumeOverride = null)
     {
@@ -85,7 +85,8 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning($"[AudioManager] Key not found: {key}");
             return false;
         }
-        float vol = volumeOverride ?? (soundVolumeMap.TryGetValue(key, out var v) ? v : 1f);
+
+        float vol = volumeOverride ?? soundVolumeMap.GetValueOrDefault(key, 1f);
         sfxSource.PlayOneShot(clip, Mathf.Clamp01(vol));
         return true;
     }

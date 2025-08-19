@@ -5,9 +5,9 @@ using UnityEngine.Video;
 public class ButtonManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("Hover scale settings")]
-    [SerializeField] private float hoverScale = 1.1f;      // ¸¶¿ì½º ¿À¹ö ½Ã ¸ñÇ¥ ½ºÄÉÀÏ(Àı´ë)
-    [SerializeField] private float duration = 0.12f;       // Æ®À© ½Ã°£
-    [SerializeField] private AnimationCurve ease = null;   // ÀÌÂ¡ Ä¿ºê
+    [SerializeField] private float hoverScale = 1.1f;      // ë§ˆìš°ìŠ¤ ì˜¤ë²„ ì‹œ ëª©í‘œ ìŠ¤ì¼€ì¼(ì ˆëŒ€)
+    [SerializeField] private float duration = 0.12f;       // íŠ¸ìœˆ ì‹œê°„
+    [SerializeField] private AnimationCurve ease = null;   // ì´ì§• ì»¤ë¸Œ
 
     private Vector3 baseScale;
     private Coroutine tween;
@@ -16,7 +16,7 @@ public class ButtonManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private void Awake()
     {
         if (ease == null) ease = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
-        baseScale = transform.localScale; // ÃÊ±â ½ºÄÉÀÏ º¹¿ø¿ë
+        baseScale = transform.localScale;   // ì´ˆê¸° ìŠ¤ì¼€ì¼ ë³µì›ìš©
         videoPlayer = GetComponent<VideoPlayer>();
     }
 
@@ -27,7 +27,7 @@ public class ButtonManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        ScaleTo(Vector3.one); // 1.0À¸·Î º¹±Í
+        ScaleTo(Vector3.one); // 1.0ìœ¼ë¡œ ë³µê·€
     }
 
     private void ScaleTo(Vector3 target)
@@ -65,6 +65,6 @@ public class ButtonManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private void OnDisable()
     {
         if (tween != null) StopCoroutine(tween);
-        transform.localScale = baseScale; // ºñÈ°¼ºÈ­ ½Ã ¿ø·¡ ½ºÄÉÀÏ·Î º¹¿ø
+        transform.localScale = baseScale; // ë¹„í™œì„±í™” ì‹œ ì›ë˜ ìŠ¤ì¼€ì¼ë¡œ ë³µì›
     }
 }

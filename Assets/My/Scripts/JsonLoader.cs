@@ -5,40 +5,44 @@ using UnityEngine;
 
 public class JsonLoader : MonoBehaviour
 {
-    [NonSerialized] public Settings Settings;
+    [NonSerialized] public Settings settings;
 
-    private static JsonLoader _instance;
+    private static JsonLoader instance;
     public static JsonLoader Instance
     {
         get
         {
-            if (_instance == null)
+            if (ReferenceEquals(instance, null))
             {
-                _instance = FindFirstObjectByType<JsonLoader>() ?? new GameObject("JsonLoader").AddComponent<JsonLoader>();
+                instance = FindFirstObjectByType<JsonLoader>() 
+                            ?? new GameObject("JsonLoader").AddComponent<JsonLoader>();
             }
-            return _instance;
+            return instance;
         }
     }
 
     private void Awake()
     {
-        if (_instance == null)
+        if (instance == null)
         {
-            _instance = this;
+            instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else if (_instance != this)
+        else if (instance != this)
         {
             Destroy(gameObject);
             return;
         }
 
-        Settings = LoadJsonData<Settings>("Settings.json");
+        settings = LoadJsonData<Settings>("Settings.json");
     }
 
     private void Start()
     {
-        if (Settings == null) return;
+        if (settings == null)
+        {
+            Debug.LogError($"[JsonLoader] Settings is null.]");
+        }
     }
 
     public T LoadJsonData<T>(string fileName)

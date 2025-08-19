@@ -13,26 +13,26 @@ public class VideoManager : MonoBehaviour
     private void Awake()
     {
         if (Instance == null) Instance = this;
-        else if (Instance != this) { Destroy(gameObject); return; }
+        else if (Instance != this) { Destroy(gameObject); }
     }
 
     /// <summary>
-    /// StreamingAssets »ó´ë °æ·Î¸¦ file:/// Àı´ë URL·Î º¯È¯
-    /// ¿¹: "Video/Test/TestVideo.webm" -> "file:///D:/.../StreamingAssets/Video/Test/TestVideo.webm"
+    /// StreamingAssets ìƒëŒ€ ê²½ë¡œë¥¼ file:/// ì ˆëŒ€ URLë¡œ ë³€í™˜
+    /// ì˜ˆ: "Video/Test/TestVideo.webm" -> "file:///D:/.../StreamingAssets/Video/Test/TestVideo.webm"
     /// </summary>
-    public string BuildStreamingUrl(string relative)
+    private string BuildStreamingUrl(string relative)
     {
         var fullPath = Path.Combine(Application.streamingAssetsPath, relative).Replace("\\", "/");
         return new Uri(fullPath).AbsoluteUri;
     }
 
     /// <summary>
-    /// ÇöÀç ·±Å¸ÀÓ¿¡¼­ webm Àç»ı °¡´É¼ºÀÌ ³ôÀºÁö º¸¼öÀûÀ¸·Î ÆÇ´Ü
-    /// - Windows(Editor/Player): false (Media Foundation °æ·Î¿¡¼­ webm ¹®Á¦ ÀæÀ½)
-    /// - Android, Linux: true (´ëÃ¼·Î °¡´É. ´Ü, µğ¹ÙÀÌ½º/ÄÚµ¦¿¡ µû¶ó Â÷ÀÌ)
-    /// - ±× ¿Ü: º¸¼öÀûÀ¸·Î false
+    /// í˜„ì¬ ëŸ°íƒ€ì„ì—ì„œ webm ì¬ìƒ ê°€ëŠ¥ì„±ì´ ë†’ì€ì§€ ë³´ìˆ˜ì ìœ¼ë¡œ íŒë‹¨
+    /// - Windows(Editor/Player): false (Media Foundation ê²½ë¡œì—ì„œ webm ë¬¸ì œ ì¦ìŒ)
+    /// - Android, Linux: true (ëŒ€ì²´ë¡œ ê°€ëŠ¥. ë‹¨, ë””ë°”ì´ìŠ¤/ì½”ë±ì— ë”°ë¼ ì°¨ì´)
+    /// - ê·¸ ì™¸: ë³´ìˆ˜ì ìœ¼ë¡œ false
     /// </summary>
-    public bool IsWebmLikelySupported()
+    private bool IsWebmLikelySupported()
     {
 #if UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN
         return false;
@@ -44,42 +44,42 @@ public class VideoManager : MonoBehaviour
     }
 
     /// <summary>
-    /// »ó´ë °æ·Î(´ë°³ .webm)¸¦ ¹Ş¾Æ, ·±Å¸ÀÓÀÌ webmÀ» ¸ø µ¹¸± °Í °°À¸¸é .mp4·Î ´ëÃ¼ ½Ãµµ
+    /// ìƒëŒ€ ê²½ë¡œ(ëŒ€ê°œ .webm)ë¥¼ ë°›ì•„, ëŸ°íƒ€ì„ì´ webmì„ ëª» ëŒë¦´ ê²ƒ ê°™ìœ¼ë©´ .mp4ë¡œ ëŒ€ì²´ ì‹œë„
     /// </summary>
     public string ResolvePlayableUrl(string relativePathPossiblyWebm)
     {
-        // webm ¾Æ´Ï¸é ±×´ë·Î
+        // webm ì•„ë‹ˆë©´ ê·¸ëŒ€ë¡œ
         if (!relativePathPossiblyWebm.EndsWith(".webm", StringComparison.OrdinalIgnoreCase))
             return BuildStreamingUrl(relativePathPossiblyWebm);
 
-        // webm Áö¿ø OK ¡æ ±×´ë·Î
+        // webm ì§€ì› OK â†’ ê·¸ëŒ€ë¡œ
         if (IsWebmLikelySupported())
             return BuildStreamingUrl(relativePathPossiblyWebm);
 
-        // webm Áö¿ø X ¡æ °°Àº ÀÌ¸§ÀÇ mp4°¡ ÀÖÀ¸¸é ±×°É·Î ´ëÃ¼
+        // webm ì§€ì› X â†’ ê°™ì€ ì´ë¦„ì˜ mp4ê°€ ìˆìœ¼ë©´ ê·¸ê±¸ë¡œ ëŒ€ì²´
         var mp4Relative = Path.ChangeExtension(relativePathPossiblyWebm, ".mp4");
 
-        // ÁÖÀÇ: Android¿¡¼± File.Exists·Î StreamingAssets È®ÀÎÀÌ ºÒ°¡.
-        // µû¶ó¼­ ¿¡µğÅÍ/À©µµ¿ì¿¡¼­¸¸ ½ÇÁ¦ ÆÄÀÏ Ã¼Å©. (¿¡µğÅÍ/À©µµ¿ì¿¡¼­¸¸ Æú¹éÀÌ ÇÊ¿äÇÏ¹Ç·Î ÃæºĞ)
+        // ì£¼ì˜: Androidì—ì„  File.Existsë¡œ StreamingAssets í™•ì¸ì´ ë¶ˆê°€.
+        // ë”°ë¼ì„œ ì—ë””í„°/ìœˆë„ìš°ì—ì„œë§Œ ì‹¤ì œ íŒŒì¼ ì²´í¬. (ì—ë””í„°/ìœˆë„ìš°ì—ì„œë§Œ í´ë°±ì´ í•„ìš”í•˜ë¯€ë¡œ ì¶©ë¶„)
 #if UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN
         var mp4Full = Path.Combine(Application.streamingAssetsPath, mp4Relative).Replace("\\", "/");
         if (File.Exists(mp4Full))
             return BuildStreamingUrl(mp4Relative);
 #endif
 
-        // ´ëÃ¼ ½ÇÆĞ ¡æ ¿øº» webm URL ±×´ë·Î(¿¡·¯°¡ ³ª´õ¶óµµ ·Î±ëÀ¸·Î È®ÀÎ)
+        // ëŒ€ì²´ ì‹¤íŒ¨ â†’ ì›ë³¸ webm URL ê·¸ëŒ€ë¡œ(ì—ëŸ¬ê°€ ë‚˜ë”ë¼ë„ ë¡œê¹…ìœ¼ë¡œ í™•ì¸)
         return BuildStreamingUrl(relativePathPossiblyWebm);
     }
     void OnError(VideoPlayer src, string msg) => Debug.LogError($"[VideoPlayer] error: {msg}");
     void OnPrepared(VideoPlayer src) { }
 
     /// <summary>
-    /// VideoPlayer ÁØºñ ÈÄ Àç»ı. ½ÇÆĞ ½Ã false ¹İÈ¯. (Å¸ÀÓ¾Æ¿ô/Ãë¼Ò ÅäÅ«/¿¡·¯ ÀÌº¥Æ® Ã³¸® Æ÷ÇÔ)
+    /// VideoPlayer ì¤€ë¹„ í›„ ì¬ìƒ. ì‹¤íŒ¨ ì‹œ false ë°˜í™˜. (íƒ€ì„ì•„ì›ƒ/ì·¨ì†Œ í† í°/ì—ëŸ¬ ì´ë²¤íŠ¸ ì²˜ë¦¬ í¬í•¨)
     /// </summary>
     public async Task<bool> PrepareAndPlayAsync(
         VideoPlayer vp,
         string url,
-        AudioSource audio,
+        AudioSource audioSource,
         float volume,
         CancellationToken token,
         double timeoutSeconds = 10.0)
@@ -96,10 +96,10 @@ public class VideoManager : MonoBehaviour
 
             vp.audioOutputMode = VideoAudioOutputMode.AudioSource;
             vp.EnableAudioTrack(0, true);
-            vp.SetTargetAudioSource(0, audio);
-            audio.playOnAwake = false;
-            audio.loop = true;
-            audio.volume = Mathf.Clamp01(volume);
+            vp.SetTargetAudioSource(0, audioSource);
+            audioSource.playOnAwake = false;
+            audioSource.loop = true;
+            audioSource.volume = Mathf.Clamp01(volume);
 
             vp.Prepare();
 
@@ -116,38 +116,38 @@ public class VideoManager : MonoBehaviour
             }
 
             vp.Play();
-            if (audio.volume > 0f) audio.Play();
+            if (audioSource.volume > 0f) audioSource.Play();
             return true;
         }
         finally
         {
-            // ÀÌº¥Æ® Áßº¹ µî·Ï ¹æÁö
+            // ì´ë²¤íŠ¸ ì¤‘ë³µ ë“±ë¡ ë°©ì§€
             vp.errorReceived -= OnError;
             vp.prepareCompleted -= OnPrepared;
         }
     }
 
     /// <summary>
-    /// RawImage + VideoPlayer Á¶ÇÕ¿¡¼­ ¹öÆ° Å©±â¿¡ ¸Â´Â RenderTexture¸¦ »ı¼º/¿¬°á
-    /// ¹İÈ¯°ª: »ı¼ºÇÑ RenderTexture (ÇÊ¿ä½Ã ÇØÁ¦ Ã¥ÀÓÀº È£ÃâÀÚ È¤Àº ÆÄ±« ½ÃÁ¡¿¡¼­ Ã³¸®)
+    /// RawImage + VideoPlayer ì¡°í•©ì—ì„œ ë²„íŠ¼ í¬ê¸°ì— ë§ëŠ” RenderTextureë¥¼ ìƒì„±/ì—°ê²°
+    /// ë°˜í™˜ê°’: ìƒì„±í•œ RenderTexture (í•„ìš”ì‹œ í•´ì œ ì±…ì„ì€ í˜¸ì¶œì í˜¹ì€ íŒŒê´´ ì‹œì ì—ì„œ ì²˜ë¦¬)
     /// </summary>
     public RenderTexture WireRawImageAndRenderTexture(VideoPlayer vp, UnityEngine.UI.RawImage raw, Vector2Int size)
     {
         int rtW = Mathf.Max(2, size.x);
         int rtH = Mathf.Max(2, size.y);
-        var rtex = new RenderTexture(rtW, rtH, 0);
-        rtex.Create();
+        var rTex = new RenderTexture(rtW, rtH, 0);
+        rTex.Create();
 
         vp.renderMode = VideoRenderMode.RenderTexture;
-        vp.targetTexture = rtex;
-        if (raw) raw.texture = rtex;
+        vp.targetTexture = rTex;
+        if (raw) raw.texture = rTex;
 
-        return rtex;
+        return rTex;
     }
 
     public IEnumerator RestartFromStart(VideoPlayer vp)
     {
-        // ¼Ò½º°¡ ¾øÀ¸¸é Á¶±â Á¾·á
+        // ì†ŒìŠ¤ê°€ ì—†ìœ¼ë©´ ì¡°ê¸° ì¢…ë£Œ
         if (vp.clip == null && string.IsNullOrEmpty(vp.url))
         {
             Debug.LogWarning("[VideoPlayerManager] No clip/url set on VideoPlayer.");
@@ -160,11 +160,11 @@ public class VideoManager : MonoBehaviour
 
         vp.time = 0.0;
 
-        try { vp.frame = 0; } catch { /* ÇÃ·§Æû/¼Ò½º¿¡ µû¶ó ¿¹¿Ü ¹«½Ã */ }
+        try { vp.frame = 0; } catch { /* í”Œë«í¼/ì†ŒìŠ¤ì— ë”°ë¼ ì˜ˆì™¸ ë¬´ì‹œ */ }
 
         vp.Play();
 
-        // (¼±ÅÃ) Ã¹ ÇÁ·¹ÀÓÀÌ ½ÇÁ¦·Î Ç¥½ÃµÉ ¶§±îÁö Àá±ñ ´ë±âÇÏ°í ½Í´Ù¸é:
+        // (ì„ íƒ) ì²« í”„ë ˆì„ì´ ì‹¤ì œë¡œ í‘œì‹œë  ë•Œê¹Œì§€ ì ê¹ ëŒ€ê¸°í•˜ê³  ì‹¶ë‹¤ë©´:
         // while (!vp.isPlaying) yield return null;
         // yield return new WaitForEndOfFrame();
     }

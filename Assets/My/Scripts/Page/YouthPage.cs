@@ -13,22 +13,22 @@ public class YouthSetting
     public ImageSetting youthExplainImage;
 
     public ButtonSetting[] youthBtns;
-    public PopupSetting[] youthPopups;   
+    public PopupSetting[] youthPopups;
 }
+
 public class YouthPage : BasePage<YouthSetting>
 {
     protected override string JsonPath => "JSON/YouthSetting.json";
 
     protected override async Task BuildContentAsync()
     {
-        // 페이지 전용 이미지
         if (Setting.youthImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.youthImage, gameObject, default(CancellationToken));
+            await UIManager.Instance.CreateImageAsync(Setting.youthImage, gameObject, CancellationToken.None);
 
         if (Setting.youthExplainImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.youthExplainImage, gameObject, default(CancellationToken));
-
-        // 페이지 전용 버튼들
+            await UIManager.Instance.CreateImageAsync(Setting.youthExplainImage, gameObject,
+                CancellationToken.None);
+        
         for (int i = 0; i < Setting.youthBtns.Length; i++)
         {
             await WireButton(Setting.youthBtns[i], Setting.youthPopups[i], gameObject);

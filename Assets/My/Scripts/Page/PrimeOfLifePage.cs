@@ -22,14 +22,12 @@ public class PrimeOfLifePage : BasePage<PrimeOfLifeSetting>
 
     protected override async Task BuildContentAsync()
     {
-        // 전용 이미지
         if (Setting.primeOfLifeImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.primeOfLifeImage, gameObject, default(CancellationToken));
+            await UIManager.Instance.CreateImageAsync(Setting.primeOfLifeImage, gameObject, CancellationToken.None);
 
         if (Setting.primeOfLifeExplainImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.primeOfLifeExplainImage, gameObject, default(CancellationToken));
-
-        // 전용 버튼들
+            await UIManager.Instance.CreateImageAsync(Setting.primeOfLifeExplainImage, gameObject, CancellationToken.None);
+        
         for (int i = 0; i < Setting.primeOfLifeBtns.Length; i++)
         {
             await WireButton(Setting.primeOfLifeBtns[i], Setting.primeOfLifePopups[i], gameObject);

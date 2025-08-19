@@ -17,46 +17,55 @@ public class IdlePage : BasePage<IdleSetting>
 {
     private GameObject menuPageObject;
 
-    // JSON °æ·Î
-    protected override string JsonPath => "JSON/IdleSetting.json";   
+    // JSON ê²½ë¡œ
+    protected override string JsonPath => "JSON/IdleSetting.json";
 
-    // ÆäÀÌÁö Àü¿ë ÄÜÅÙÃ÷(Å¸ÀÌÆ² ÅØ½ºÆ®, ½ÃÀÛ ¹öÆ°)¸¸ ±¸¼º
+    // í˜ì´ì§€ ì „ìš© ì½˜í…ì¸ (íƒ€ì´í‹€ í…ìŠ¤íŠ¸, ì‹œì‘ ë²„íŠ¼)ë§Œ êµ¬ì„±
     protected override async Task BuildContentAsync()
     {
-        // Å¸ÀÌÆ² ÅØ½ºÆ® »ı¼º
+        // íƒ€ì´í‹€ í…ìŠ¤íŠ¸ ìƒì„±
         await UIManager.Instance.CreateSingleTextAsync(
-            Setting.titleText, gameObject, default(CancellationToken));
+            Setting.titleText, gameObject, CancellationToken.None);
 
-        // ½ÃÀÛ ¹öÆ° »ı¼º
+        // ì‹œì‘ ë²„íŠ¼ ìƒì„±
         var created = await UIManager.Instance.CreateSingleButtonAsync(
-            Setting.startButton, gameObject, default(CancellationToken));
+            Setting.startButton, gameObject, CancellationToken.None);
 
-        // »ı¼ºµÈ ¿ÀºêÁ§Æ® Áß button ¿ÀºêÁ§Æ®¸¸ °¡Á®¿È
+        // ìƒì„±ëœ ì˜¤ë¸Œì íŠ¸ ì¤‘ button ì˜¤ë¸Œì íŠ¸ë§Œ ê°€ì ¸ì˜´
         var startGO = created.button;
         if (startGO != null && startGO.TryGetComponent<Button>(out var startBtn))
         {
-            startBtn.onClick.AddListener(async () =>
-            {
-                // ÆäÀÌµå ¾Æ¿ô ÈÄ IdlePage ºñÈ°¼ºÈ­
-                await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                gameObject.SetActive(false);
+            startBtn.onClick.AddListener(() => { _ = HandleStartButtonClickedAsync(); });
+        }
+    }
 
-                if (menuPageObject == null)
+    private async Task HandleStartButtonClickedAsync()
+    {
+        try
+        {
+            // í˜ì´ë“œ ì•„ì›ƒ í›„ IdlePage ë¹„í™œì„±í™”
+            await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.settings.fadeTime, true);
+            gameObject.SetActive(false);
+
+            if (menuPageObject == null)
+            {
+                // ë©”ë‰´ í˜ì´ì§€ ìƒì„± ë° í‘œì‹œ
+                GameObject parent = UIManager.Instance.mainBackground;
+                menuPageObject = await UIManager.Instance.CreatePageAsync(Setting.menuPage, parent);
+                if (menuPageObject != null)
                 {
-                    // ¸Ş´º ÆäÀÌÁö »ı¼º ¹× Ç¥½Ã
-                    GameObject parent = UIManager.Instance.mainBackground;
-                    menuPageObject = await UIManager.Instance.CreatePageAsync(Setting.menuPage, parent);
-                    if (menuPageObject != null)
-                    {
-                        menuPageObject.AddComponent<MenuPage>();
-                    }
+                    menuPageObject.AddComponent<MenuPage>();
                 }
-                else
-                {
-                    menuPageObject.SetActive(true);
-                    await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                }                
-            });
+            }
+            else
+            {
+                menuPageObject.SetActive(true);
+                await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.settings.fadeTime, true);
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"[IdlePage] Start Button Click failed: {e}");
         }
     }
 }

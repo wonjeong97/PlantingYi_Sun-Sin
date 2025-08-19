@@ -22,14 +22,12 @@ public class AfterDeathPage : BasePage<AfterDeathSetting>
 
     protected override async Task BuildContentAsync()
     {
-        // 전용 이미지
         if (Setting.afterDeathImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.afterDeathImage, gameObject, default(CancellationToken));
+            await UIManager.Instance.CreateImageAsync(Setting.afterDeathImage, gameObject, CancellationToken.None);
 
         if (Setting.afterDeathExplainImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.afterDeathExplainImage, gameObject, default(CancellationToken));
+            await UIManager.Instance.CreateImageAsync(Setting.afterDeathExplainImage, gameObject, CancellationToken.None);
         
-        // 전용 버튼들
         for (int i = 0; i < Setting.afterDeathBtns.Length; i++)
         {
             await WireButton(Setting.afterDeathBtns[i], Setting.afterDeathPopups[i], gameObject);

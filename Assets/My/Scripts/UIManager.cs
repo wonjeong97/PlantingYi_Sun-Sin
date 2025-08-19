@@ -22,19 +22,12 @@ public class UIManager : MonoBehaviour
 
     private CancellationTokenSource cts;
 
-    // Addressables.InstantiateAsync로 만든 동적 오브젝트 추적
+    // Addressable.InstantiateAsync로 만든 동적 오브젝트 추적
     private readonly List<GameObject> addrInstances = new List<GameObject>();
 
     private Settings jsonSetting;
 
-    public Settings JsonSetting
-    {
-        get => jsonSetting;
-        private set => jsonSetting = value;
-    }
-
     [HideInInspector] public GameObject mainBackground;
-
 
     private void Awake()
     {
@@ -43,38 +36,36 @@ public class UIManager : MonoBehaviour
             Instance = this;
             //DontDestroyOnLoad(gameObject);
 
-            cts = new CancellationTokenSource();            
+            cts = new CancellationTokenSource();
         }
         else if (Instance != this)
         {
             Destroy(gameObject);
-            return;
         }
     }
 
     private async void Start()
     {
-        if (JsonLoader.Instance.Settings == null)
+        try
         {
-            Debug.LogError("[UIManager] Settings are not loaded yet.");
-            return;
+            if (JsonLoader.Instance.settings == null)
+            {
+                Debug.LogError("[UIManager] Settings are not loaded yet.");
+                return;
+            }
+
+            jsonSetting = JsonLoader.Instance.settings;
+            inactivityThreshold = jsonSetting.inactivityTime;
+
+            await InitUI();
         }
-        else
+        catch (OperationCanceledException)
         {
-            JsonSetting = JsonLoader.Instance.Settings;
-            inactivityThreshold = JsonSetting.inactivityTime;
-            try
-            {
-                await InitUI();
-            }
-            catch (OperationCanceledException)
-            {
-                Debug.LogWarning("[UIManager] UI initialization canceled.");
-            }
-            catch (Exception e)
-            {
-                Debug.LogError($"[UIManager] UI initialization failed: {e}");
-            }
+            Debug.LogWarning("[UIManager] UI initialization canceled.");
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"[UIManager] UI initialization failed: {e}");
         }
     }
 
@@ -88,7 +79,7 @@ public class UIManager : MonoBehaviour
             if (inactivityTimer >= inactivityThreshold)
             {
                 inactivityTimer = 0f;
-                ShowIdlePageOnly();
+                _ = ShowIdlePageOnly();
             }
 
             if (Input.anyKeyDown || Input.touchCount > 0 || Input.GetMouseButtonDown(0))
@@ -100,11 +91,19 @@ public class UIManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        try { cts?.Cancel(); } catch { }
+        try
+        {
+            cts?.Cancel();
+        }
+        catch (Exception e)
+        {
+            Debug.LogWarning($"[UIManager] Failed to cancel token: {e}");
+        }
+
         cts?.Dispose();
         cts = null;
 
-        // 생성했던 Addressables 인스턴스 정리
+        // 생성했던 Addressable 인스턴스 정리
         for (int i = addrInstances.Count - 1; i >= 0; --i)
         {
             var go = addrInstances[i];
@@ -113,18 +112,19 @@ public class UIManager : MonoBehaviour
                 Addressables.ReleaseInstance(go);
             }
         }
+
         addrInstances.Clear();
     }
 
-    public async Task InitUI(CancellationToken token = default)
+    private async Task InitUI(CancellationToken token = default)
     {
         var ct = MergeToken(token);
 
         try
         {
             GameObject canvas = await CreateCanvasAsync(ct);
-            mainBackground = await CreateBackgroundImageAsync(JsonSetting.mainBackground, canvas, ct);
-            idlePage = await CreatePageAsync(JsonSetting.idlePage, mainBackground, ct);
+            mainBackground = await CreateBackgroundImageAsync(jsonSetting.mainBackground, canvas, ct);
+            idlePage = await CreatePageAsync(jsonSetting.idlePage, mainBackground, ct);
             if (idlePage != null)
             {
                 idlePage.AddComponent<IdlePage>();
@@ -145,50 +145,60 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// IdlePage를 제외한 모든 페이지를 비활성화함
     /// </summary>
-    public async void ShowIdlePageOnly()
+    public async Task ShowIdlePageOnly()
     {
         if (mainBackground == null || idlePage == null)
         {
             Debug.LogWarning("[UIManager] mainBackground or idlePage is not initialized.");
             return;
-        }            
-
-        await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
-
-        // mainBackground 하위의 모든 Page를 비활성화
-        foreach (Transform child in mainBackground.transform)
-        {
-            child.gameObject.SetActive(false);
         }
 
-        // IdlePage만 다시 활성화
-        idlePage.SetActive(true);
-        await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
+        try
+        {
+            await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.settings.fadeTime, true);
+
+            // mainBackground 하위의 모든 Page를 비활성화
+            foreach (Transform child in mainBackground.transform)
+            {
+                child.gameObject.SetActive(false);
+            }
+
+            // IdlePage만 다시 활성화
+            idlePage.SetActive(true);
+            await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.settings.fadeTime, true);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"[UIManager] ShowIdlePageOnly failed: {e}");
+        }
     }
 
     #region Public API
-    public Task<GameObject> CreatePopupAsync(PopupSetting setting, GameObject parent, UnityAction<GameObject> onClose = null, CancellationToken token = default)
+
+    public Task<GameObject> CreatePopupAsync(PopupSetting setting, GameObject parent,
+        UnityAction<GameObject> onClose = null, CancellationToken token = default)
         => CreatePopupInternalAsync(setting, parent, onClose, MergeToken(token));
 
     public Task<GameObject> CreatePageAsync(PageSetting page, GameObject parent, CancellationToken token = default)
         => CreatePageInternalAsync(page, parent, MergeToken(token));
 
     /// <summary>
-    /// Addressables.InstantiateAsync로 동적으로 생성된 모든 GameObject를 해제하고 목록을 비움
+    /// Addressable.InstantiateAsync로 동적으로 생성된 모든 GameObject를 해제하고 목록을 비움
     /// </summary>
     public async Task ClearAllDynamic()
     {
-        await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
+        await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.settings.fadeTime, true);
         for (int i = addrInstances.Count - 1; i >= 0; --i)
         {
             var go = addrInstances[i];
             if (go != null)
             {
-                Addressables.ReleaseInstance(go); // Addressables 인스턴스 해제
+                Addressables.ReleaseInstance(go); // Addressable 인스턴스 해제
             }
         }
+
         addrInstances.Clear(); // 목록 초기화
-        await InitUI();      
+        await InitUI();
     }
 
     /// <summary>
@@ -196,7 +206,7 @@ public class UIManager : MonoBehaviour
     /// </summary>
     /// <param name="token">작업 도중 취소할 수 있는 CancellationToken</param>
     /// <returns></returns>
-    public async Task<GameObject> CreateCanvasAsync(CancellationToken token = default)
+    private async Task<GameObject> CreateCanvasAsync(CancellationToken token = default)
     {
         // 1. Canvas 프리팹 인스턴스 생성
         var go = await InstantiateAsync("Prefabs/CanvasPrefab.prefab", null, MergeToken(token));
@@ -220,7 +230,7 @@ public class UIManager : MonoBehaviour
         // 4. GraphicRaycaster 컴포넌트 보장 (UI 클릭/터치 감지)
         if (!go.TryGetComponent<GraphicRaycaster>(out var raycaster))
         {
-            raycaster = go.AddComponent<GraphicRaycaster>();
+            go.AddComponent<GraphicRaycaster>();
         }
 
         return go;
@@ -234,9 +244,10 @@ public class UIManager : MonoBehaviour
     /// <param name="parent">생성된 배경 이미지의 부모 GameObject</param>
     /// <param name="token">작업 도중 취소를 위한 CancellationToken</param>
     /// <returns></returns>
-    public async Task<GameObject> CreateBackgroundImageAsync(ImageSetting setting, GameObject parent, CancellationToken token)
+    public async Task<GameObject> CreateBackgroundImageAsync(ImageSetting setting, GameObject parent,
+        CancellationToken token)
     {
-        // 1. Addressables로 Image 프리팹을 비동기 인스턴스화
+        // 1. Addressable로 Image 프리팹을 비동기 인스턴스화
         var go = await InstantiateAsync("Prefabs/ImagePrefab.prefab", parent.transform, token);
         if (!go) return null;
 
@@ -248,7 +259,8 @@ public class UIManager : MonoBehaviour
             // StreamingAssets에서 Texture2D 로드 후 Sprite 생성
             var texture = LoadTexture(setting.sourceImage);
             if (texture)
-                image.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                image.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height),
+                    new Vector2(0.5f, 0.5f));
             image.color = setting.color;
             image.type = (Image.Type)setting.type;
         }
@@ -277,7 +289,7 @@ public class UIManager : MonoBehaviour
     /// <returns></returns>
     public async Task<GameObject> CreateImageAsync(ImageSetting setting, GameObject parent, CancellationToken token)
     {
-        // 1. Addressables를 통해 ImagePrefab 인스턴스 생성
+        // 1. Addressable를 통해 ImagePrefab 인스턴스 생성
         var go = await InstantiateAsync("Prefabs/ImagePrefab.prefab", parent.transform, token);
         if (!go) return null;
 
@@ -289,7 +301,8 @@ public class UIManager : MonoBehaviour
             var texture = LoadTexture(setting.sourceImage);
 
             if (texture) // Texture2D를 Sprite로 변환해 적용
-                image.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                image.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height),
+                    new Vector2(0.5f, 0.5f));
 
             image.color = setting.color;
             image.type = (Image.Type)setting.type;
@@ -338,7 +351,7 @@ public class UIManager : MonoBehaviour
     /// <returns></returns>
     public async Task CreateSingleTextAsync(TextSetting setting, GameObject parent, CancellationToken token)
     {
-        // Text 프리팹 생성 (Addressables)
+        // Text 프리팹 생성 (Addressable)
         var go = await InstantiateAsync("Prefabs/TextPrefab.prefab", parent.transform, token);
         if (!go) return;
 
@@ -347,7 +360,7 @@ public class UIManager : MonoBehaviour
         // 텍스트 시각 속성 적용
         if (go.TryGetComponent<TextMeshProUGUI>(out var uiText))
         {
-            // 폰트는 Addressables에서 로드되며, alignment와 텍스트 등도 함께 적용
+            // 폰트는 Addressable에서 로드되며, alignment와 텍스트 등도 함께 적용
             await LoadFontAndApplyAsync(
                 uiText,
                 setting.fontName,
@@ -356,7 +369,7 @@ public class UIManager : MonoBehaviour
                 setting.fontColor,
                 setting.alignment,
                 token
-                );
+            );
         }
 
         // 위치/회전 적용
@@ -367,7 +380,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public async Task<List<(GameObject button, GameObject addImage)>> CreateButtonsAsync(
+    private async Task<List<(GameObject button, GameObject addImage)>> CreateButtonsAsync(
         ButtonSetting[] settings, GameObject parent, CancellationToken token)
     {
         var results = new List<(GameObject button, GameObject addImage)>();
@@ -391,7 +404,7 @@ public class UIManager : MonoBehaviour
     /// <param name="token">작업 도중 취소할 수 있는 CancellationToken</param>
     /// <returns></returns>
     public async Task<(GameObject button, GameObject addImage)> CreateSingleButtonAsync(
-     ButtonSetting setting, GameObject parent, CancellationToken token)
+        ButtonSetting setting, GameObject parent, CancellationToken token)
     {
         // 1) 버튼 프리팹 인스턴스
         var go = await InstantiateAsync("Prefabs/ButtonPrefab.prefab", parent.transform, token);
@@ -400,10 +413,10 @@ public class UIManager : MonoBehaviour
 
         // 2) 프리팹 컴포넌트 참조
         var rtBtn = go.GetComponent<RectTransform>();
-        var raw = go.GetComponent<RawImage>();       // 배경은 RawImage
-        var vp = go.GetComponent<VideoPlayer>();    // 배경 비디오
+        var raw = go.GetComponent<RawImage>(); // 배경은 RawImage
+        var vp = go.GetComponent<VideoPlayer>(); // 배경 비디오
         var btn = go.GetComponent<Button>();
-        var audio = go.GetComponent<AudioSource>() ?? go.AddComponent<AudioSource>();
+        var audioSource = go.GetComponent<AudioSource>() ?? go.AddComponent<AudioSource>();
 
         // 3) 버튼 크기/위치/회전 먼저 적용
         if (rtBtn)
@@ -415,8 +428,9 @@ public class UIManager : MonoBehaviour
 
         // 4) 배경: 비디오가 있으면 우선, 실패/미지정이면 이미지
         bool videoApplied = false;
-        
-        if (vp != null && setting.buttonBackgroundVideo != null && !string.IsNullOrEmpty(setting.buttonBackgroundVideo.fileName))
+
+        if (vp != null && setting.buttonBackgroundVideo != null &&
+            !string.IsNullOrEmpty(setting.buttonBackgroundVideo.fileName))
         {
             // 버튼 크기에 맞는 RenderTexture를 만들고 연결
             VideoManager.Instance.WireRawImageAndRenderTexture(
@@ -428,7 +442,7 @@ public class UIManager : MonoBehaviour
             string url = VideoManager.Instance.ResolvePlayableUrl(setting.buttonBackgroundVideo.fileName);
 
             bool ok = await VideoManager.Instance.PrepareAndPlayAsync(
-                vp, url, audio, setting.buttonBackgroundVideo.volume, token);
+                vp, url, audioSource, setting.buttonBackgroundVideo.volume, token);
 
             if (!ok)
             {
@@ -471,13 +485,14 @@ public class UIManager : MonoBehaviour
         }
 
         // 6) 추가 이미지 (옵션)
-        GameObject addImgGO = null;
+        GameObject addImgGo = null;
         if (setting.buttonAdditionalImage != null && !string.IsNullOrEmpty(setting.buttonAdditionalImage.sourceImage))
         {
-            addImgGO = await CreateImageAsync(setting.buttonAdditionalImage, go, token);
-            if (addImgGO && addImgGO.TryGetComponent<RectTransform>(out var addRT))
+            addImgGo = await CreateImageAsync(setting.buttonAdditionalImage, go, token);
+            if (addImgGo && addImgGo.TryGetComponent<RectTransform>(out var addRT))
             {
-                addRT.anchoredPosition = new Vector2(setting.buttonAdditionalImage.position.x, -setting.buttonAdditionalImage.position.y);
+                addRT.anchoredPosition = new Vector2(setting.buttonAdditionalImage.position.x,
+                    -setting.buttonAdditionalImage.position.y);
                 addRT.sizeDelta = setting.buttonAdditionalImage.size;
             }
         }
@@ -487,14 +502,10 @@ public class UIManager : MonoBehaviour
         {
             var soundKey = setting.buttonSound;
             if (!string.IsNullOrEmpty(soundKey))
-                btn.onClick.AddListener(() =>
-                {
-                    AudioManager.Instance?.Play(soundKey);
-
-                    });
+                btn.onClick.AddListener(() => { AudioManager.Instance?.Play(soundKey); });
         }
 
-        return (go, addImgGO);
+        return (go, addImgGo);
     }
 
     /// <summary>
@@ -504,7 +515,8 @@ public class UIManager : MonoBehaviour
     /// <param name="parent">생성된 VideoPlayer의 부모 GameObject</param>
     /// <param name="token">작업 도중 취소할 수 있는 CancellationToken</param>
     /// <returns>생성된 VideoPlayer GameObject</returns>
-    public async Task<GameObject> CreateVideoPlayerAsync(VideoSetting setting, GameObject parent, CancellationToken token)
+    public async Task<GameObject> CreateVideoPlayerAsync(VideoSetting setting, GameObject parent,
+        CancellationToken token)
     {
         if (setting == null || string.IsNullOrEmpty(setting.fileName))
         {
@@ -519,8 +531,8 @@ public class UIManager : MonoBehaviour
 
         // 2. 컴포넌트 참조
         var vp = go.GetComponent<VideoPlayer>();
-        var raw = go.GetComponent<UnityEngine.UI.RawImage>();
-        var audio = go.GetComponent<AudioSource>() ?? go.AddComponent<AudioSource>();
+        var raw = go.GetComponent<RawImage>();
+        var audioSource = go.GetComponent<AudioSource>() ?? go.AddComponent<AudioSource>();
 
         if (!vp)
         {
@@ -543,11 +555,11 @@ public class UIManager : MonoBehaviour
         );
 
         // 5. URL 결정
-        string url = VideoManager.Instance.ResolvePlayableUrl(setting.fileName);
+        var url = VideoManager.Instance.ResolvePlayableUrl(setting.fileName);
 
         // 6. 준비 및 재생
-        bool ok = await VideoManager.Instance.PrepareAndPlayAsync(
-            vp, url, audio, setting.volume, token
+        var ok = await VideoManager.Instance.PrepareAndPlayAsync(
+            vp, url, audioSource, setting.volume, token
         );
 
         if (!ok)
@@ -566,8 +578,9 @@ public class UIManager : MonoBehaviour
     /// <param name="onClose">팝업이 닫힐 때 호출할 콜백</param>
     /// <param name="token">작업 도중 취소할 수 있는 CancellationToken</param>
     /// <returns></returns>
-    private async Task<GameObject> CreatePopupInternalAsync(PopupSetting setting, GameObject parent, UnityAction<GameObject> onClose, CancellationToken token)
-    {   
+    private async Task<GameObject> CreatePopupInternalAsync(PopupSetting setting, GameObject parent,
+        UnityAction<GameObject> onClose, CancellationToken token)
+    {
         // 팝업 루트 생성
         var popupRoot = new GameObject(string.IsNullOrEmpty(setting.name) ? "GeneratedPopup" : setting.name);
         if (!popupRoot) return null;
@@ -575,36 +588,36 @@ public class UIManager : MonoBehaviour
         popupRoot.transform.SetParent(parent.transform, false);
 
         // 1. 팝업 배경 생성
-        var popupBG = await CreateBackgroundImageAsync(setting.popupBackgroundImage, popupRoot, token);
-        if (!popupBG) return popupRoot;
+        var popupBg = await CreateBackgroundImageAsync(setting.popupBackgroundImage, popupRoot, token);
+        if (!popupBg) return popupRoot;
 
         // 다른 UI 위에 표시되도록 맨 뒤에서 앞으로 이동
-        popupBG.transform.SetAsLastSibling();
+        popupBg.transform.SetAsLastSibling();
 
         // 2. 텍스트와 이미지 생성 작업을 병렬 실행
         var allTasks = new List<Task>(2)
         {
-            CreateTextsAsync(setting.popupTexts, popupBG, token),       // 팝업 내부 텍스트 생성
-            CreatePopupImagesAsync(setting.popupImages, popupBG, token) // 팝업 내부 이미지 생성
+            CreateTextsAsync(setting.popupTexts, popupBg, token), // 팝업 내부 텍스트 생성
+            CreatePopupImagesAsync(setting.popupImages, popupBg, token) // 팝업 내부 이미지 생성
         };
         await Task.WhenAll(allTasks);
 
         // 3. 닫기 버튼 생성
-        var (btnGO, _) = await CreateSingleButtonAsync(setting.popupButton, popupBG, token);
-        if (btnGO && btnGO.TryGetComponent<Button>(out var btn))
+        var (btnGo, _) = await CreateSingleButtonAsync(setting.popupButton, popupBg, token);
+        if (btnGo && btnGo.TryGetComponent<Button>(out var btn))
         {
             // 버튼 클릭 시 팝업 제거 + 콜백 호출
             btn.onClick.AddListener(() =>
             {
-                onClose?.Invoke(popupRoot);        // 외부 콜백 실행
+                onClose?.Invoke(popupRoot); // 외부 콜백 실행
 
-                // 팝업의 Addressables 자식 해제
+                // 팝업의 Addressable 자식 해제
                 foreach (Transform child in popupRoot.transform)
                 {
                     SafeReleaseInstance(child.gameObject);
                 }
 
-                Destroy(popupRoot);                // 팝업 오브젝트 제거                
+                Destroy(popupRoot); // 팝업 오브젝트 제거                
             });
         }
 
@@ -655,11 +668,13 @@ public class UIManager : MonoBehaviour
 
         // 3. 병렬 실행할 작업 목록 준비
         var jobs = new List<Task>(4);
-        jobs.Add(CreateTextsAsync(page.texts, pageRoot, token));        // 텍스트 생성
-        jobs.Add(CreatePopupImagesAsync(page.images, pageRoot, token)); // 이미지 생성
-        jobs.Add(CreateButtonsAsync(page.buttons, pageRoot, token));    // 버튼 생성
-        // TODO: CreateKeyboardsAsync(page.keyboards, pageRoot, token)  // 키보드 UI 생성
-        // TODO: CreateVideosAsync(page.videos, pageRoot, token)        // 비디오 UI 생성
+        {
+            jobs.Add(CreateTextsAsync(page.texts, pageRoot, token)); // 텍스트 생성
+            jobs.Add(CreatePopupImagesAsync(page.images, pageRoot, token)); // 이미지 생성
+            jobs.Add(CreateButtonsAsync(page.buttons, pageRoot, token)); // 버튼 생성
+            // TODO: CreateKeyboardsAsync(page.keyboards, pageRoot, token)  // 키보드 UI 생성
+            // TODO: CreateVideosAsync(page.videos, pageRoot, token)        // 비디오 UI 생성
+        }
 
         // 4. 모든 생성 작업 완료 대기
         await Task.WhenAll(jobs);
@@ -667,13 +682,15 @@ public class UIManager : MonoBehaviour
         // 5. 생성된 페이지 루트 반환
         return pageRoot;
     }
+
     #endregion
 
     #region Utilities (Addressables, Fonts, Materials, Files)
+
     /// <summary>
-    ///  Addressables를 사용해 비동기로 프리팹을 인스턴스화(Instantiate)
+    ///  Addressable를 사용해 비동기로 프리팹을 인스턴스화(Instantiate)
     /// </summary>
-    /// <param name="key">Addressables에서 로드할 프리팹 키</param>
+    /// <param name="key">Addressable에서 로드할 프리팹 키</param>
     /// <param name="parent">생성할 오브젝트의 부모 Transform</param>
     /// <param name="token">생성 작업을 취소할 수 있는 CancellationToken</param>
     /// <returns>생성된 GameObject, 실패 시 null</returns>
@@ -693,7 +710,7 @@ public class UIManager : MonoBehaviour
             if (go != null) addrInstances.Add(go);
             return go;
         }
-        catch (OperationCanceledException)  // 취소된 경우
+        catch (OperationCanceledException) // 취소된 경우
         {
             // 생성이 완료된 상태라면 즉시 해제하여 메모리 / 참조 누수 방지
             if (handle.IsValid() && handle.Status == AsyncOperationStatus.Succeeded && handle.Result)
@@ -712,10 +729,10 @@ public class UIManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Addressables를 사용하여 비동기로 에셋을 로드
+    /// Addressable를 사용하여 비동기로 에셋을 로드
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    /// <param name="key"> Addressables에서 로드할 에셋 키</param>
+    /// <param name="key"> Addressable에서 로드할 에셋 키</param>
     /// <param name="token">로드 작업을 취소할 수 있는 CancellationToken</param>
     /// <returns>로드된 에셋(T 타입), 취소 시 OperationCanceledException 발생</returns>
     private async Task<T> LoadAssetAsync<T>(string key, CancellationToken token) where T : UnityEngine.Object
@@ -723,7 +740,7 @@ public class UIManager : MonoBehaviour
         // 호출 시 즉시 취소 요청 확인
         token.ThrowIfCancellationRequested();
 
-        // Addressables로 비동기 에셋 로
+        // Addressable로 비동기 에셋 로
         var handle = Addressables.LoadAssetAsync<T>(key);
 
         try
@@ -732,17 +749,18 @@ public class UIManager : MonoBehaviour
             return await AwaitWithCancellation(handle, token);
         }
         finally
-        {   // 로드 완료 혹은 취소 시 handle 해제
+        {
+            // 로드 완료 혹은 취소 시 handle 해제
             if (handle.IsValid())
                 Addressables.Release(handle);
         }
     }
 
     /// <summary>
-    /// Addressables의 AsyncOperationHandle을 await하면서 CancellationToken 지원
+    /// Addressable의 AsyncOperationHandle을 await하면서 CancellationToken 지원
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    /// <param name="handle">Addressables 비동기 로드/생성 핸들</param>
+    /// <param name="handle">Addressable 비동기 로드/생성 핸들</param>
     /// <param name="token">취소 시 OperationCanceledException 발생</param>
     /// <returns>정상 완료 시 handle.Task의 결과 반환</returns>
     /// <exception cref="OperationCanceledException"></exception>
@@ -752,7 +770,7 @@ public class UIManager : MonoBehaviour
         var tcs = new TaskCompletionSource<bool>();
 
         // 토큰이 취소되면 tcs를 완료시켜 Task.WhenAny에서 취소를 먼저 감지할 수 있도록 함
-        using (token.Register(() => tcs.TrySetResult(true)))
+        await using (token.Register(() => tcs.TrySetResult(true)))
         {
             // 로드 완료(handle.Task)와 취소(tcs.Task) 중 하나가 먼저 끝날 때까지 대기
             var completed = await Task.WhenAny(handle.Task, tcs.Task);
@@ -776,7 +794,7 @@ public class UIManager : MonoBehaviour
         if (string.IsNullOrEmpty(relativePath)) return null;
 
         // StreamingAssets 폴더 기준 전체 경로 생성
-        string fullPath = Path.Combine(Application.streamingAssetsPath, relativePath);
+        var fullPath = Path.Combine(Application.streamingAssetsPath, relativePath);
 
         // 파일 존재 여부 확인
         if (!File.Exists(fullPath)) return null;
@@ -790,13 +808,13 @@ public class UIManager : MonoBehaviour
     }
 
     /// <summary>
-    /// 폰트 키를 실제 Addressables 리소스 키로 변환
+    /// 폰트 키를 실제 Addressable 리소스 키로 변환
     /// </summary>
     /// <param name="key">JSON 설정에서 지정한 폰트 맵핑 키</param>
     /// <returns> 매핑된 폰트 이름(또는 원본 키)</returns>
     private string ResolveFont(string key)
     {
-        FontMaps fontMap = JsonLoader.Instance.Settings.fontMap;
+        var fontMap = JsonLoader.Instance.settings.fontMap;
 
         // fontMap이 없으면 변환 없이 반환
         if (fontMap == null) return key;
@@ -809,7 +827,7 @@ public class UIManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Addressables에서 폰트를 비동기로 로드하여 지정한 TextMeshProUGUI에 적용
+    /// Addressable에서 폰트를 비동기로 로드하여 지정한 TextMeshProUGUI에 적용
     /// </summary>
     /// <param name="uiText">폰트를 적용할 TextMeshProUGUI 컴포넌트</param>
     /// <param name="fontKey">JSON 설정에서 정의된 폰트 키</param>
@@ -819,7 +837,8 @@ public class UIManager : MonoBehaviour
     /// <param name="alignment">텍스트 정렬 방식</param>
     /// <param name="token">취소 토큰 (작업 중단 가능)</param>
     /// <returns>성공 여부 (true: 적용 성공, false: 실패 또는 취소)</returns>
-    private async Task<bool> LoadFontAndApplyAsync(TextMeshProUGUI uiText, string fontKey, string textValue, float fontSize,
+    private async Task<bool> LoadFontAndApplyAsync(TextMeshProUGUI uiText, string fontKey, string textValue,
+        float fontSize,
         Color fontColor, TextAlignmentOptions alignment, CancellationToken token)
     {
         // UI 텍스트 객체나 폰트 키가 없으면 실패 처리
@@ -833,7 +852,7 @@ public class UIManager : MonoBehaviour
 
         try
         {
-            // Addressables에서 TMP_FontAsset 로드
+            // Addressable에서 TMP_FontAsset 로드
             var font = await LoadAssetAsync<TMP_FontAsset>(mappedFontName, token);
 
             // 로드 도중 취소되었는지 최종 확인
@@ -866,10 +885,10 @@ public class UIManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Addressables에서 Material을 비동기로 로드하여 지정한 Image 컴포넌트에 적용
+    /// Addressable에서 Material을 비동기로 로드하여 지정한 Image 컴포넌트에 적용
     /// </summary>
     /// <param name="targetImage">머티리얼을 적용할 UI Image 컴포넌트</param>
-    /// <param name="materialKey">Addressables에 등록된 머티리얼 키</param>
+    /// <param name="materialKey">Addressable에 등록된 머티리얼 키</param>
     /// <param name="token">취소 토큰 (작업 도중 취소 가능)</param>
     /// <returns>성공 여부 (true: 적용 성공, false: 실패 또는 취소)</returns>
     private async Task<bool> LoadMaterialAndApplyAsync(Image targetImage, string materialKey, CancellationToken token)
@@ -879,7 +898,7 @@ public class UIManager : MonoBehaviour
 
         try
         {
-            // Addressables에서 Material 로드
+            // Addressable에서 Material 로드
             var mat = await LoadAssetAsync<Material>(materialKey, token);
 
             // 로드 도중 취소 요청이 있었는지 최종 확인
@@ -903,14 +922,14 @@ public class UIManager : MonoBehaviour
     }
 
     /// <summary>
-    ///  Addressables로 생성된 인스턴스를 안전하게 해제
+    ///  Addressable로 생성된 인스턴스를 안전하게 해제
     /// </summary>
     /// <param name="go">해제할 GameObject 인스턴스</param>
     private void SafeReleaseInstance(GameObject go)
     {
         if (!go) return; // 유효하지 않으면 종료
-        Addressables.ReleaseInstance(go);    // Addressables 인스턴스 해제
-        addrInstances.Remove(go);   // 추적 리스트에서 제거
+        Addressables.ReleaseInstance(go); // Addressable 인스턴스 해제
+        addrInstances.Remove(go); // 추적 리스트에서 제거
     }
 
     /// <summary>
@@ -918,7 +937,7 @@ public class UIManager : MonoBehaviour
     /// </summary>
     /// <param name="external">외부에서 전달된 CancellationToken</param>
     /// <returns>병합된 CancellationToken</returns>
-    public CancellationToken MergeToken(CancellationToken external)
+    private CancellationToken MergeToken(CancellationToken external)
     {
         if (cts == null) return external; // 내부 토큰이 없으면 외부 토큰 그대로 사용
 
@@ -930,5 +949,6 @@ public class UIManager : MonoBehaviour
 
         return linked.Token;
     }
+
     #endregion
 }

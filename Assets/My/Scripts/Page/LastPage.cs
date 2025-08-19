@@ -22,14 +22,12 @@ public class LastPage : BasePage<LastPageSetting>
 
     protected override async Task BuildContentAsync()
     {
-        // 전용 이미지
         if (Setting.lastImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.lastImage, gameObject, default(CancellationToken));
+            await UIManager.Instance.CreateImageAsync(Setting.lastImage, gameObject, CancellationToken.None);
 
         if (Setting.lastExplainImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.lastExplainImage, gameObject, default(CancellationToken));
-
-        // 전용 버튼들
+            await UIManager.Instance.CreateImageAsync(Setting.lastExplainImage, gameObject, CancellationToken.None);
+        
         for (int i = 0; i < Setting.lastBtns.Length; i++)
         {
             await WireButton(Setting.lastBtns[i], Setting.lastPopups[i], gameObject);

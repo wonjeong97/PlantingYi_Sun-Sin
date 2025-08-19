@@ -13,41 +13,44 @@ using UnityEngine.UI;
 /// <typeparam name="TSetting">각 페이지별 설정 데이터 클래스 타입</typeparam>
 public abstract class BasePage<TSetting> : MonoBehaviour, IUICreate where TSetting : class
 {
-    [NonSerialized] public TSetting Setting;            // 페이지별 설정 데이터
+    [NonSerialized] protected TSetting Setting; // 페이지별 설정 데이터
     [HideInInspector] public MenuPage menuPageInstance; // 메뉴 페이지 인스턴스 (뒤로가기 버튼에서 사용)
 
-    protected abstract string JsonPath { get; }     // 각 파생 페이지에서 JSON 경로만 지정
-    protected abstract Task BuildContentAsync();    // 각 파생 페이지의 전용 콘텐츠    
+    protected abstract string JsonPath { get; } // 각 파생 페이지에서 JSON 경로만 지정
+    protected abstract Task BuildContentAsync(); // 각 파생 페이지의 전용 콘텐츠    
 
     // 페이지 시작 시 JSON 로드 → UI 생성 → 페이드 인 순서로 실행
-    protected virtual async void Start()
+    protected virtual async Task StartAsync()
     {
-        // JSON 데이터 로드
-        Setting = JsonLoader.Instance.LoadJsonData<TSetting>(JsonPath);
-        if (Setting == null)
-        {
-            Debug.LogError($"[{GetType().Name}] Settings not found at {JsonPath}");
-            return;
-        }
-
         try
         {
+            // JSON 데이터 로드
+            Setting = JsonLoader.Instance.LoadJsonData<TSetting>(JsonPath);
+            if (Setting == null)
+            {
+                Debug.LogError($"[{GetType().Name}] Settings not found at {JsonPath}");
+                return;
+            }
+
             // UI 생성
             await CreateUI();
 
             // 공통 페이드 인
-            await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
+            await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.settings.fadeTime, true);
         }
         catch (OperationCanceledException)
         {
             Debug.LogWarning($"[{GetType().Name}] Start canceled.");
-            throw;
         }
         catch (Exception e)
         {
             Debug.LogError($"[{GetType().Name}] Start failed: {e}");
-            throw;
         }
+    }
+
+    protected virtual void Start()
+    {
+        _ = StartAsync(); // fire-and-forget, 예외는 StartAsync 내부에서 처리됨
     }
 
     // 공통 UI 생성 로직
@@ -56,20 +59,18 @@ public abstract class BasePage<TSetting> : MonoBehaviour, IUICreate where TSetti
         // 1) 배경 생성
         var background = GetFieldOrProperty<ImageSetting>(Setting, "backgroundImage");
         if (background != null)
-            await UIManager.Instance.CreateBackgroundImageAsync(background, gameObject, default(CancellationToken));
+            await UIManager.Instance.CreateBackgroundImageAsync(background, gameObject, CancellationToken.None);
 
         // 2) 처음으로 버튼 (Idle 복귀)
         var backToIdle = GetFieldOrProperty<ButtonSetting>(Setting, "backToIdleButton");
         if (backToIdle != null)
         {
-            var created = await UIManager.Instance.CreateSingleButtonAsync(backToIdle, gameObject, default(CancellationToken));
+            var created =
+                await UIManager.Instance.CreateSingleButtonAsync(backToIdle, gameObject, CancellationToken.None);
             var go = created.button;
             if (go != null && go.TryGetComponent<Button>(out var btn))
             {
-                btn.onClick.AddListener(() =>
-                {
-                    UIManager.Instance.ShowIdlePageOnly();                    
-                });
+                btn.onClick.AddListener(() => { _ = HandleBackToIdleAsync(); });
             }
         }
 
@@ -77,20 +78,13 @@ public abstract class BasePage<TSetting> : MonoBehaviour, IUICreate where TSetti
         var backButtonSetting = GetFieldOrProperty<ButtonSetting>(Setting, "backButton");
         if (backButtonSetting != null)
         {
-            var created = await UIManager.Instance.CreateSingleButtonAsync(backButtonSetting, gameObject, default(CancellationToken));
+            var created =
+                await UIManager.Instance.CreateSingleButtonAsync(backButtonSetting, gameObject, CancellationToken.None);
+
             var go = created.button;
             if (go != null && go.TryGetComponent<Button>(out var btn))
             {
-                btn.onClick.AddListener(async () =>
-                {
-                    await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                    gameObject.SetActive(false);
-                    if (menuPageInstance != null)
-                    {
-                        menuPageInstance.gameObject.SetActive(true);
-                        await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.Settings.fadeTime, true);
-                    }
-                });
+                btn.onClick.AddListener(() => _ = HandleBackToMenuAsync());
             }
         }
 
@@ -98,19 +92,58 @@ public abstract class BasePage<TSetting> : MonoBehaviour, IUICreate where TSetti
         await BuildContentAsync();
     }
 
+    private async Task HandleBackToIdleAsync()
+    {
+        try
+        {
+            await UIManager.Instance.ShowIdlePageOnly();
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"[BasePage] Button click failed: {e}");
+        }
+    }
+
+    private async Task HandleBackToMenuAsync()
+    {
+        try
+        {
+            await FadeManager.Instance.FadeOutAsync(JsonLoader.Instance.settings.fadeTime, true);
+            gameObject.SetActive(false);
+            if (menuPageInstance != null)
+            {
+                menuPageInstance.gameObject.SetActive(true);
+                await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.settings.fadeTime, true);
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"[BasePage] Button click failed: {e}");
+        }
+    }
+
     // 버튼 생성 및 이벤트 연결
     protected async Task WireButton(ButtonSetting bs, PopupSetting ps, GameObject parent)
     {
         if (bs == null || ps == null) return;
 
-        var created = await UIManager.Instance.CreateSingleButtonAsync(bs, parent, default(CancellationToken));
+        var created = await UIManager.Instance.CreateSingleButtonAsync(bs, parent, CancellationToken.None);
         var go = created.button;
         if (go != null && go.TryGetComponent<Button>(out var btn))
         {
-            btn.onClick.AddListener(async () =>
-            {
-                await UIManager.Instance.CreatePopupAsync(ps, parent);
-            });
+            btn.onClick.AddListener(() => _ = HandleButtonClick(ps, parent));
+        }
+    }
+
+    private async Task HandleButtonClick(PopupSetting ps, GameObject parent)
+    {
+        try
+        {
+            await UIManager.Instance.CreatePopupAsync(ps, parent);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"[BasePage] Popup create failed: {e}");
         }
     }
 

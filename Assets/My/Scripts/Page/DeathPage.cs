@@ -22,14 +22,14 @@ public class DeathPage : BasePage<DeathSetting>
 
     protected override async Task BuildContentAsync()
     {
-        // Àü¿ë ÀÌ¹ÌÁö
+        // Ã€Ã¼Â¿Ã« Ã€ÃŒÂ¹ÃŒÃÃ¶
         if (Setting.deathImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.deathImage, gameObject, default(CancellationToken));
+            await UIManager.Instance.CreateImageAsync(Setting.deathImage, gameObject, CancellationToken.None);
 
         if (Setting.deathExplainImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.deathExplainImage, gameObject, default(CancellationToken));
+            await UIManager.Instance.CreateImageAsync(Setting.deathExplainImage, gameObject, CancellationToken.None);
 
-        // Àü¿ë ¹öÆ°µé
+        // Ã€Ã¼Â¿Ã« Â¹Ã¶Ã†Â°ÂµÃ©
         for (int i = 0; i < Setting.deathBtns.Length; i++)
         {
             await WireButton(Setting.deathBtns[i], Setting.deathPopups[i], gameObject);

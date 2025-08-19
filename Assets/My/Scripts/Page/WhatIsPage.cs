@@ -22,14 +22,13 @@ public class WhatIsPage : BasePage<WhatIsSetting>
 
     protected override async Task BuildContentAsync()
     {
-        // ÆäÀÌÁö Àü¿ë: ºñµğ¿À ÇÃ·¹ÀÌ¾î »ı¼º
         videoPlayer = await UIManager.Instance.CreateVideoPlayerAsync(
-            Setting.video, gameObject, default(CancellationToken));
+            Setting.video, gameObject, CancellationToken.None);
     }
 
     private void OnEnable()
     {
-        // ´Ù½Ã È°¼ºÈ­µÉ ¶§ Ç×»ó Ã¹ ÇÁ·¹ÀÓºÎÅÍ Àç»ı
+        // í˜ì´ì§€ í™œì„±í™” ì‹œ ë¹„ë””ì˜¤ë¥¼ ì²« ë²ˆì§¸ í”„ë ˆì„ë¶€í„° ì‹œì‘í•¨
         if (videoPlayer != null && videoPlayer.TryGetComponent<VideoPlayer>(out var vp))
         {
             StartCoroutine(VideoManager.Instance.RestartFromStart(vp));

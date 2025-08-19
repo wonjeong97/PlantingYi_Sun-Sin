@@ -18,17 +18,17 @@ public class ChildhoodSetting
 
 public class ChildhoodPage : BasePage<ChildhoodSetting>
 {
-    // JSON °æ·Î
+    // JSON ê²½ë¡œ
     protected override string JsonPath => "JSON/ChildhoodSetting.json";
 
-    // ÆäÀÌÁö º° ÄÁÅÙÃ÷ »ı¼º
+    // í˜ì´ì§€ ë³„ ì»¨í…ì¸  ìƒì„±
     protected override async Task BuildContentAsync()
     {
-        // ÆäÀÌÁö Àü¿ë ÀÌ¹ÌÁö
+        // í˜ì´ì§€ ì „ìš© ì´ë¯¸ì§€
         if (Setting.childhoodImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.childhoodImage, gameObject, default(CancellationToken));
+            await UIManager.Instance.CreateImageAsync(Setting.childhoodImage, gameObject, CancellationToken.None);
         if (Setting.childhoodExplainImage != null)
-            await UIManager.Instance.CreateImageAsync(Setting.childhoodExplainImage, gameObject, default(CancellationToken));
+            await UIManager.Instance.CreateImageAsync(Setting.childhoodExplainImage, gameObject, CancellationToken.None);
 
         for (int i = 0; i < Setting.childhoodBtns.Length; i++)
         {
