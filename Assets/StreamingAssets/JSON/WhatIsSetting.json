@@ -1,30 +1,56 @@
 {
   "backgroundImage": {
     "name": "WhatIsPageBackground",
-    "size": { "x": 1920, "y": 1080 },
+    "size": {
+      "x": 1920,
+      "y": 1080
+    },
     "sourceImage": "Image/Page/WhatIs.png",
-    "color": { "r": 1, "g": 1, "b": 1, "a": 1.0 }
+    "color": {
+      "r": 1,
+      "g": 1,
+      "b": 1,
+      "a": 1.0
+    }
   },
   "backToIdleButton": {
     "name": "Button_BackToIdle",
-    "size": { "x": 176, "y": 157 },
-    "position": { "x": 1770, "y": 100 },
+    "size": {
+      "x": 75,
+      "y": 75
+    },
+    "position": {
+      "x": 960,
+      "y": 1030
+    },
     "buttonBackgroundImage": {
-      "sourceImage": "Image/Button/1_GoTitle.png"
+      "sourceImage": "Image/Button/home.png"
     }
   },
   "backButton": {
     "name": "Button_Back",
-    "size": { "x": 300, "y": 100 },
-    "position": { "x": 960, "y": 150 },
+    "size": {
+      "x": 75,
+      "y": 75
+    },
+    "position": {
+      "x": 850,
+      "y": 1030
+    },
     "buttonBackgroundImage": {
-      "sourceImage": "Image/Button/1_Button.png"
+      "sourceImage": "Image/Button/back.png"
     }
   },
   "_video": {
     "name": "WhatIsVideoPlayer",
-    "size": { "x": 1280, "y": 720 },
-    "position": { "x": 960, "y": 540 },
+    "size": {
+      "x": 1280,
+      "y": 720
+    },
+    "position": {
+      "x": 960,
+      "y": 540
+    },
     "fileName": "Video/Test/YTN.webm",
     "volume": 0.5
   }

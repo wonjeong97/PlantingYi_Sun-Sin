@@ -1,176 +1,315 @@
 {
   "backgroundImage": {
     "name": "LastPageBackground",
-    "size": { "x": 1920, "y": 1080 },
-    "sourceImage": "Image/Background/1_White.png",
-    "color": { "r": 1, "g": 1, "b": 1, "a": 0.0 }
+    "size": {
+      "x": 1920,
+      "y": 1080
+    },
+    "sourceImage": "Image/Page/LastPage.png",
+    "color": {
+      "r": 1,
+      "g": 1,
+      "b": 1,
+      "a": 1.0
+    }
   },
   "backToIdleButton": {
     "name": "Button_BackToIdle",
-    "size": { "x": 176, "y": 157 },
-    "position": { "x": 1770, "y": 100 },
+    "size": {
+      "x": 75,
+      "y": 75
+    },
+    "position": {
+      "x": 960,
+      "y": 1030
+    },
     "buttonBackgroundImage": {
-      "sourceImage": "Image/Button/1_GoTitle.png"
+      "sourceImage": "Image/Button/home.png"
     }
   },
   "backButton": {
     "name": "Button_Back",
-    "size": { "x": 300, "y": 100 },
-    "position": { "x": 960, "y": 150 },
+    "size": {
+      "x": 75,
+      "y": 75
+    },
+    "position": {
+      "x": 850,
+      "y": 1030
+    },
     "buttonBackgroundImage": {
-      "sourceImage": "Image/Button/1_Button.png"
-    }
-  },
-  "lastImage": {
-    "name": "Image_LastImage",
-    "size": { "x": 150, "y": 150 },
-    "position": { "x": 400, "y": 275 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "lastExplainImage": {
-    "name": "Image_LastExplainImage",
-    "size": { "x": 650, "y": 400 },
-    "position": { "x": 400, "y": 600 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
+      "sourceImage": "Image/Button/back.png"
     }
   },
   "lastBtns": [
     {
       "name": "Button_Last_0",
-      "size": { "x": 800, "y": 65 },
-      "position": { "x": 1220, "y": 180 },
+      "size": {
+        "x": 800,
+        "y": 65
+      },
+      "position": {
+        "x": 1550,
+        "y": 270
+      },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+        "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "20. 게바위 이야기",
         "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
-        "alignment": 513
+        "fontSize": 35,
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "alignment": 257
       }
     },
     {
       "name": "Button_Last_1",
-      "size": { "x": 800, "y": 65 },
-      "position": { "x": 1220, "y": 270 },
+      "size": {
+        "x": 800,
+        "y": 65
+      },
+      "position": {
+        "x": 1550,
+        "y": 360
+      },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+        "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "27. 파직에서 전사까지",
         "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
-        "alignment": 513
+        "fontSize": 35,
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "alignment": 257
       }
     },
     {
       "name": "Button_Last_2",
-      "size": { "x": 800, "y": 65 },
-      "position": { "x": 1220, "y": 360 },
+      "size": {
+        "x": 800,
+        "y": 65
+      },
+      "position": {
+        "x": 1550,
+        "y": 450
+      },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+        "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "29. 명량해전",
         "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
-        "alignment": 513
+        "fontSize": 35,
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "alignment": 257
       }
     },
     {
       "name": "Button_Last_3",
-      "size": { "x": 800, "y": 65 },
-      "position": { "x": 1220, "y": 450 },
+      "size": {
+        "x": 800,
+        "y": 65
+      },
+      "position": {
+        "x": 1550,
+        "y": 540
+      },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+        "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "43. 두 번의 백의종군",
         "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
-        "alignment": 513
+        "fontSize": 35,
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "alignment": 257
       }
     },
     {
       "name": "Button_Last_4",
-      "size": { "x": 800, "y": 65 },
-      "position": { "x": 1220, "y": 540 },
+      "size": {
+        "x": 800,
+        "y": 65
+      },
+      "position": {
+        "x": 1550,
+        "y": 630
+      },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+        "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "44. 해전 횟수",
         "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
-        "alignment": 513
+        "fontSize": 35,
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "alignment": 257
       }
     },
     {
       "name": "Button_Last_5",
-      "size": { "x": 800, "y": 65 },
-      "position": { "x": 1220, "y": 630 },
+      "size": {
+        "x": 800,
+        "y": 65
+      },
+      "position": {
+        "x": 1550,
+        "y": 720
+      },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+        "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "45. 명량해전 철쇄 이야기",
         "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
-        "alignment": 513
+        "fontSize": 35,
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "alignment": 257
       }
     },
     {
       "name": "Button_Last_6",
-      "size": { "x": 800, "y": 65 },
-      "position": { "x": 1220, "y": 720 },
+      "size": {
+        "x": 800,
+        "y": 65
+      },
+      "position": {
+        "x": 1550,
+        "y": 810
+      },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+        "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "47. 이순신과 원균의 갈등",
         "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
-        "alignment": 513
+        "fontSize": 35,
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "alignment": 257
       }
     },
     {
       "name": "Button_Last_7",
-      "size": { "x": 800, "y": 65 },
-      "position": { "x": 1220, "y": 810 },
+      "size": {
+        "x": 800,
+        "y": 65
+      },
+      "position": {
+        "x": 1550,
+        "y": 900
+      },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+        "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "48. 이순신과 선조와의 애증",
         "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
-        "alignment": 513
+        "fontSize": 35,
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "alignment": 257
       }
     },
     {
       "name": "Button_Last_8",
-      "size": { "x": 800, "y": 65 },
-      "position": { "x": 1220, "y": 900 },
+      "size": {
+        "x": 800,
+        "y": 65
+      },
+      "position": {
+        "x": 1550,
+        "y": 990
+      },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+        "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "49. 명나라 수군과의 관계",
         "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
-        "alignment": 513
+        "fontSize": 35,
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "alignment": 257
       }
     }
   ],
@@ -178,13 +317,27 @@
     {
       "name": "Popup_Last_0",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -194,13 +347,27 @@
     {
       "name": "Popup_Last_1",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -210,13 +377,27 @@
     {
       "name": "Popup_Last_2",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -226,13 +407,27 @@
     {
       "name": "Popup_Last_3",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -242,13 +437,27 @@
     {
       "name": "Popup_Last_4",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -258,13 +467,27 @@
     {
       "name": "Popup_Last_5",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -274,13 +497,27 @@
     {
       "name": "Popup_Last_6",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -290,13 +527,27 @@
     {
       "name": "Popup_Last_7",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -306,13 +557,27 @@
     {
       "name": "Popup_Last_8",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },

@@ -1,89 +1,164 @@
 {
   "backgroundImage": {
     "name": "ChildhoodPageBackground",
-    "size": { "x": 1920, "y": 1080 },
-    "sourceImage": "Image/Page/YouthPage.png",
-    "color": { "r": 1, "g": 1, "b": 1, "a": 1.0 }
+    "size": {
+      "x": 1920,
+      "y": 1080
+    },
+    "sourceImage": "Image/Page/ChildhoodPage.png",
+    "color": {
+      "r": 1,
+      "g": 1,
+      "b": 1,
+      "a": 1.0
+    }
   },
   "backToIdleButton": {
     "name": "Button_BackToIdle",
-    "size": { "x": 176, "y": 157 },
-    "position": { "x": 1770, "y": 100 },
+    "size": {
+      "x": 75,
+      "y": 75
+    },
+    "position": {
+      "x": 960,
+      "y": 1030
+    },
     "buttonBackgroundImage": {
-      "sourceImage": "Image/Button/1_GoTitle.png"
+      "sourceImage": "Image/Button/home.png"
     }
   },
   "backButton": {
     "name": "Button_Back",
-    "size": { "x": 300, "y": 100 },
-    "position": { "x": 960, "y": 150 },
+    "size": {
+      "x": 75,
+      "y": 75
+    },
+    "position": {
+      "x": 850,
+      "y": 1030
+    },
     "buttonBackgroundImage": {
-      "sourceImage": "Image/Button/1_Button.png"
+      "sourceImage": "Image/Button/back.png"
     }
   },
-
   "childhoodBtns": [
     {
       "name": "Button_Childhood_0",
-      "size": { "x": 900, "y": 100 },
-      "position": { "x": 1550, "y": 450 },
+      "size": {
+        "x": 900,
+        "y": 100
+      },
+      "position": {
+        "x": 1550,
+        "y": 450
+      },
       "buttonBackgroundImage": {
         "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
-        "position": {"x": -20, "y": 20},
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "9. 이순신의 탄생과 아산 이주이야기",
         "fontName": "font1",
         "fontSize": 45,
-        "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 257
       }
     },
     {
       "name": "Button_Childhood_1",
-      "size": { "x": 900, "y": 100 },
-      "position": { "x": 1550, "y": 550 },
+      "size": {
+        "x": 900,
+        "y": 100
+      },
+      "position": {
+        "x": 1550,
+        "y": 550
+      },
       "buttonBackgroundImage": {
         "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
-        "position": {"x": -20, "y": 20},
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "10. 이순신 조상님에 대한 이야기",
         "fontName": "font1",
         "fontSize": 45,
-        "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 257
       }
     },
     {
       "name": "Button_Childhood_2",
-      "size": { "x": 900, "y": 100 },
-      "position": { "x": 1550, "y": 650 },
+      "size": {
+        "x": 900,
+        "y": 100
+      },
+      "position": {
+        "x": 1550,
+        "y": 650
+      },
       "buttonBackgroundImage": {
         "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
-        "position": {"x": -20, "y": 20},
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "11. 유년 시절의 이순신이야기",
         "fontName": "font1",
         "fontSize": 45,
-        "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 257
       }
     },
     {
       "name": "Button_Childhood_3",
-      "size": { "x": 900, "y": 100 },
-      "position": { "x": 1550, "y": 750 },
+      "size": {
+        "x": 900,
+        "y": 100
+      },
+      "position": {
+        "x": 1550,
+        "y": 750
+      },
       "buttonBackgroundImage": {
         "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
-        "position": {"x": -20, "y": 20},
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "13. 이순신의 가족이야기",
         "fontName": "font1",
         "fontSize": 45,
-        "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 257
       }
     }
@@ -92,13 +167,27 @@
     {
       "name": "Popup_Childhood_0",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -108,13 +197,27 @@
     {
       "name": "Popup_Childhood_1",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -124,13 +227,27 @@
     {
       "name": "Popup_Childhood_2",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -140,13 +257,27 @@
     {
       "name": "Popup_Childhood_3",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },

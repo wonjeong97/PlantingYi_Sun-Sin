@@ -20,12 +20,13 @@ public class UIManager : MonoBehaviour
 
     private GameObject idlePage;
 
-    private CancellationTokenSource cts;
+    public CancellationTokenSource cts;
 
     // Addressable.InstantiateAsync로 만든 동적 오브젝트 추적
-    private readonly List<GameObject> addrInstances = new List<GameObject>();
+    public readonly List<GameObject> addrInstances = new List<GameObject>();
 
     private Settings jsonSetting;
+    private ButtonSetting defaultButtonSetting;
 
     [HideInInspector] public GameObject mainBackground;
 
@@ -409,7 +410,7 @@ public class UIManager : MonoBehaviour
         // 1) 버튼 프리팹 인스턴스
         var go = await InstantiateAsync("Prefabs/ButtonPrefab.prefab", parent.transform, token);
         if (!go) return (null, null);
-        go.name = setting.name;
+        go.name =  !string.IsNullOrEmpty(setting.name) ? setting.name : defaultButtonSetting.name;
 
         // 2) 프리팹 컴포넌트 참조
         var rtBtn = go.GetComponent<RectTransform>();

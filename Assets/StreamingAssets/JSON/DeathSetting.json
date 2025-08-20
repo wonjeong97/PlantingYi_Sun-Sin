@@ -1,161 +1,285 @@
 {
   "backgroundImage": {
     "name": "DeathPageBackground",
-    "size": { "x": 1920, "y": 1080 },
-    "sourceImage": "Image/Background/1_White.png",
-    "color": { "r": 1, "g": 1, "b": 1, "a": 0.0 }
+    "size": {
+      "x": 1920,
+      "y": 1080
+    },
+    "sourceImage": "Image/Page/DeathPage.png",
+    "color": {
+      "r": 1,
+      "g": 1,
+      "b": 1,
+      "a": 1.0
+    }
   },
   "backToIdleButton": {
     "name": "Button_BackToIdle",
-    "size": { "x": 176, "y": 157 },
-    "position": { "x": 1770, "y": 100 },
+    "size": {
+      "x": 75,
+      "y": 75
+    },
+    "position": {
+      "x": 960,
+      "y": 1030
+    },
     "buttonBackgroundImage": {
-      "sourceImage": "Image/Button/1_GoTitle.png"
+      "sourceImage": "Image/Button/home.png"
     }
   },
   "backButton": {
     "name": "Button_Back",
-    "size": { "x": 300, "y": 100 },
-    "position": { "x": 960, "y": 150 },
+    "size": {
+      "x": 75,
+      "y": 75
+    },
+    "position": {
+      "x": 850,
+      "y": 1030
+    },
     "buttonBackgroundImage": {
-      "sourceImage": "Image/Button/1_Button.png"
-    }
-  },
-  "deathImage": {
-    "name": "Image_DeathImage",
-    "size": { "x": 150, "y": 150 },
-    "position": { "x": 400, "y": 275 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "deathExplainImage": {
-    "name": "Image_DeathExplainImage",
-    "size": { "x": 650, "y": 400 },
-    "position": { "x": 400, "y": 600 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
+      "sourceImage": "Image/Button/back.png"
     }
   },
   "deathBtns": [
     {
       "name": "Button_Death_0",
-      "size": { "x": 800, "y": 75 },
-      "position": { "x": 1220, "y": 200 },
+      "size": {
+        "x": 800,
+        "y": 75
+      },
+      "position": {
+        "x": 1550,
+        "y": 280
+      },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+        "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "14. 묘소 이장 이야기",
         "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
-        "alignment": 513
+        "fontSize": 35,
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "alignment": 257
       }
     },
     {
       "name": "Button_Death_1",
-      "size": { "x": 800, "y": 75 },
-      "position": { "x": 1220, "y": 300 },
+      "size": {
+        "x": 800,
+        "y": 75
+      },
+      "position": {
+        "x": 1550,
+        "y": 380
+      },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+        "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "15. 정조의 이순신 사랑",
         "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
-        "alignment": 513
+        "fontSize": 35,
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "alignment": 257
       }
     },
     {
       "name": "Button_Death_2",
-      "size": { "x": 800, "y": 75 },
-      "position": { "x": 1220, "y": 400 },
+      "size": {
+        "x": 800,
+        "y": 75
+      },
+      "position": {
+        "x": 1550,
+        "y": 480
+      },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+        "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "16. 묘소 앞 석물들",
         "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
-        "alignment": 513
+        "fontSize": 35,
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "alignment": 257
       }
     },
     {
       "name": "Button_Death_3",
-      "size": { "x": 800, "y": 75 },
-      "position": { "x": 1220, "y": 500 },
+      "size": {
+        "x": 800,
+        "y": 75
+      },
+      "position": {
+        "x": 1550,
+        "y": 580
+      },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+        "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "17. 전사 관련 이야기",
         "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
-        "alignment": 513
+        "fontSize": 35,
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "alignment": 257
       }
     },
     {
       "name": "Button_Death_4",
-      "size": { "x": 800, "y": 75 },
-      "position": { "x": 1220, "y": 600 },
+      "size": {
+        "x": 800,
+        "y": 75
+      },
+      "position": {
+        "x": 1550,
+        "y": 680
+      },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+        "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "18. 노량해전과 유언",
         "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
-        "alignment": 513
+        "fontSize": 35,
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "alignment": 257
       }
     },
     {
       "name": "Button_Death_5",
-      "size": { "x": 800, "y": 75 },
-      "position": { "x": 1220, "y": 700 },
+      "size": {
+        "x": 800,
+        "y": 75
+      },
+      "position": {
+        "x": 1550,
+        "y": 780
+      },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+        "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "19. 위충암 이야기",
         "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
-        "alignment": 513
+        "fontSize": 35,
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "alignment": 257
       }
     },
     {
       "name": "Button_Death_6",
-      "size": { "x": 800, "y": 75 },
-      "position": { "x": 1220, "y": 800 },
+      "size": {
+        "x": 800,
+        "y": 75
+      },
+      "position": {
+        "x": 1550,
+        "y": 880
+      },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+        "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "24. 이산 이순신길",
         "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
-        "alignment": 513
+        "fontSize": 35,
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "alignment": 257
       }
     },
     {
       "name": "Button_Death_7",
-      "size": { "x": 800, "y": 75 },
-      "position": { "x": 1220, "y": 900 },
+      "size": {
+        "x": 800,
+        "y": 75
+      },
+      "position": {
+        "x": 1550,
+        "y": 980
+      },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+        "sourceImage": "Image/Button/line.png"
       },
       "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "37. 조선시대 이순신 선양",
         "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
-        "alignment": 513
+        "fontSize": 35,
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "alignment": 257
       }
     }
   ],
@@ -163,13 +287,27 @@
     {
       "name": "Popup_Death_0",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -179,13 +317,27 @@
     {
       "name": "Popup_Death_1",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -195,13 +347,27 @@
     {
       "name": "Popup_Death_2",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -211,13 +377,27 @@
     {
       "name": "Popup_Death_3",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -227,13 +407,27 @@
     {
       "name": "Popup_Death_4",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -243,13 +437,27 @@
     {
       "name": "Popup_Death_5",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -259,13 +467,27 @@
     {
       "name": "Popup_Death_6",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -275,13 +497,27 @@
     {
       "name": "Popup_Death_7",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },

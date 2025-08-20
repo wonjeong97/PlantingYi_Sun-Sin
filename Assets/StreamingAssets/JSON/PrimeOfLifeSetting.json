@@ -1,265 +1,494 @@
 {
   "backgroundImage": {
     "name": "PrimeOfLifePageBackground",
-    "size": { "x": 1920, "y": 1080 },
-    "sourceImage": "Image/Background/1_White.png",
-    "color": { "r": 1, "g": 1, "b": 1, "a": 0.0 }
+    "size": {
+      "x": 1920,
+      "y": 1080
+    },
+    "sourceImage": "Image/Page/POLPage.png",
+    "color": {
+      "r": 1,
+      "g": 1,
+      "b": 1,
+      "a": 1.0
+    }
   },
   "backToIdleButton": {
     "name": "Button_BackToIdle",
-    "size": { "x": 176, "y": 157 },
-    "position": { "x": 1770, "y": 100 },
+    "size": {
+      "x": 75,
+      "y": 75
+    },
+    "position": {
+      "x": 960,
+      "y": 1030
+    },
     "buttonBackgroundImage": {
-      "sourceImage": "Image/Button/1_GoTitle.png"
+      "sourceImage": "Image/Button/home.png"
     }
   },
   "backButton": {
     "name": "Button_Back",
-    "size": { "x": 300, "y": 100 },
-    "position": { "x": 960, "y": 150 },
+    "size": {
+      "x": 75,
+      "y": 75
+    },
+    "position": {
+      "x": 850,
+      "y": 1030
+    },
     "buttonBackgroundImage": {
-      "sourceImage": "Image/Button/1_Button.png"
-    }
-  },
-  "primeOfLifeImage": {
-    "name": "Image_PrimeOfLifeImage",
-    "size": { "x": 150, "y": 150 },
-    "position": { "x": 400, "y": 275 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
-    }
-  },
-  "primeOfLifeExplainImage": {
-    "name": "Image_PrimeOfLifeExplainImage",
-    "size": { "x": 650, "y": 400 },
-    "position": { "x": 400, "y": 600 },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Background/1_White.png"
+      "sourceImage": "Image/Button/back.png"
     }
   },
   "primeOfLifeBtns": [
     {
       "name": "Button_PrimeOfLife_0",
-      "size": { "x": 800, "y": 50 },
-      "position": { "x": 1220, "y": 125 },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+      "size": {
+        "x": 800,
+        "y": 50
       },
-      "buttonText": {
+      "position": {
+        "x": 1550,
+        "y": 180
+      },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Button/line.png"
+      },
+     "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "21. 이순신 삶의 목표 충효",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 513
       }
     },
     {
       "name": "Button_PrimeOfLife_1",
-      "size": { "x": 800, "y": 50 },
-      "position": { "x": 1220, "y": 185 },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+      "size": {
+        "x": 800,
+        "y": 50
       },
-      "buttonText": {
+      "position": {
+        "x": 1550,
+        "y": 240
+      },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Button/line.png"
+      },
+     "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "22. 효자 이순신",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 513
       }
     },
     {
       "name": "Button_PrimeOfLife_2",
-      "size": { "x": 800, "y": 50 },
-      "position": { "x": 1220, "y": 245 },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+      "size": {
+        "x": 800,
+        "y": 50
       },
-      "buttonText": {
+      "position": {
+        "x": 1550,
+        "y": 300
+      },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Button/line.png"
+      },
+     "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "23. 이순신 어머니이야기",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 513
       }
     },
     {
       "name": "Button_PrimeOfLife_3",
-      "size": { "x": 800, "y": 50 },
-      "position": { "x": 1220, "y": 305 },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+      "size": {
+        "x": 800,
+        "y": 50
       },
-      "buttonText": {
+      "position": {
+        "x": 1550,
+        "y": 360
+      },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Button/line.png"
+      },
+     "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "26. 전라좌수사에서 삼도수군통제사까지",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 513
       }
     },
     {
       "name": "Button_PrimeOfLife_4",
-      "size": { "x": 800, "y": 50 },
-      "position": { "x": 1220, "y": 365 },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+      "size": {
+        "x": 800,
+        "y": 50
       },
-      "buttonText": {
+      "position": {
+        "x": 1550,
+        "y": 420
+      },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Button/line.png"
+      },
+     "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "28.한산해전",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 513
       }
     },
     {
       "name": "Button_PrimeOfLife_5",
-      "size": { "x": 800, "y": 50 },
-      "position": { "x": 1220, "y": 425 },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+      "size": {
+        "x": 800,
+        "y": 50
       },
-      "buttonText": {
+      "position": {
+        "x": 1550,
+        "y": 480
+      },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Button/line.png"
+      },
+     "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "30. 거북선이야기",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 513
       }
     },
     {
       "name": "Button_PrimeOfLife_6",
-      "size": { "x": 800, "y": 50 },
-      "position": { "x": 1220, "y": 485 },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+      "size": {
+        "x": 800,
+        "y": 50
       },
-      "buttonText": {
+      "position": {
+        "x": 1550,
+        "y": 540
+      },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Button/line.png"
+      },
+     "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "31. 정철조총 개발",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 513
       }
     },
     {
       "name": "Button_PrimeOfLife_7",
-      "size": { "x": 800, "y": 50 },
-      "position": { "x": 1220, "y": 545 },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+      "size": {
+        "x": 800,
+        "y": 50
       },
-      "buttonText": {
+      "position": {
+        "x": 1550,
+        "y": 600
+      },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Button/line.png"
+      },
+     "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "32. 이순신 병법",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 513
       }
     },
     {
       "name": "Button_PrimeOfLife_8",
-      "size": { "x": 800, "y": 50 },
-      "position": { "x": 1220, "y": 605 },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+      "size": {
+        "x": 800,
+        "y": 50
       },
-      "buttonText": {
+      "position": {
+        "x": 1550,
+        "y": 660
+      },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Button/line.png"
+      },
+     "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "33. 이순신의 정보 전략",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 513
       }
     },
     {
       "name": "Button_PrimeOfLife_9",
-      "size": { "x": 800, "y": 50 },
-      "position": { "x": 1220, "y": 665 },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+      "size": {
+        "x": 800,
+        "y": 50
       },
-      "buttonText": {
+      "position": {
+        "x": 1550,
+        "y": 720
+      },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Button/line.png"
+      },
+     "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "34. 소통의 리더십",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 513
       }
     },
     {
       "name": "Button_PrimeOfLife_10",
-      "size": { "x": 800, "y": 50 },
-      "position": { "x": 1220, "y": 725 },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+      "size": {
+        "x": 800,
+        "y": 50
       },
-      "buttonText": {
+      "position": {
+        "x": 1550,
+        "y": 780
+      },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Button/line.png"
+      },
+     "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "35 이순신의 애민",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 513
       }
     },
     {
       "name": "Button_PrimeOfLife_11",
-      "size": { "x": 800, "y": 50 },
-      "position": { "x": 1220, "y": 785 },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+      "size": {
+        "x": 800,
+        "y": 50
       },
-      "buttonText": {
+      "position": {
+        "x": 1550,
+        "y": 840
+      },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Button/line.png"
+      },
+     "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "36. 이순신의 좌우명과 사생관",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 513
       }
     },
     {
       "name": "Button_PrimeOfLife_12",
-      "size": { "x": 800, "y": 50 },
-      "position": { "x": 1220, "y": 845 },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+      "size": {
+        "x": 800,
+        "y": 50
       },
-      "buttonText": {
+      "position": {
+        "x": 1550,
+        "y": 900
+      },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Button/line.png"
+      },
+     "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "40 조선 수군의 위상",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 513
       }
     },
     {
       "name": "Button_PrimeOfLife_13",
-      "size": { "x": 800, "y": 50 },
-      "position": { "x": 1220, "y": 905 },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+      "size": {
+        "x": 800,
+        "y": 50
       },
-      "buttonText": {
+      "position": {
+        "x": 1550,
+        "y": 960
+      },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Button/line.png"
+      },
+     "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "41. 류성룡, 이원익, 정탁",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 513
       }
     },
     {
       "name": "Button_PrimeOfLife_14",
-      "size": { "x": 800, "y": 50 },
-      "position": { "x": 1220, "y": 965 },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Background/1_White.png"
+      "size": {
+        "x": 800,
+        "y": 50
       },
-      "buttonText": {
+      "position": {
+        "x": 1550,
+        "y": 1020
+      },
+      "buttonBackgroundImage": {
+        "sourceImage": "Image/Button/line.png"
+      },
+     "buttonText": {
+        "position": {
+          "x": -20,
+          "y": 20
+        },
         "text": "42. 이순신의 부하들",
         "fontName": "font1",
         "fontSize": 24,
-        "fontColor": { "r": 0, "g": 0, "b": 0, "a": 1 },
+        "fontColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "alignment": 513
       }
     }
@@ -268,13 +497,27 @@
     {
       "name": "Popup_PrimeOfLife_0",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -284,13 +527,27 @@
     {
       "name": "Popup_PrimeOfLife_1",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -300,13 +557,27 @@
     {
       "name": "Popup_PrimeOfLife_2",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -316,13 +587,27 @@
     {
       "name": "Popup_PrimeOfLife_3",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -332,13 +617,27 @@
     {
       "name": "Popup_PrimeOfLife_4",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -348,13 +647,27 @@
     {
       "name": "Popup_PrimeOfLife_5",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -364,13 +677,27 @@
     {
       "name": "Popup_PrimeOfLife_6",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -380,13 +707,27 @@
     {
       "name": "Popup_PrimeOfLife_7",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -396,13 +737,27 @@
     {
       "name": "Popup_PrimeOfLife_8",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -412,13 +767,27 @@
     {
       "name": "Popup_PrimeOfLife_9",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -428,13 +797,27 @@
     {
       "name": "Popup_PrimeOfLife_10",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -444,13 +827,27 @@
     {
       "name": "Popup_PrimeOfLife_11",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -460,13 +857,27 @@
     {
       "name": "Popup_PrimeOfLife_12",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -476,13 +887,27 @@
     {
       "name": "Popup_PrimeOfLife_13",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
@@ -492,13 +917,27 @@
     {
       "name": "Popup_PrimeOfLife_14",
       "popupBackgroundImage": {
-        "size": { "x": 1920, "y": 1080 },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
         "sourceImage": "Image/Background/1_White.png",
-        "color": { "r": 1, "g": 1, "b": 1, "a": 0.5 }
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        }
       },
       "popupButton": {
-        "position": { "x": 960, "y": 900 },
-        "size": { "x": 300, "y": 100 },
+        "position": {
+          "x": 960,
+          "y": 900
+        },
+        "size": {
+          "x": 300,
+          "y": 100
+        },
         "buttonBackgroundImage": {
           "sourceImage": "Image/Button/1_Button.png"
         },
