@@ -410,7 +410,7 @@ public class UIManager : MonoBehaviour
         // 1) 버튼 프리팹 인스턴스
         var go = await InstantiateAsync("Prefabs/ButtonPrefab.prefab", parent.transform, token);
         if (!go) return (null, null);
-        go.name =  !string.IsNullOrEmpty(setting.name) ? setting.name : defaultButtonSetting.name;
+        go.name = setting.name;
 
         // 2) 프리팹 컴포넌트 참조
         var rtBtn = go.GetComponent<RectTransform>();
