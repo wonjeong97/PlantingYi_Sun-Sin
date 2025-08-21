@@ -16,8 +16,8 @@
   "startButton": {
     "name": "StartButton",
     "size": {
-      "x": 453,
-      "y": 184
+      "x": 208,
+      "y": 208
     },
     "position": {
       "x": 960,

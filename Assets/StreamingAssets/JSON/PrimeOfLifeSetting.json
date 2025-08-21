@@ -16,12 +16,12 @@
   "backToIdleButton": {
     "name": "Button_BackToIdle",
     "size": {
-      "x": 75,
-      "y": 75
+      "x": 100,
+      "y": 100
     },
     "position": {
       "x": 960,
-      "y": 1030
+      "y": 985
     },
     "buttonBackgroundImage": {
       "sourceImage": "Image/Button/home.png"
@@ -30,12 +30,12 @@
   "backButton": {
     "name": "Button_Back",
     "size": {
-      "x": 75,
-      "y": 75
+      "x": 100,
+      "y": 100
     },
     "position": {
-      "x": 850,
-      "y": 1030
+      "x": 825,
+      "y": 985
     },
     "buttonBackgroundImage": {
       "sourceImage": "Image/Button/back.png"

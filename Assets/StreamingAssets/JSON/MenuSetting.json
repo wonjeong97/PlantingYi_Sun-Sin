@@ -16,12 +16,12 @@
   "backToIdleButton": {
     "name": "Button_BackToIdle",
     "size": {
-      "x": 75,
-      "y": 75
+      "x": 100,
+      "y": 100
     },
     "position": {
       "x": 960,
-      "y": 1030
+      "y": 985
     },
     "buttonBackgroundImage": {
       "sourceImage": "Image/Button/home.png"
@@ -30,12 +30,12 @@
   "whatIsButton": {
     "name": "Button_WhatIs",
     "size": {
-      "x": 200,
-      "y": 330
+      "x": 300,
+      "y": 450
     },
     "position": {
       "x": 190,
-      "y": 750
+      "y": 675
     },
     "buttonBackgroundImage": {
       "sourceImage": "Image/Button/플랜팅이순신이란.png"
@@ -44,12 +44,12 @@
   "childhoodButton": {
     "name": "Button_Childhood",
     "size": {
-      "x": 200,
-      "y": 330
+      "x": 300,
+      "y": 450
     },
     "position": {
       "x": 460,
-      "y": 750
+      "y": 675
     },
     "buttonBackgroundImage": {
       "sourceImage": "Image/Button/유년.png"
@@ -58,12 +58,12 @@
   "youthButton": {
     "name": "Button_Youth",
     "size": {
-      "x": 200,
-      "y": 330
+      "x": 300,
+      "y": 450
     },
     "position": {
       "x": 710,
-      "y": 750
+      "y": 675
     },
     "buttonBackgroundImage": {
       "sourceImage": "Image/Button/청년.png"
@@ -72,12 +72,12 @@
   "primeOfLifeButton": {
     "name": "Button_PrimeOfLife",
     "size": {
-      "x": 200,
-      "y": 330
+      "x": 300,
+      "y": 450
     },
     "position": {
       "x": 960,
-      "y": 750
+      "y": 675
     },
     "buttonBackgroundImage": {
       "sourceImage": "Image/Button/장년.png"
@@ -86,12 +86,12 @@
   "lastButton": {
     "name": "Button_Last",
     "size": {
-      "x": 200,
-      "y": 330
+      "x": 300,
+      "y": 450
     },
     "position": {
       "x": 1210,
-      "y": 750
+      "y": 675
     },
     "buttonBackgroundImage": {
       "sourceImage": "Image/Button/말년.png"
@@ -100,12 +100,12 @@
   "deathButton": {
     "name": "Button_Death",
     "size": {
-      "x": 200,
-      "y": 330
+      "x": 300,
+      "y": 450
     },
     "position": {
       "x": 1460,
-      "y": 750
+      "y": 675
     },
     "buttonBackgroundImage": {
       "sourceImage": "Image/Button/죽음.png"
@@ -114,12 +114,12 @@
   "afterDeathButton": {
     "name": "Button_AfterDeath",
     "size": {
-      "x": 200,
-      "y": 330
+      "x": 300,
+      "y": 450
     },
     "position": {
       "x": 1710,
-      "y": 750
+      "y": 675
     },
     "buttonBackgroundImage": {
       "sourceImage": "Image/Button/사후.png"

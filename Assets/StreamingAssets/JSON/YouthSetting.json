@@ -5,7 +5,7 @@
       "x": 1920,
       "y": 1080
     },
-    "sourceImage": "Image/Page/YouthPage.png",
+    "sourceImage": "Image/Page/Youth/YouthPage.png",
     "color": {
       "r": 1,
       "g": 1,
@@ -16,12 +16,12 @@
   "backToIdleButton": {
     "name": "Button_BackToIdle",
     "size": {
-      "x": 75,
-      "y": 75
+      "x": 100,
+      "y": 100
     },
     "position": {
       "x": 960,
-      "y": 1030
+      "y": 985
     },
     "buttonBackgroundImage": {
       "sourceImage": "Image/Button/home.png"
@@ -30,12 +30,12 @@
   "backButton": {
     "name": "Button_Back",
     "size": {
-      "x": 75,
-      "y": 75
+      "x": 100,
+      "y": 100
     },
     "position": {
-      "x": 850,
-      "y": 1030
+      "x": 825,
+      "y": 985
     },
     "buttonBackgroundImage": {
       "sourceImage": "Image/Button/back.png"
@@ -45,91 +45,43 @@
     {
       "name": "Button_Youth_0",
       "size": {
-        "x": 800,
-        "y": 75
+        "x": 666,
+        "y": 147
       },
       "position": {
-        "x": 1550,
-        "y": 490
+        "x": 1275,
+        "y": 360
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-      "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "8. 이순신의 결혼과 신혼집이야기",
-        "fontName": "font1",
-        "fontSize": 45,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 257
+        "sourceImage": "Image/Page/Youth/8.png"
       }
     },
     {
       "name": "Button_Youth_1",
       "size": {
-        "x": 800,
-        "y": 75
+        "x": 666,
+        "y": 147
       },
       "position": {
-        "x": 1550,
-        "y": 640
+        "x": 1275,
+        "y": 510
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-      "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "12. 이순신의 무과급제 이야기",
-        "fontName": "font1",
-        "fontSize": 45,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 257
+        "sourceImage": "Image/Page/Youth/12.png"
       }
     },
     {
       "name": "Button_Youth_2",
       "size": {
-        "x": 800,
-        "y": 75
+        "x": 666,
+        "y": 147
       },
       "position": {
-        "x": 1550,
-        "y": 790
+        "x": 1275,
+        "y": 660
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-      "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "25. 이순신의 초급 관리 시절 이야기",
-        "fontName": "font1",
-        "fontSize": 45,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 257
+        "sourceImage": "Image/Page/Youth/25.png"
       }
     }
   ],
