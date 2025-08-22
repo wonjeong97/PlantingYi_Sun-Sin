@@ -26,11 +26,12 @@ public class AfterDeathPage : BasePage<AfterDeathSetting>
             await UIManager.Instance.CreateImageAsync(setting.afterDeathImage, gameObject, CancellationToken.None);
 
         if (setting.afterDeathExplainImage != null)
-            await UIManager.Instance.CreateImageAsync(setting.afterDeathExplainImage, gameObject, CancellationToken.None);
-        
+            await UIManager.Instance.CreateImageAsync(setting.afterDeathExplainImage, gameObject,
+                CancellationToken.None);
+
         for (int i = 0; i < setting.afterDeathBtns.Length; i++)
         {
-            await WireButton(setting.afterDeathBtns[i], setting.afterDeathPopups[i], gameObject);
+            await WireButton(setting.afterDeathBtns[i], setting.afterDeathPopups, i, gameObject);
         }
     }
 }

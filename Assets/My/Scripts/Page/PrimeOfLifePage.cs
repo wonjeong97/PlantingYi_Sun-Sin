@@ -13,7 +13,7 @@ public class PrimeOfLifeSetting
     public ImageSetting primeOfLifeExplainImage;
 
     public ButtonSetting[] primeOfLifeBtns;
-    public PopupSetting[] primeOfLifePopups;    
+    public PopupSetting[] primeOfLifePopups;
 }
 
 public class PrimeOfLifePage : BasePage<PrimeOfLifeSetting>
@@ -26,11 +26,12 @@ public class PrimeOfLifePage : BasePage<PrimeOfLifeSetting>
             await UIManager.Instance.CreateImageAsync(setting.primeOfLifeImage, gameObject, CancellationToken.None);
 
         if (setting.primeOfLifeExplainImage != null)
-            await UIManager.Instance.CreateImageAsync(setting.primeOfLifeExplainImage, gameObject, CancellationToken.None);
-        
+            await UIManager.Instance.CreateImageAsync(setting.primeOfLifeExplainImage, gameObject,
+                CancellationToken.None);
+
         for (int i = 0; i < setting.primeOfLifeBtns.Length; i++)
         {
-            await WireButton(setting.primeOfLifeBtns[i], setting.primeOfLifePopups[i], gameObject);
+            await WireButton(setting.primeOfLifeBtns[i], setting.primeOfLifePopups, i, gameObject);
         }
     }
 }

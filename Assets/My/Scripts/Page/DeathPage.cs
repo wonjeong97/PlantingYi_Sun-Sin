@@ -13,7 +13,7 @@ public class DeathSetting
     public ImageSetting deathExplainImage;
 
     public ButtonSetting[] deathBtns;
-    public PopupSetting[] deathPopups;     
+    public PopupSetting[] deathPopups;
 }
 
 public class DeathPage : BasePage<DeathSetting>
@@ -27,10 +27,10 @@ public class DeathPage : BasePage<DeathSetting>
 
         if (setting.deathExplainImage != null)
             await UIManager.Instance.CreateImageAsync(setting.deathExplainImage, gameObject, CancellationToken.None);
-        
+
         for (int i = 0; i < setting.deathBtns.Length; i++)
         {
-            await WireButton(setting.deathBtns[i], setting.deathPopups[i], gameObject);
+            await WireButton(setting.deathBtns[i], setting.deathPopups, i, gameObject);
         }
     }
 }

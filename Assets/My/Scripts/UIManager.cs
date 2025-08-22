@@ -148,7 +148,7 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public async Task ShowIdlePageOnly()
     {
-        if (mainBackground == null || idlePage == null)
+        if (mainBackground is null || idlePage is null)
         {
             Debug.LogWarning("[UIManager] mainBackground or idlePage is not initialized.");
             return;
@@ -176,9 +176,9 @@ public class UIManager : MonoBehaviour
 
     #region Public API
 
-    public Task<GameObject> CreatePopupAsync(PopupSetting setting, GameObject parent,
+    public Task<GameObject> CreatePopupChainAsync(PopupSetting[] allPopups, int index, GameObject parent,
         UnityAction<GameObject> onClose = null, CancellationToken token = default)
-        => CreatePopupInternalAsync(setting, parent, onClose, MergeToken(token));
+        => CreatePopupInternalAsync(allPopups, index, parent, onClose, MergeToken(token));
 
     public Task<GameObject> CreatePageAsync(PageSetting page, GameObject parent, CancellationToken token = default)
         => CreatePageInternalAsync(page, parent, MergeToken(token));
@@ -572,57 +572,95 @@ public class UIManager : MonoBehaviour
     }
 
     /// <summary>
-    /// PopupSetting 데이터를 기반으로 팝업 UI를 동적으로 생성
+    /// PopupSetting 배열과 인덱스를 기반으로 팝업을 생성합니다.
+    /// - popupBackgroundImage, popupTexts, popupImages를 생성합니다.
+    /// - popupNextButton / popupPreviousButton / popupCloseButton을 연결합니다.
+    /// - Next 버튼: index+1 팝업으로 이동
+    /// - Prev 버튼: index-1 팝업으로 이동
+    /// - Close 버튼: 팝업을 닫고 onClose 콜백 실행
     /// </summary>
-    /// <param name="setting">팝업의 배경, 텍스트, 이미지, 버튼 등에 대한 설정 데이터</param>
+    /// <param name="allPopups">팝업 설정 배열</param>
+    /// <param name="index">생성할 팝업의 인덱스</param>
     /// <param name="parent">팝업을 부착할 부모 GameObject</param>
     /// <param name="onClose">팝업이 닫힐 때 호출할 콜백</param>
     /// <param name="token">작업 도중 취소할 수 있는 CancellationToken</param>
-    /// <returns></returns>
-    private async Task<GameObject> CreatePopupInternalAsync(PopupSetting setting, GameObject parent,
-        UnityAction<GameObject> onClose, CancellationToken token)
+    /// <returns>생성된 팝업 GameObject</returns>
+   private async Task<GameObject> CreatePopupInternalAsync(
+    PopupSetting[] allPopups, int index,
+    GameObject parent, UnityAction<GameObject> onClose, CancellationToken token)
+{
+    if (allPopups == null || index < 0 || index >= allPopups.Length)
+        return null;
+
+    var setting = allPopups[index];
+
+    // 팝업 루트 생성
+    var popupRoot = new GameObject(string.IsNullOrEmpty(setting.name) ? "GeneratedPopup" : setting.name);
+    if (!popupRoot) return null;
+
+    popupRoot.transform.SetParent(parent.transform, false);
+
+    // 1. 팝업 배경
+    var popupBg = await CreateBackgroundImageAsync(setting.popupBackgroundImage, popupRoot, token);
+    if (!popupBg) return popupRoot;
+
+    popupBg.transform.SetAsLastSibling();
+
+    // 2. 텍스트/이미지
+    var allTasks = new List<Task>(2)
     {
-        // 팝업 루트 생성
-        var popupRoot = new GameObject(string.IsNullOrEmpty(setting.name) ? "GeneratedPopup" : setting.name);
-        if (!popupRoot) return null;
+        CreateTextsAsync(setting.popupTexts, popupBg, token),
+        CreatePopupImagesAsync(setting.popupImages, popupBg, token)
+    };
+    await Task.WhenAll(allTasks);
 
-        popupRoot.transform.SetParent(parent.transform, false);
-
-        // 1. 팝업 배경 생성
-        var popupBg = await CreateBackgroundImageAsync(setting.popupBackgroundImage, popupRoot, token);
-        if (!popupBg) return popupRoot;
-
-        // 다른 UI 위에 표시되도록 맨 뒤에서 앞으로 이동
-        popupBg.transform.SetAsLastSibling();
-
-        // 2. 텍스트와 이미지 생성 작업을 병렬 실행
-        var allTasks = new List<Task>(2)
-        {
-            CreateTextsAsync(setting.popupTexts, popupBg, token), // 팝업 내부 텍스트 생성
-            CreatePopupImagesAsync(setting.popupImages, popupBg, token) // 팝업 내부 이미지 생성
-        };
-        await Task.WhenAll(allTasks);
-
-        // 3. 닫기 버튼 생성
-        var (btnGo, _) = await CreateSingleButtonAsync(setting.popupButton, popupBg, token);
+    // 3. Next 버튼
+    if (setting.popupNextButton != null && index < allPopups.Length - 1)
+    {
+        var (btnGo, _) = await CreateSingleButtonAsync(setting.popupNextButton, popupBg, token);
         if (btnGo && btnGo.TryGetComponent<Button>(out var btn))
         {
-            // 버튼 클릭 시 팝업 제거 + 콜백 호출
             btn.onClick.AddListener(() =>
             {
-                onClose?.Invoke(popupRoot); // 외부 콜백 실행
-
-                // 팝업의 Addressable 자식 해제
-                foreach (Transform child in popupRoot.transform)
-                {
-                    SafeReleaseInstance(child.gameObject);
-                }
-
-                Destroy(popupRoot); // 팝업 오브젝트 제거                
+                Destroy(popupRoot);
+                _ = CreatePopupInternalAsync(allPopups, index + 1, parent, onClose, token);
             });
         }
+    }
 
-        return popupRoot;
+    // 4. Prev 버튼
+    if (setting.popupPreviousButton != null && index > 0)
+    {
+        var (btnGo, _) = await CreateSingleButtonAsync(setting.popupPreviousButton, popupBg, token);
+        if (btnGo && btnGo.TryGetComponent<Button>(out var btn))
+        {
+            btn.onClick.AddListener(() =>
+            {
+                Destroy(popupRoot);
+                _ = CreatePopupInternalAsync(allPopups, index - 1, parent, onClose, token);
+            });
+        }
+    }
+
+    // 5. Close 버튼
+    if (setting.popupCloseButton != null)
+    {
+        var (btnGo, _) = await CreateSingleButtonAsync(setting.popupCloseButton, popupBg, token);
+        if (btnGo && btnGo.TryGetComponent<Button>(out var btn))
+        {
+            btn.onClick.AddListener(() =>
+            {
+                onClose?.Invoke(popupRoot);
+
+                foreach (Transform child in popupRoot.transform)
+                    SafeReleaseInstance(child.gameObject);
+
+                Destroy(popupRoot);
+            });
+        }
+    }
+
+    return popupRoot;
     }
 
     /// <summary>

@@ -123,30 +123,21 @@ public abstract class BasePage<T> : MonoBehaviour, IUICreate where T : class
     }
 
     // 버튼 생성 및 이벤트 연결
-    protected async Task WireButton(ButtonSetting bs, PopupSetting ps, GameObject parent)
+    protected async Task WireButton(ButtonSetting bs, PopupSetting[] popups, int index, GameObject parent)
     {
-        if (bs == null || ps == null) return;
+        if (bs == null || popups == null || index < 0 || index >= popups.Length) return;
 
         var created = await UIManager.Instance.CreateSingleButtonAsync(bs, parent, CancellationToken.None);
         var go = created.button;
         if (go != null && go.TryGetComponent<Button>(out var btn))
         {
-            btn.onClick.AddListener(() => _ = HandleButtonClick(ps, parent));
+            btn.onClick.AddListener(() =>
+            {
+                _ = UIManager.Instance.CreatePopupChainAsync(popups, index, parent);
+            });
         }
     }
-
-    private async Task HandleButtonClick(PopupSetting ps, GameObject parent)
-    {
-        try
-        {
-            await UIManager.Instance.CreatePopupAsync(ps, parent);
-        }
-        catch (Exception e)
-        {
-            Debug.LogError($"[BasePage] Popup create failed: {e}");
-        }
-    }
-
+    
     /// <summary>
     /// 지정한 이름의 필드나 프로퍼티 값을 가져오는 유틸 메서드
     /// (JSON 세팅에서 필드/프로퍼티 구분 없이 접근 가능)

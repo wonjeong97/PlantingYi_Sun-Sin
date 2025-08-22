@@ -13,7 +13,7 @@ public class LastPageSetting
     public ImageSetting lastExplainImage;
 
     public ButtonSetting[] lastBtns;
-    public PopupSetting[] lastPopups;    
+    public PopupSetting[] lastPopups;
 }
 
 public class LastPage : BasePage<LastPageSetting>
@@ -27,10 +27,10 @@ public class LastPage : BasePage<LastPageSetting>
 
         if (setting.lastExplainImage != null)
             await UIManager.Instance.CreateImageAsync(setting.lastExplainImage, gameObject, CancellationToken.None);
-        
+
         for (int i = 0; i < setting.lastBtns.Length; i++)
         {
-            await WireButton(setting.lastBtns[i], setting.lastPopups[i], gameObject);
+            await WireButton(setting.lastBtns[i], setting.lastPopups, i, gameObject);
         }
     }
 }

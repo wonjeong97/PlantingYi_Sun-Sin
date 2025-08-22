@@ -185,7 +185,7 @@
           "a": 0.5
         }
       },
-      "popupButton": {
+      "popupCloseButton": {
         "position": {
           "x": 960,
           "y": 900
@@ -215,7 +215,7 @@
           "a": 0.5
         }
       },
-      "popupButton": {
+      "popupCloseButton": {
         "position": {
           "x": 960,
           "y": 900
@@ -245,7 +245,7 @@
           "a": 0.5
         }
       },
-      "popupButton": {
+      "popupCloseButton": {
         "position": {
           "x": 960,
           "y": 900
@@ -275,7 +275,7 @@
           "a": 0.5
         }
       },
-      "popupButton": {
+      "popupCloseButton": {
         "position": {
           "x": 960,
           "y": 900
@@ -305,7 +305,7 @@
           "a": 0.5
         }
       },
-      "popupButton": {
+      "popupCloseButton": {
         "position": {
           "x": 960,
           "y": 900
@@ -335,7 +335,7 @@
           "a": 0.5
         }
       },
-      "popupButton": {
+      "popupCloseButton": {
         "position": {
           "x": 960,
           "y": 900
@@ -365,7 +365,7 @@
           "a": 0.5
         }
       },
-      "popupButton": {
+      "popupCloseButton": {
         "position": {
           "x": 960,
           "y": 900
@@ -395,7 +395,7 @@
           "a": 0.5
         }
       },
-      "popupButton": {
+      "popupCloseButton": {
         "position": {
           "x": 960,
           "y": 900
@@ -425,7 +425,7 @@
           "a": 0.5
         }
       },
-      "popupButton": {
+      "popupCloseButton": {
         "position": {
           "x": 960,
           "y": 900

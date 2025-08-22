@@ -178,7 +178,9 @@ public class PopupSetting
     public ImageSetting popupBackgroundImage;
     public TextSetting[] popupTexts;
     public ImageSetting[] popupImages;
-    public ButtonSetting popupButton;
+    public ButtonSetting popupNextButton;
+    public ButtonSetting popupPreviousButton;
+    public ButtonSetting popupCloseButton;
 }
 
 [Serializable]

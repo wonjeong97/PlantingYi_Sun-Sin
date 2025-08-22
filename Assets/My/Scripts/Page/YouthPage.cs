@@ -28,10 +28,10 @@ public class YouthPage : BasePage<YouthSetting>
         if (setting.youthExplainImage != null)
             await UIManager.Instance.CreateImageAsync(setting.youthExplainImage, gameObject,
                 CancellationToken.None);
-        
+
         for (int i = 0; i < setting.youthBtns.Length; i++)
         {
-            await WireButton(setting.youthBtns[i], setting.youthPopups[i], gameObject);
+            await WireButton(setting.youthBtns[i], setting.youthPopups, i, gameObject);
         }
     }
 }

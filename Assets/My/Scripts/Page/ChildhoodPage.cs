@@ -32,7 +32,7 @@ public class ChildhoodPage : BasePage<ChildhoodSetting>
 
         for (int i = 0; i < setting.childhoodBtns.Length; i++)
         {
-            await WireButton(setting.childhoodBtns[i], setting.childhoodPopups[i], gameObject);
+            await WireButton(setting.childhoodBtns[i], setting.childhoodPopups, i, gameObject);
         }
     }
 }
