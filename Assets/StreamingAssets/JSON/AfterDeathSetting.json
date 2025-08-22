@@ -5,7 +5,7 @@
       "x": 1920,
       "y": 1080
     },
-    "sourceImage": "Image/Page/AfterDeathPage.png",
+    "sourceImage": "Image/Page/AfterDeath/AfterDeathPage.png",
     "color": {
       "r": 1,
       "g": 1,
@@ -20,7 +20,7 @@
       "y": 100
     },
     "position": {
-      "x": 960,
+      "x": 300,
       "y": 985
     },
     "buttonBackgroundImage": {
@@ -34,7 +34,7 @@
       "y": 100
     },
     "position": {
-      "x": 825,
+      "x": 175,
       "y": 985
     },
     "buttonBackgroundImage": {
@@ -45,361 +45,169 @@
     {
       "name": "Button_AfterDeath_0",
       "size": {
-        "x": 800,
-        "y": 55
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 280
+        "x": 970,
+        "y": 270
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-      "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "1. 현충사의 유래",
-        "fontName": "font1",
-        "fontSize": 35,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/AfterDeath/1.png"
       }
     },
     {
       "name": "Button_AfterDeath_1",
       "size": {
-        "x": 800,
-        "y": 55
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 340
+        "x": 970,
+        "y": 385
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-      "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "2. 일제 강점기 때 현충사",
-        "fontName": "font1",
-        "fontSize": 35,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/AfterDeath/2.png"
       }
     },
     {
       "name": "Button_AfterDeath_2",
       "size": {
-        "x": 800,
-        "y": 55
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 400
+        "x": 970,
+        "y": 500
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-      "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "3. 현충사 내의 이순신 유적",
-        "fontName": "font1",
-        "fontSize": 35,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/AfterDeath/3.png"
       }
     },
     {
       "name": "Button_AfterDeath_3",
       "size": {
-        "x": 800,
-        "y": 55
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 460
+        "x": 970,
+        "y": 615
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-      "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "4. 지금의 현충사",
-        "fontName": "font1",
-        "fontSize": 35,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/AfterDeath/4.png"
       }
     },
     {
       "name": "Button_AfterDeath_4",
       "size": {
-        "x": 800,
-        "y": 55
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 520
+        "x": 970,
+        "y": 730
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-      "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "5. 이순신 영정",
-        "fontName": "font1",
-        "fontSize": 35,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/AfterDeath/5.png"
       }
     },
     {
       "name": "Button_AfterDeath_5",
       "size": {
-        "x": 800,
-        "y": 55
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 580
+        "x": 970,
+        "y": 845
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-      "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "6. 현충사 내 유물",
-        "fontName": "font1",
-        "fontSize": 35,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/AfterDeath/6.png"
       }
     },
     {
       "name": "Button_AfterDeath_6",
       "size": {
-        "x": 800,
-        "y": 55
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 640
+        "x": 1525,
+        "y": 270
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-      "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "7. 전국 이순신 사당",
-        "fontName": "font1",
-        "fontSize": 35,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/AfterDeath/7.png"
       }
     },
     {
       "name": "Button_AfterDeath_7",
       "size": {
-        "x": 800,
-        "y": 55
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 700
+        "x": 1525,
+        "y": 385
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-      "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "38. 아산시 이순신 선양",
-        "fontName": "font1",
-        "fontSize": 35,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/AfterDeath/38.png"
       }
     },
     {
       "name": "Button_AfterDeath_8",
       "size": {
-        "x": 800,
-        "y": 55
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 760
+        "x": 1525,
+        "y": 500
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-      "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "39. 전국 이순신 동상",
-        "fontName": "font1",
-        "fontSize": 35,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/AfterDeath/39.png"
       }
     },
     {
       "name": "Button_AfterDeath_9",
       "size": {
-        "x": 800,
-        "y": 55
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 820
+        "x": 1525,
+        "y": 615
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-      "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "46. 이순신 영화 이야기",
-        "fontName": "font1",
-        "fontSize": 35,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/AfterDeath/46.png"
       }
     },
     {
       "name": "Button_AfterDeath_10",
       "size": {
-        "x": 800,
-        "y": 55
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 880
+        "x": 1525,
+        "y": 730
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-      "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "50. 일본 해군에 미친 영향",
-        "fontName": "font1",
-        "fontSize": 35,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/AfterDeath/50.png"
       }
     },
     {
       "name": "Button_AfterDeath_11",
       "size": {
-        "x": 800,
-        "y": 55
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 940
+        "x": 1525,
+        "y": 845
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-      "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "51. 이순신 사후 평가",
-        "fontName": "font1",
-        "fontSize": 35,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/AfterDeath/51.png"
       }
     }
   ],
@@ -411,25 +219,25 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/AfterDeath/Popup/1.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1000
         },
         "size": {
-          "x": 300,
+          "x": 100,
           "y": 100
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
+          "sourceImage": "Image/Button/back.png"
         },
         "buttonSound": "click1"
       }
@@ -441,25 +249,25 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/AfterDeath/Popup/2.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1000
         },
         "size": {
-          "x": 300,
+          "x": 100,
           "y": 100
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
+          "sourceImage": "Image/Button/back.png"
         },
         "buttonSound": "click1"
       }
@@ -471,25 +279,25 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/AfterDeath/Popup/3.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1000
         },
         "size": {
-          "x": 300,
+          "x": 100,
           "y": 100
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
+          "sourceImage": "Image/Button/back.png"
         },
         "buttonSound": "click1"
       }
@@ -501,25 +309,25 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/AfterDeath/Popup/4.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1000
         },
         "size": {
-          "x": 300,
+          "x": 100,
           "y": 100
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
+          "sourceImage": "Image/Button/back.png"
         },
         "buttonSound": "click1"
       }
@@ -531,25 +339,25 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/AfterDeath/Popup/5.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1000
         },
         "size": {
-          "x": 300,
+          "x": 100,
           "y": 100
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
+          "sourceImage": "Image/Button/back.png"
         },
         "buttonSound": "click1"
       }
@@ -561,25 +369,25 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/AfterDeath/Popup/.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1000
         },
         "size": {
-          "x": 300,
+          "x": 100,
           "y": 100
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
+          "sourceImage": "Image/Button/back.png"
         },
         "buttonSound": "click1"
       }
@@ -591,25 +399,25 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/AfterDeath/Popup/.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1000
         },
         "size": {
-          "x": 300,
+          "x": 100,
           "y": 100
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
+          "sourceImage": "Image/Button/back.png"
         },
         "buttonSound": "click1"
       }
@@ -621,25 +429,25 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/AfterDeath/Popup/.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1000
         },
         "size": {
-          "x": 300,
+          "x": 100,
           "y": 100
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
+          "sourceImage": "Image/Button/back.png"
         },
         "buttonSound": "click1"
       }
@@ -651,25 +459,25 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/AfterDeath/Popup/.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1000
         },
         "size": {
-          "x": 300,
+          "x": 100,
           "y": 100
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
+          "sourceImage": "Image/Button/back.png"
         },
         "buttonSound": "click1"
       }
@@ -681,25 +489,25 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/AfterDeath/Popup/.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1000
         },
         "size": {
-          "x": 300,
+          "x": 100,
           "y": 100
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
+          "sourceImage": "Image/Button/back.png"
         },
         "buttonSound": "click1"
       }
@@ -711,25 +519,25 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/AfterDeath/Popup/.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1000
         },
         "size": {
-          "x": 300,
+          "x": 100,
           "y": 100
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
+          "sourceImage": "Image/Button/back.png"
         },
         "buttonSound": "click1"
       }
@@ -741,25 +549,25 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/AfterDeath/Popup/.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1000
         },
         "size": {
-          "x": 300,
+          "x": 100,
           "y": 100
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
+          "sourceImage": "Image/Button/back.png"
         },
         "buttonSound": "click1"
       }

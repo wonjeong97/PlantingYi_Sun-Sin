@@ -30,11 +30,11 @@
   "whatIsButton": {
     "name": "Button_WhatIs",
     "size": {
-      "x": 300,
-      "y": 450
+      "x": 209,
+      "y": 455
     },
     "position": {
-      "x": 190,
+      "x": 300,
       "y": 675
     },
     "buttonBackgroundImage": {
@@ -44,11 +44,11 @@
   "childhoodButton": {
     "name": "Button_Childhood",
     "size": {
-      "x": 300,
-      "y": 450
+      "x": 209,
+      "y": 455
     },
     "position": {
-      "x": 460,
+      "x": 520,
       "y": 675
     },
     "buttonBackgroundImage": {
@@ -58,11 +58,11 @@
   "youthButton": {
     "name": "Button_Youth",
     "size": {
-      "x": 300,
-      "y": 450
+      "x": 209,
+      "y": 455
     },
     "position": {
-      "x": 710,
+      "x": 740,
       "y": 675
     },
     "buttonBackgroundImage": {
@@ -72,8 +72,8 @@
   "primeOfLifeButton": {
     "name": "Button_PrimeOfLife",
     "size": {
-      "x": 300,
-      "y": 450
+      "x": 209,
+      "y": 455
     },
     "position": {
       "x": 960,
@@ -86,11 +86,11 @@
   "lastButton": {
     "name": "Button_Last",
     "size": {
-      "x": 300,
-      "y": 450
+      "x": 209,
+      "y": 455
     },
     "position": {
-      "x": 1210,
+      "x": 1180,
       "y": 675
     },
     "buttonBackgroundImage": {
@@ -100,11 +100,11 @@
   "deathButton": {
     "name": "Button_Death",
     "size": {
-      "x": 300,
-      "y": 450
+      "x": 209,
+      "y": 455
     },
     "position": {
-      "x": 1460,
+      "x": 1400,
       "y": 675
     },
     "buttonBackgroundImage": {
@@ -114,11 +114,11 @@
   "afterDeathButton": {
     "name": "Button_AfterDeath",
     "size": {
-      "x": 300,
-      "y": 450
+      "x": 209,
+      "y": 455
     },
     "position": {
-      "x": 1710,
+      "x": 1620,
       "y": 675
     },
     "buttonBackgroundImage": {

@@ -5,7 +5,7 @@
       "x": 1920,
       "y": 1080
     },
-    "sourceImage": "Image/Page/POLPage.png",
+    "sourceImage": "Image/Page/PrimeOfLife/PrimeOfLifePage.png",
     "color": {
       "r": 1,
       "g": 1,
@@ -20,7 +20,7 @@
       "y": 100
     },
     "position": {
-      "x": 960,
+      "x": 300,
       "y": 985
     },
     "buttonBackgroundImage": {
@@ -34,7 +34,7 @@
       "y": 100
     },
     "position": {
-      "x": 825,
+      "x": 175,
       "y": 985
     },
     "buttonBackgroundImage": {
@@ -45,451 +45,211 @@
     {
       "name": "Button_PrimeOfLife_0",
       "size": {
-        "x": 800,
-        "y": 50
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 180
+        "x": 1025,
+        "y": 150
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-     "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "21. 이순신 삶의 목표 충효",
-        "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/PrimeOfLife/21.png"
       }
     },
     {
       "name": "Button_PrimeOfLife_1",
       "size": {
-        "x": 800,
-        "y": 50
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 240
+        "x": 1025,
+        "y": 270
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-     "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "22. 효자 이순신",
-        "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/PrimeOfLife/22.png"
       }
     },
     {
       "name": "Button_PrimeOfLife_2",
       "size": {
-        "x": 800,
-        "y": 50
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 300
+        "x": 1025,
+        "y": 390
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-     "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "23. 이순신 어머니이야기",
-        "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/PrimeOfLife/23.png"
       }
     },
     {
       "name": "Button_PrimeOfLife_3",
       "size": {
-        "x": 800,
-        "y": 50
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 360
+        "x": 1025,
+        "y": 510
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-     "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "26. 전라좌수사에서 삼도수군통제사까지",
-        "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/PrimeOfLife/26.png"
       }
     },
     {
       "name": "Button_PrimeOfLife_4",
       "size": {
-        "x": 800,
-        "y": 50
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 420
+        "x": 1025,
+        "y": 630
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-     "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "28. 한산해전",
-        "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/PrimeOfLife/28.png"
       }
     },
     {
       "name": "Button_PrimeOfLife_5",
       "size": {
-        "x": 800,
-        "y": 50
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 480
+        "x": 1025,
+        "y": 750
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-     "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "30. 거북선이야기",
-        "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/PrimeOfLife/30.png"
       }
     },
     {
       "name": "Button_PrimeOfLife_6",
       "size": {
-        "x": 800,
-        "y": 50
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 540
+        "x": 1025,
+        "y": 870
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-     "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "31. 정철조총 개발",
-        "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/PrimeOfLife/31.png"
       }
     },
     {
       "name": "Button_PrimeOfLife_7",
       "size": {
-        "x": 800,
-        "y": 50
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 600
+        "x": 1025,
+        "y": 990
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-     "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "32. 이순신 병법",
-        "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/PrimeOfLife/32.png"
       }
     },
     {
       "name": "Button_PrimeOfLife_8",
       "size": {
-        "x": 800,
-        "y": 50
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 660
+        "x": 1575,
+        "y": 200
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-     "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "33. 이순신의 정보 전략",
-        "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/PrimeOfLife/33.png"
       }
     },
     {
       "name": "Button_PrimeOfLife_9",
       "size": {
-        "x": 800,
-        "y": 50
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 720
+        "x": 1575,
+        "y": 320
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-     "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "34. 소통의 리더십",
-        "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/PrimeOfLife/34.png"
       }
     },
     {
       "name": "Button_PrimeOfLife_10",
       "size": {
-        "x": 800,
-        "y": 50
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 780
+        "x": 1575,
+        "y": 440
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-     "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "35. 이순신의 애민",
-        "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/PrimeOfLife/35.png"
       }
     },
     {
       "name": "Button_PrimeOfLife_11",
       "size": {
-        "x": 800,
-        "y": 50
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 840
+        "x": 1575,
+        "y": 560
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-     "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "36. 이순신의 좌우명과 사생관",
-        "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/PrimeOfLife/36.png"
       }
     },
     {
       "name": "Button_PrimeOfLife_12",
       "size": {
-        "x": 800,
-        "y": 50
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 900
+        "x": 1575,
+        "y": 680
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-     "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "40. 조선 수군의 위상",
-        "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/PrimeOfLife/40.png"
       }
     },
     {
       "name": "Button_PrimeOfLife_13",
       "size": {
-        "x": 800,
-        "y": 50
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 960
+        "x": 1575,
+        "y": 800
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-     "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "41. 류성룡, 이원익, 정탁",
-        "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/PrimeOfLife/41.png"
       }
     },
     {
       "name": "Button_PrimeOfLife_14",
       "size": {
-        "x": 800,
-        "y": 50
+        "x": 518,
+        "y": 121
       },
       "position": {
-        "x": 1550,
-        "y": 1020
+        "x": 1575,
+        "y": 920
       },
       "buttonBackgroundImage": {
-        "sourceImage": "Image/Button/line.png"
-      },
-     "buttonText": {
-        "position": {
-          "x": -20,
-          "y": 20
-        },
-        "text": "42. 이순신의 부하들",
-        "fontName": "font1",
-        "fontSize": 24,
-        "fontColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        },
-        "alignment": 513
+        "sourceImage": "Image/Page/PrimeOfLife/42.png"
       }
     }
   ],
