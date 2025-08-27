@@ -40,18 +40,5 @@
     "buttonBackgroundImage": {
       "sourceImage": "Image/Button/back.png"
     }
-  },
-  "_video": {
-    "name": "WhatIsVideoPlayer",
-    "size": {
-      "x": 1280,
-      "y": 720
-    },
-    "position": {
-      "x": 960,
-      "y": 540
-    },
-    "fileName": "Video/Test/YTN.webm",
-    "volume": 0.5
   }
 }

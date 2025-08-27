@@ -16,12 +16,12 @@
   "startButton": {
     "name": "StartButton",
     "size": {
-      "x": 208,
-      "y": 208
+      "x": 230,
+      "y": 230
     },
     "position": {
       "x": 960,
-      "y": 920
+      "y": 825
     },
     "buttonBackgroundImage": {
       "sourceImage": "Image/Button/start.png"

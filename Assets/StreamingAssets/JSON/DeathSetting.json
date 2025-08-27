@@ -163,27 +163,26 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/Death/Popup/14.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupCloseButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1035
         },
         "size": {
-          "x": 300,
-          "y": 100
+          "x": 80,
+          "y": 80
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
-        },
-        "buttonSound": "click1"
+          "sourceImage": "Image/Button/back.png"
+        }
       }
     },
     {
@@ -193,27 +192,26 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/Death/Popup/15.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupCloseButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1035
         },
         "size": {
-          "x": 300,
-          "y": 100
+          "x": 80,
+          "y": 80
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
-        },
-        "buttonSound": "click1"
+          "sourceImage": "Image/Button/back.png"
+        }
       }
     },
     {
@@ -223,27 +221,26 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/Death/Popup/16.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupCloseButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1035
         },
         "size": {
-          "x": 300,
-          "y": 100
+          "x": 80,
+          "y": 80
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
-        },
-        "buttonSound": "click1"
+          "sourceImage": "Image/Button/back.png"
+        }
       }
     },
     {
@@ -253,27 +250,26 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/Death/Popup/17.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupCloseButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1035
         },
         "size": {
-          "x": 300,
-          "y": 100
+          "x": 80,
+          "y": 80
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
-        },
-        "buttonSound": "click1"
+          "sourceImage": "Image/Button/back.png"
+        }
       }
     },
     {
@@ -283,27 +279,26 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/Death/Popup/18.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupCloseButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1035
         },
         "size": {
-          "x": 300,
-          "y": 100
+          "x": 80,
+          "y": 80
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
-        },
-        "buttonSound": "click1"
+          "sourceImage": "Image/Button/back.png"
+        }
       }
     },
     {
@@ -313,27 +308,26 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/Death/Popup/19.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupCloseButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1035
         },
         "size": {
-          "x": 300,
-          "y": 100
+          "x": 80,
+          "y": 80
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
-        },
-        "buttonSound": "click1"
+          "sourceImage": "Image/Button/back.png"
+        }
       }
     },
     {
@@ -343,27 +337,26 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/Death/Popup/24.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupCloseButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1035
         },
         "size": {
-          "x": 300,
-          "y": 100
+          "x": 80,
+          "y": 80
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
-        },
-        "buttonSound": "click1"
+          "sourceImage": "Image/Button/back.png"
+        }
       }
     },
     {
@@ -373,27 +366,26 @@
           "x": 1920,
           "y": 1080
         },
-        "sourceImage": "Image/Background/1_White.png",
+        "sourceImage": "Image/Page/Death/Popup/37.png",
         "color": {
           "r": 1,
           "g": 1,
           "b": 1,
-          "a": 0.5
+          "a": 1
         }
       },
       "popupCloseButton": {
         "position": {
           "x": 960,
-          "y": 900
+          "y": 1035
         },
         "size": {
-          "x": 300,
-          "y": 100
+          "x": 80,
+          "y": 80
         },
         "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/1_Button.png"
-        },
-        "buttonSound": "click1"
+          "sourceImage": "Image/Button/back.png"
+        }
       }
     }
   ]
