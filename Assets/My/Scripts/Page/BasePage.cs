@@ -5,17 +5,34 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
+public interface IPageWithSubPopups
+{
+    PopupSetting[] GetSubPopups();
+}
+
 /// <summary>
 /// 모든 UI 페이지의 공통 기반 클래스.
 /// 제네릭으로 페이지별 Setting 타입을 지정하고,
 /// 공통 UI 생성 로직(배경, 뒤로가기, Idle 복귀 버튼 등)을 제공.
 /// </summary>
 /// <typeparam name="T">각 페이지별 설정 데이터 클래스 타입</typeparam>
-public abstract class BasePage<T> : MonoBehaviour, IUICreate where T : class
+public abstract class BasePage<T> : MonoBehaviour, IUICreate, IPageWithSubPopups where T : class
 {
     [NonSerialized] protected T setting; // 페이지별 설정 데이터
     [HideInInspector] public MenuPage menuPageInstance; // 메뉴 페이지 인스턴스 (뒤로가기 버튼에서 사용)
 
+    public virtual PopupSetting[] GetSubPopups()
+    {
+        if (setting == null) return null;
+
+        // T 타입 안에 subPopups 필드가 있으면 리턴
+        var field = typeof(T).GetField("subPopups", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+        if (field != null)
+            return field.GetValue(setting) as PopupSetting[];
+
+        return null;
+    }
+    
     protected abstract string JsonPath { get; } // 각 파생 페이지에서 JSON 경로만 지정
     protected abstract Task BuildContentAsync(); // 각 파생 페이지의 전용 콘텐츠    
 

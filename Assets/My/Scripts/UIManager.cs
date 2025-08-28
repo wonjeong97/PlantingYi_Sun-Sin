@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using TMPro;
@@ -17,17 +19,13 @@ public class UIManager : MonoBehaviour
 
     private float inactivityTimer;
     private float inactivityThreshold = 60f; // 입력이 없는 경우 타이틀로 되돌아가는 시간
-
     private GameObject idlePage;
-
-    public CancellationTokenSource cts;
-
-    // Addressable.InstantiateAsync로 만든 동적 오브젝트 추적
-    public readonly List<GameObject> addrInstances = new List<GameObject>();
-
     private Settings jsonSetting;
     private ButtonSetting defaultButtonSetting;
 
+    // Addressable.InstantiateAsync로 만든 동적 오브젝트 추적
+    public readonly List<GameObject> addrInstances = new List<GameObject>();
+    public CancellationTokenSource cts;
     [HideInInspector] public GameObject mainBackground;
 
     private void Awake()
@@ -35,8 +33,6 @@ public class UIManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            //DontDestroyOnLoad(gameObject);
-
             cts = new CancellationTokenSource();
         }
         else if (Instance != this)
@@ -73,7 +69,7 @@ public class UIManager : MonoBehaviour
     private void Update()
     {
         // IdlePage가 아니고, 일정시간 입력이 없을 시 초기화
-        if (idlePage != null && !idlePage.activeInHierarchy)
+        if (idlePage && !idlePage.activeInHierarchy)
         {
             inactivityTimer += Time.deltaTime;
 
@@ -119,7 +115,7 @@ public class UIManager : MonoBehaviour
 
     private async Task InitUI(CancellationToken token = default)
     {
-        var ct = MergeToken(token);
+        CancellationToken ct = MergeToken(token);
 
         try
         {
@@ -585,84 +581,124 @@ public class UIManager : MonoBehaviour
     /// <param name="onClose">팝업이 닫힐 때 호출할 콜백</param>
     /// <param name="token">작업 도중 취소할 수 있는 CancellationToken</param>
     /// <returns>생성된 팝업 GameObject</returns>
-   private async Task<GameObject> CreatePopupInternalAsync(
-    PopupSetting[] allPopups, int index,
-    GameObject parent, UnityAction<GameObject> onClose, CancellationToken token)
-{
-    if (allPopups == null || index < 0 || index >= allPopups.Length)
-        return null;
-
-    var setting = allPopups[index];
-
-    // 팝업 루트 생성
-    var popupRoot = new GameObject(string.IsNullOrEmpty(setting.name) ? "GeneratedPopup" : setting.name);
-    if (!popupRoot) return null;
-
-    popupRoot.transform.SetParent(parent.transform, false);
-
-    // 1. 팝업 배경
-    var popupBg = await CreateBackgroundImageAsync(setting.popupBackgroundImage, popupRoot, token);
-    if (!popupBg) return popupRoot;
-
-    popupBg.transform.SetAsLastSibling();
-
-    // 2. 텍스트/이미지
-    var allTasks = new List<Task>(2)
+    private async Task<GameObject> CreatePopupInternalAsync(
+        PopupSetting[] allPopups, int index,
+        GameObject parent, UnityAction<GameObject> onClose, CancellationToken token)
     {
-        CreateTextsAsync(setting.popupTexts, popupBg, token),
-        CreatePopupImagesAsync(setting.popupImages, popupBg, token)
-    };
-    await Task.WhenAll(allTasks);
+        if (allPopups == null || index < 0 || index >= allPopups.Length)
+            return null;
 
-    // 3. Next 버튼
-    if (setting.popupNextButton != null && index < allPopups.Length - 1)
-    {
-        var (btnGo, _) = await CreateSingleButtonAsync(setting.popupNextButton, popupBg, token);
-        if (btnGo && btnGo.TryGetComponent<Button>(out var btn))
+        var setting = allPopups[index];
+
+        // 팝업 루트 생성
+        var popupRoot = new GameObject(string.IsNullOrEmpty(setting.name) ? "GeneratedPopup" : setting.name);
+        if (!popupRoot) return null;
+
+        popupRoot.transform.SetParent(parent.transform, false);
+
+        // 1. 팝업 배경
+        var popupBg = await CreateBackgroundImageAsync(setting.popupBackgroundImage, popupRoot, token);
+        if (!popupBg) return popupRoot;
+
+        popupBg.transform.SetAsLastSibling();
+
+        // 2. 텍스트/이미지
+        var allTasks = new List<Task>(2)
         {
-            btn.onClick.AddListener(() =>
-            {
-                Destroy(popupRoot);
-                _ = CreatePopupInternalAsync(allPopups, index + 1, parent, onClose, token);
-            });
-        }
-    }
+            CreateTextsAsync(setting.popupTexts, popupBg, token),
+            CreatePopupImagesAsync(setting.popupImages, popupBg, token)
+        };
+        await Task.WhenAll(allTasks);
 
-    // 4. Prev 버튼
-    if (setting.popupPreviousButton != null && index > 0)
-    {
-        var (btnGo, _) = await CreateSingleButtonAsync(setting.popupPreviousButton, popupBg, token);
-        if (btnGo && btnGo.TryGetComponent<Button>(out var btn))
+        // 3. Next 버튼
+        /*if (setting.popupNextButton != null && index < allPopups.Length - 1)
         {
-            btn.onClick.AddListener(() =>
+            var (btnGo, _) = await CreateSingleButtonAsync(setting.popupNextButton, popupBg, token);
+            if (btnGo && btnGo.TryGetComponent<Button>(out var btn))
             {
-                Destroy(popupRoot);
-                _ = CreatePopupInternalAsync(allPopups, index - 1, parent, onClose, token);
-            });
-        }
-    }
+                btn.onClick.AddListener(() =>
+                {
+                    Destroy(popupRoot);
+                    _ = CreatePopupInternalAsync(allPopups, index + 1, parent, onClose, token);
+                });
+            }
+        }*/
 
-    // 5. Close 버튼
-    if (setting.popupCloseButton != null)
-    {
-        var (btnGo, _) = await CreateSingleButtonAsync(setting.popupCloseButton, popupBg, token);
-        if (btnGo && btnGo.TryGetComponent<Button>(out var btn))
+        // 4. Prev 버튼
+        /*if (setting.popupPreviousButton != null && index > 0)
         {
-            btn.onClick.AddListener(() =>
+            var (btnGo, _) = await CreateSingleButtonAsync(setting.popupPreviousButton, popupBg, token);
+            if (btnGo && btnGo.TryGetComponent<Button>(out var btn))
             {
-                onClose?.Invoke(popupRoot);
+                btn.onClick.AddListener(() =>
+                {
+                    Destroy(popupRoot);
+                    _ = CreatePopupInternalAsync(allPopups, index - 1, parent, onClose, token);
+                });
+            }
+        }*/
+        
+        // 내부 팝업 버튼들 생성
+        var popup2Btns = await CreateButtonsAsync(setting.popup2Buttons, popupBg, token);
+        foreach (var (btnGo2, _) in popup2Btns)
+        {
+            if (btnGo2 != null && btnGo2.TryGetComponent<Button>(out var btn2))
+            {
+                var buttonSetting = setting.popup2Buttons.FirstOrDefault(b => b.name == btnGo2.name);
+                if (buttonSetting == null) continue;
 
-                foreach (Transform child in popupRoot.transform)
-                    SafeReleaseInstance(child.gameObject);
+                btn2.onClick.AddListener(() =>
+                {
+                    if (!string.IsNullOrEmpty(buttonSetting.targetPopupName))
+                    {
+                        // 부모 페이지에서 SubPopups 가져오기
+                        var page = parent.GetComponentInParent<IPageWithSubPopups>();
+                        var subPopups = page?.GetSubPopups();
 
-                Destroy(popupRoot);
-            });
+                        if (subPopups != null)
+                        {
+                            var target = subPopups.FirstOrDefault(p => p.name == buttonSetting.targetPopupName);
+                            if (target != null)
+                            {
+                                int idx = Array.IndexOf(subPopups, target);
+                                _ = CreatePopupInternalAsync(subPopups, idx, parent, null, token);
+                            }
+                            else
+                            {
+                                Debug.LogWarning($"[UIManager] SubPopup not found: {buttonSetting.targetPopupName}");
+                            }
+                        }
+                        else
+                        {
+                            Debug.LogWarning("[UIManager] No subPopups found on parent page");
+                        }
+                    }
+                });
+            }
         }
-    }
+        
 
-    return popupRoot;
-    }
+        // 5. Close 버튼
+        if (setting.popupCloseButton != null)
+        {
+            var (btnGo, _) = await CreateSingleButtonAsync(setting.popupCloseButton, popupBg, token);
+            if (btnGo && btnGo.TryGetComponent<Button>(out var btn))
+            {
+                btn.onClick.AddListener(() =>
+                {
+                    onClose?.Invoke(popupRoot);
 
+                    foreach (Transform child in popupRoot.transform)
+                        SafeReleaseInstance(child.gameObject);
+
+                    Destroy(popupRoot);
+                });
+            }
+        }
+
+        return popupRoot;
+    }
+    
     /// <summary>
     /// 팝업에 사용할 이미지들을 비동기로 생성
     /// </summary>

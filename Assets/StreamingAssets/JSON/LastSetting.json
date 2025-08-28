@@ -1,434 +1,326 @@
 {
   "backgroundImage": {
     "name": "LastPageBackground",
-    "size": {
-      "x": 1920,
-      "y": 1080
-    },
+    "size": { "x": 1920, "y": 1080 },
     "sourceImage": "Image/Page/Last/LastPage.png",
-    "color": {
-      "r": 1,
-      "g": 1,
-      "b": 1,
-      "a": 1.0
-    }
+    "color": { "r": 1, "g": 1, "b": 1, "a": 1.0 }
   },
   "backToIdleButton": {
     "name": "Button_BackToIdle",
-    "size": {
-      "x": 100,
-      "y": 100
-    },
-    "position": {
-      "x": 300,
-      "y": 985
-    },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Button/home.png"
-    }
+    "size": { "x": 100, "y": 100 },
+    "position": { "x": 300, "y": 985 },
+    "buttonBackgroundImage": { "sourceImage": "Image/Button/home.png" }
   },
   "backButton": {
     "name": "Button_Back",
-    "size": {
-      "x": 100,
-      "y": 100
-    },
-    "position": {
-      "x": 175,
-      "y": 985
-    },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Button/back.png"
-    }
+    "size": { "x": 100, "y": 100 },
+    "position": { "x": 175, "y": 985 },
+    "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
   },
   "lastBtns": [
     {
       "name": "Button_Last_0",
-      "size": {
-        "x": 518,
-        "y": 121
-      },
-      "position": {
-        "x": 1025,
-        "y": 280
-      },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Page/Last/20.png"
-      }      
+      "size": { "x": 518, "y": 121 },
+      "position": { "x": 1025, "y": 280 },
+      "buttonBackgroundImage": { "sourceImage": "Image/Page/Last/20.png" }
     },
     {
       "name": "Button_Last_1",
-      "size": {
-        "x": 518,
-        "y": 121
-      },
-      "position": {
-        "x": 1025,
-        "y": 420
-      },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Page/Last/27.png"
-      }      
+      "size": { "x": 518, "y": 121 },
+      "position": { "x": 1025, "y": 420 },
+      "buttonBackgroundImage": { "sourceImage": "Image/Page/Last/27.png" }
     },
     {
       "name": "Button_Last_2",
-      "size": {
-        "x": 518,
-        "y": 121
-      },
-      "position": {
-        "x": 1025,
-        "y": 560
-      },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Page/Last/29.png"
-      }      
+      "size": { "x": 518, "y": 121 },
+      "position": { "x": 1025, "y": 560 },
+      "buttonBackgroundImage": { "sourceImage": "Image/Page/Last/29.png" }
     },
     {
       "name": "Button_Last_3",
-      "size": {
-        "x": 518,
-        "y": 121
-      },
-      "position": {
-        "x": 1025,
-        "y": 700
-      },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Page/Last/43.png"
-      }      
+      "size": { "x": 518, "y": 121 },
+      "position": { "x": 1025, "y": 700 },
+      "buttonBackgroundImage": { "sourceImage": "Image/Page/Last/43.png" }
     },
     {
       "name": "Button_Last_4",
-      "size": {
-        "x": 518,
-        "y": 121
-      },
-      "position": {
-        "x": 1025,
-        "y": 840
-      },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Page/Last/44.png"
-      }      
+      "size": { "x": 518, "y": 121 },
+      "position": { "x": 1025, "y": 840 },
+      "buttonBackgroundImage": { "sourceImage": "Image/Page/Last/44.png" }
     },
     {
       "name": "Button_Last_5",
-      "size": {
-        "x": 518,
-        "y": 121
-      },
-      "position": {
-        "x": 1575,
-        "y": 350
-      },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Page/Last/45.png"
-      }      
+      "size": { "x": 518, "y": 121 },
+      "position": { "x": 1575, "y": 350 },
+      "buttonBackgroundImage": { "sourceImage": "Image/Page/Last/45.png" }
     },
     {
       "name": "Button_Last_6",
-      "size": {
-        "x": 518,
-        "y": 121
-      },
-      "position": {
-        "x": 1575,
-        "y": 490
-      },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Page/Last/47.png"
-      }      
+      "size": { "x": 518, "y": 121 },
+      "position": { "x": 1575, "y": 490 },
+      "buttonBackgroundImage": { "sourceImage": "Image/Page/Last/47.png" }
     },
     {
       "name": "Button_Last_7",
-      "size": {
-        "x": 518,
-        "y": 121
-      },
-      "position": {
-        "x": 1575,
-        "y": 630
-      },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Page/Last/48.png"
-      }      
+      "size": { "x": 518, "y": 121 },
+      "position": { "x": 1575, "y": 630 },
+      "buttonBackgroundImage": { "sourceImage": "Image/Page/Last/48.png" }
     },
     {
       "name": "Button_Last_8",
-      "size": {
-        "x": 518,
-        "y": 121
-      },
-      "position": {
-        "x": 1575,
-        "y": 770
-      },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Page/Last/49.png"
-      }      
+      "size": { "x": 518, "y": 121 },
+      "position": { "x": 1575, "y": 770 },
+      "buttonBackgroundImage": { "sourceImage": "Image/Page/Last/49.png" }
     }
   ],
   "lastPopups": [
     {
       "name": "Popup_Last_0",
       "popupBackgroundImage": {
-        "size": {
-          "x": 1920,
-          "y": 1080
-        },
+        "size": { "x": 1920, "y": 1080 },
         "sourceImage": "Image/Page/Last/Popup/20.png",
-        "color": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        }
+        "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
       },
-      "popupCloseButton": {
-        "position": {
-          "x": 960,
-          "y": 1035
+      "popup2Buttons":[
+        {
+          "name": "20-1",
+          "targetPopupName": "20-1 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 400 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "어머니의 죽음",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
         },
-        "size": {
-          "x": 80,
-          "y": 80
+        {
+          "name": "20-2",
+          "targetPopupName": "20-2 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 550 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "게바위에서 만난 어머니",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
         },
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
+        {
+          "name": "20-3",
+          "targetPopupName": "20-3 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 700 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "게바위 유래",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
+        },
+        {
+          "name": "20-4",
+          "targetPopupName": "20-4 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 850 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "이순신의 어머니 사랑",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
         }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 960, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
       }
     },
     {
       "name": "Popup_Last_1",
       "popupBackgroundImage": {
-        "size": {
-          "x": 1920,
-          "y": 1080
-        },
+        "size": { "x": 1920, "y": 1080 },
         "sourceImage": "Image/Page/Last/Popup/27.png",
-        "color": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        }
+        "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
       },
       "popupCloseButton": {
-        "position": {
-          "x": 960,
-          "y": 1035
-        },
-        "size": {
-          "x": 80,
-          "y": 80
-        },
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
-        }
+        "position": { "x": 960, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
       }
     },
     {
       "name": "Popup_Last_2",
       "popupBackgroundImage": {
-        "size": {
-          "x": 1920,
-          "y": 1080
-        },
+        "size": { "x": 1920, "y": 1080 },
         "sourceImage": "Image/Page/Last/Popup/29.png",
-        "color": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        }
+        "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
       },
       "popupCloseButton": {
-        "position": {
-          "x": 960,
-          "y": 1035
-        },
-        "size": {
-          "x": 80,
-          "y": 80
-        },
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
-        }
+        "position": { "x": 960, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
       }
     },
     {
       "name": "Popup_Last_3",
       "popupBackgroundImage": {
-        "size": {
-          "x": 1920,
-          "y": 1080
-        },
+        "size": { "x": 1920, "y": 1080 },
         "sourceImage": "Image/Page/Last/Popup/43.png",
-        "color": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        }
+        "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
       },
       "popupCloseButton": {
-        "position": {
-          "x": 960,
-          "y": 1035
-        },
-        "size": {
-          "x": 80,
-          "y": 80
-        },
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
-        }
+        "position": { "x": 960, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
       }
     },
     {
       "name": "Popup_Last_4",
       "popupBackgroundImage": {
-        "size": {
-          "x": 1920,
-          "y": 1080
-        },
+        "size": { "x": 1920, "y": 1080 },
         "sourceImage": "Image/Page/Last/Popup/44.png",
-        "color": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        }
+        "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
       },
       "popupCloseButton": {
-        "position": {
-          "x": 960,
-          "y": 1035
-        },
-        "size": {
-          "x": 80,
-          "y": 80
-        },
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
-        }
+        "position": { "x": 960, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
       }
     },
     {
       "name": "Popup_Last_5",
       "popupBackgroundImage": {
-        "size": {
-          "x": 1920,
-          "y": 1080
-        },
+        "size": { "x": 1920, "y": 1080 },
         "sourceImage": "Image/Page/Last/Popup/45.png",
-        "color": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        }
+        "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
       },
       "popupCloseButton": {
-        "position": {
-          "x": 960,
-          "y": 1035
-        },
-        "size": {
-          "x": 80,
-          "y": 80
-        },
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
-        }
+        "position": { "x": 960, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
       }
     },
     {
       "name": "Popup_Last_6",
       "popupBackgroundImage": {
-        "size": {
-          "x": 1920,
-          "y": 1080
-        },
+        "size": { "x": 1920, "y": 1080 },
         "sourceImage": "Image/Page/Last/Popup/47.png",
-        "color": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        }
+        "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
       },
       "popupCloseButton": {
-        "position": {
-          "x": 960,
-          "y": 1035
-        },
-        "size": {
-          "x": 80,
-          "y": 80
-        },
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
-        }
+        "position": { "x": 960, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
       }
     },
     {
       "name": "Popup_Last_7",
       "popupBackgroundImage": {
-        "size": {
-          "x": 1920,
-          "y": 1080
-        },
+        "size": { "x": 1920, "y": 1080 },
         "sourceImage": "Image/Page/Last/Popup/48.png",
-        "color": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        }
+        "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
       },
       "popupCloseButton": {
-        "position": {
-          "x": 960,
-          "y": 1035
-        },
-        "size": {
-          "x": 80,
-          "y": 80
-        },
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
-        }
+        "position": { "x": 960, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
       }
     },
     {
       "name": "Popup_Last_8",
       "popupBackgroundImage": {
-        "size": {
-          "x": 1920,
-          "y": 1080
-        },
+        "size": { "x": 1920, "y": 1080 },
         "sourceImage": "Image/Page/Last/Popup/49.png",
-        "color": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        }
+        "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
       },
       "popupCloseButton": {
-        "position": {
-          "x": 960,
-          "y": 1035
-        },
-        "size": {
-          "x": 80,
-          "y": 80
-        },
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
+        "position": { "x": 960, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    }
+  ],
+  "subPopups":[
+    {
+      "name": "20-1 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Last/SubPopup/20-1.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
         }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "20-2 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Last/SubPopup/20-2.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "20-3 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Last/SubPopup/20-3.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "20-4 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Last/SubPopup/20-4.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
       }
     }
   ]

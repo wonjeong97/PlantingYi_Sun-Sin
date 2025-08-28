@@ -14,6 +14,8 @@ public class AfterDeathSetting
 
     public ButtonSetting[] afterDeathBtns;
     public PopupSetting[] afterDeathPopups;
+    
+    public PopupSetting[] subPopups;
 }
 
 public class AfterDeathPage : BasePage<AfterDeathSetting>

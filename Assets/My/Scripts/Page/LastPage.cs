@@ -14,6 +14,8 @@ public class LastPageSetting
 
     public ButtonSetting[] lastBtns;
     public PopupSetting[] lastPopups;
+    
+    public PopupSetting[] subPopups;
 }
 
 public class LastPage : BasePage<LastPageSetting>

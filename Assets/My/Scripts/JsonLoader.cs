@@ -169,6 +169,8 @@ public class ButtonSetting
     public ImageSetting buttonAdditionalImage;
     public TextSetting buttonText;
     public string buttonSound;
+    
+    public string targetPopupName; // 클릭 시 열릴 팝업 이름
 }
 
 [Serializable]
@@ -178,8 +180,9 @@ public class PopupSetting
     public ImageSetting popupBackgroundImage;
     public TextSetting[] popupTexts;
     public ImageSetting[] popupImages;
-    public ButtonSetting popupNextButton;
-    public ButtonSetting popupPreviousButton;
+    //public ButtonSetting popupNextButton;
+    //public ButtonSetting popupPreviousButton;
+    public ButtonSetting[] popup2Buttons;
     public ButtonSetting popupCloseButton;
 }
 

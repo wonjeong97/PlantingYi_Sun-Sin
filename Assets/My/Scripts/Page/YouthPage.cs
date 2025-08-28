@@ -14,6 +14,8 @@ public class YouthSetting
 
     public ButtonSetting[] youthBtns;
     public PopupSetting[] youthPopups;
+    
+    public PopupSetting[] subPopups;
 }
 
 public class YouthPage : BasePage<YouthSetting>

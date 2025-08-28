@@ -14,6 +14,8 @@ public class PrimeOfLifeSetting
 
     public ButtonSetting[] primeOfLifeBtns;
     public PopupSetting[] primeOfLifePopups;
+    
+    public PopupSetting[] subPopups;
 }
 
 public class PrimeOfLifePage : BasePage<PrimeOfLifeSetting>

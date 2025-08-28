@@ -14,6 +14,8 @@ public class ChildhoodSetting
 
     public ButtonSetting[] childhoodBtns;
     public PopupSetting[] childhoodPopups;
+
+    public PopupSetting[] subPopups;
 }
 
 public class ChildhoodPage : BasePage<ChildhoodSetting>

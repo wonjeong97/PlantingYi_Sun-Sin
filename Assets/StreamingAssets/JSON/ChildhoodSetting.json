@@ -1,219 +1,813 @@
 {
   "backgroundImage": {
     "name": "ChildhoodPageBackground",
-    "size": {
-      "x": 1920,
-      "y": 1080
-    },
+    "size": { "x": 1920, "y": 1080 },
     "sourceImage": "Image/Page/Childhood/ChildhoodPage.png",
-    "color": {
-      "r": 1,
-      "g": 1,
-      "b": 1,
-      "a": 1.0
-    }
+    "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
   },
   "backToIdleButton": {
     "name": "Button_BackToIdle",
-    "size": {
-      "x": 100,
-      "y": 100
-    },
-    "position": {
-      "x": 300,
-      "y": 985
-    },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Button/home.png"
-    }
+    "size": { "x": 100, "y": 100 },
+    "position": { "x": 300, "y": 985 },
+    "buttonBackgroundImage": { "sourceImage": "Image/Button/home.png" }
   },
   "backButton": {
     "name": "Button_Back",
-    "size": {
-      "x": 100,
-      "y": 100
-    },
-    "position": {
-      "x": 175,
-      "y": 985
-    },
-    "buttonBackgroundImage": {
-      "sourceImage": "Image/Button/back.png"
-    }
+    "size": { "x": 100, "y": 100 },
+    "position": { "x": 175, "y": 985 },
+    "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
   },
   "childhoodBtns": [
     {
       "name": "Button_Childhood_0",
-      "size": {
-        "x": 666,
-        "y": 180
-      },
-      "position": {
-        "x": 1275,
-        "y": 355
-      },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Page/Childhood/9.png"
-      }
+      "size": { "x": 666, "y": 180 },
+      "position": { "x": 1275, "y": 355 },
+      "buttonBackgroundImage": { "sourceImage": "Image/Page/Childhood/9.png" }
     },
     {
       "name": "Button_Childhood_1",
-      "size": {
-        "x": 666,
-        "y": 147
-      },
-      "position": {
-        "x": 1275,
-        "y": 485
-      },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Page/Childhood/10.png"
-      }
+      "size": { "x": 666, "y": 147 },
+      "position": { "x": 1275, "y": 485 },
+      "buttonBackgroundImage": { "sourceImage": "Image/Page/Childhood/10.png" }
     },
     {
       "name": "Button_Childhood_2",
-      "size": {
-        "x": 666,
-        "y": 147
-      },
-      "position": {
-        "x": 1275,
-        "y": 630
-      },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Page/Childhood/11.png"
-      }
+      "size": { "x": 666, "y": 147 },
+      "position": { "x": 1275, "y": 630 },
+      "buttonBackgroundImage": { "sourceImage": "Image/Page/Childhood/11.png" }
     },
     {
       "name": "Button_Childhood_3",
-      "size": {
-        "x": 666,
-        "y": 148
-      },
-      "position": {
-        "x": 1275,
-        "y": 775
-      },
-      "buttonBackgroundImage": {
-        "sourceImage": "Image/Page/Childhood/13.png"
-      }
+      "size": { "x": 666, "y": 148 },
+      "position": { "x": 1275, "y": 775 },
+      "buttonBackgroundImage": { "sourceImage": "Image/Page/Childhood/13.png" }
     }
   ],
   "childhoodPopups": [
     {
       "name": "Popup_Childhood_0",
       "popupBackgroundImage": {
-        "size": {
-          "x": 1920,
-          "y": 1080
-        },
+        "size": { "x": 1920, "y": 1080 },
         "sourceImage": "Image/Page/Childhood/Popup/9.png",
-        "color": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        }
+        "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
       },
-      "popupCloseButton": {
-        "position": {
-          "x": 960,
-          "y": 1035
+      "popup2Buttons": [
+        {
+          "name": "9-1",
+          "targetPopupName": "9-1 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 350 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "이순신의 태몽",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
         },
-        "size": {
-          "x": 80,
-          "y": 80
+        {
+          "name": "9-2",
+          "targetPopupName": "9-2 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 475 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "아산으로 이주",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
         },
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
+        {
+          "name": "9-3",
+          "targetPopupName": "9-3 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 600 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "류성룡",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
+        },
+        {
+          "name": "9-4",
+          "targetPopupName": "9-4 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 725 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "류성룡의 추천",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
+        },
+        {
+          "name": "9-5",
+          "targetPopupName": "9-5 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 850 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "류성룡과 이순신의 관계",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
         }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 960, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
       }
     },
     {
       "name": "Popup_Childhood_1",
       "popupBackgroundImage": {
-        "size": {
-          "x": 1920,
-          "y": 1080
-        },
+        "size": { "x": 1920, "y": 1080 },
         "sourceImage": "Image/Page/Childhood/Popup/10.png",
-        "color": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        }
+        "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
       },
-      "popupCloseButton": {
-        "position": {
-          "x": 960,
-          "y": 1035
+      "popup2Buttons": [
+        {
+          "name": "10-1",
+          "targetPopupName": "10-1 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 350 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "이순신의 친가",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
         },
-        "size": {
-          "x": 80,
-          "y": 80
+        {
+          "name": "10-2",
+          "targetPopupName": "10-2 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 475 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "이순신의 증조부",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
         },
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
+        {
+          "name": "10-3",
+          "targetPopupName": "10-3 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 600 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "이순신의 조부",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
+        },
+        {
+          "name": "10-4",
+          "targetPopupName": "10-4 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 725 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "이순신의 아버지",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
+        },
+        {
+          "name": "10-5",
+          "targetPopupName": "10-5 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 850 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "이순신의 외가",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
         }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 960, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
       }
     },
     {
       "name": "Popup_Childhood_2",
       "popupBackgroundImage": {
-        "size": {
-          "x": 1920,
-          "y": 1080
-        },
+        "size": { "x": 1920, "y": 1080 },
         "sourceImage": "Image/Page/Childhood/Popup/11.png",
-        "color": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        }
+        "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
       },
-      "popupCloseButton": {
-        "position": {
-          "x": 960,
-          "y": 1035
+      "popup2Buttons": [
+        {
+          "name": "11-1",
+          "targetPopupName": "11-1 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 350 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "이순신 어릴 적",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
         },
-        "size": {
-          "x": 80,
-          "y": 80
+        {
+          "name": "11-2",
+          "targetPopupName": "11-2 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 475 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "강직한 꼬마",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
         },
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
+        {
+          "name": "11-3",
+          "targetPopupName": "11-3 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 600 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "무신으로 꿈 전향",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
+        },
+        {
+          "name": "11-4",
+          "targetPopupName": "11-4 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 725 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "선비같은 무관",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
+        },
+        {
+          "name": "11-5",
+          "targetPopupName": "11-5 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1275, "y": 850 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "문무 소양을 두루 갖춘 장군",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
         }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 960, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
       }
     },
     {
       "name": "Popup_Childhood_3",
       "popupBackgroundImage": {
-        "size": {
-          "x": 1920,
-          "y": 1080
-        },
+        "size": { "x": 1920, "y": 1080 },
         "sourceImage": "Image/Page/Childhood/Popup/13.png",
-        "color": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 1
-        }
+        "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
       },
-      "popupCloseButton": {
-        "position": {
-          "x": 960,
-          "y": 1035
+      "popup2Buttons":[
+        {
+          "name": "13-1",
+          "targetPopupName": "13-1 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1000, "y": 350 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "이순신의 부인",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
         },
-        "size": {
-          "x": 80,
-          "y": 80
+        {
+          "name": "13-2",
+          "targetPopupName": "13-2 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1500, "y": 350 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "이순신의 장남",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
         },
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
+        {
+          "name": "13-3",
+          "targetPopupName": "13-3 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1000, "y": 500 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "이순신의 차남",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
+        },
+        {
+          "name": "13-4",
+          "targetPopupName": "13-4 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1500, "y": 500 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "이순신의 셋째 아들",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
+        },
+        {
+          "name": "13-5",
+          "targetPopupName": "13-5 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1000, "y": 650 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "이순신의 딸들",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
+        },
+        {
+          "name": "13-6",
+          "targetPopupName": "13-6 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1500, "y": 650 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "이순신의 서자들",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
+        },
+        {
+          "name": "13-7",
+          "targetPopupName": "13-7 Popup",
+          "size": { "x": 455, "y": 85 },
+          "position": { "x": 1000, "y": 800 },
+          "buttonBackgroundImage": { "sourceImage": "Image/Button/button.png" },
+          "buttonText":
+          {
+            "position": { "x": 45, "y": -5 },
+            "text": "이순신의 조카들",
+            "fontName": "font1",
+            "fontSize": 32,
+            "fontColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+            "alignment": 4097
+          }
         }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 960, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    }
+  ],
+  "subPopups":[
+    {
+      "name": "9-1 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/9-1.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "9-2 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/9-2.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },   
+    {
+      "name": "9-3 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/9-3.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    }, 
+    {
+      "name": "9-4 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/9-4.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    }, 
+    {
+      "name": "9-5 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/9-5.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "10-1 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/10-1.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "10-2 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/10-2.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "10-3 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/10-3.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "10-4 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/10-4.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "10-5 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/10-5.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "11-1 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/11-1.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "11-2 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/11-2.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "11-3 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/11-3.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "11-4 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/11-4.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "11-5 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/11-5.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "13-1 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/13-1.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "13-2 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/13-2.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "13-3 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/13-3.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "13-4 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/13-4.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "13-5 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/13-5.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "13-6 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/13-6.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
+      }
+    },
+    {
+      "name": "13-7 Popup",
+      "popupImages": [
+        {
+          "size": { "x": 1025, "y": 1255},
+          "position":{"x": 1280, "y": 565},
+          "sourceImage":"Image/Page/Childhood/SubPopup/13-7.png",
+          "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+        }
+      ],
+      "popupCloseButton": {
+        "position": { "x": 1280, "y": 1035 },
+        "size": { "x": 80, "y": 80 },
+        "buttonBackgroundImage": { "sourceImage": "Image/Button/back.png" }
       }
     }
   ]
