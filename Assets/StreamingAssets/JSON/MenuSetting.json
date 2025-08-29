@@ -1,63 +1,63 @@
 {
   "backgroundImage": {
     "name": "MenuPageBackground",
-    "size": { "x": 1920, "y": 1080 },
+    "size": {"x": 1920, "y": 1080},
     "sourceImage": "Image/Background/1_Menu.png",
-    "color": { "r": 1, "g": 1, "b": 1, "a": 1.0 }
+    "color": {"r": 1, "g": 1, "b": 1, "a": 1.0}
   },
   "backToIdleButton": {
     "name": "Button_BackToIdle",
-    "size": { "x": 100, "y": 100 },
-    "position": { "x": 960, "y": 985 },
-    "buttonBackgroundImage": { "sourceImage": "Image/Button/home.png" }
+    "size": {"x": 100, "y": 100},
+    "position": {"x": 960, "y": 985},
+    "buttonBackgroundImage": {"sourceImage": "Image/Button/home.png"}
   },
   "whatIsButton": {
     "name": "Button_WhatIs",
-    "size": { "x": 209, "y": 455 },
-    "position": { "x": 300, "y": 675 },
-    "buttonBackgroundImage": { "sourceImage": "Image/Button/플랜팅이순신이란.png" }
+    "size": {"x": 209, "y": 455},
+    "position": {"x": 300, "y": 675},
+    "buttonBackgroundImage": {"sourceImage": "Image/Button/플랜팅이순신이란.png"}
   },
   "childhoodButton": {
     "name": "Button_Childhood",
-    "size": { "x": 209, "y": 455 },
-    "position": { "x": 520, "y": 675 },
-    "buttonBackgroundImage": { "sourceImage": "Image/Button/유년.png" }
+    "size": {"x": 209, "y": 455},
+    "position": {"x": 520, "y": 675},
+    "buttonBackgroundImage": {"sourceImage": "Image/Button/유년.png"}
   },
   "youthButton": {
     "name": "Button_Youth",
-    "size": { "x": 209, "y": 455 },
-    "position": { "x": 740, "y": 675 },
-    "buttonBackgroundImage": { "sourceImage": "Image/Button/청년.png" }
+    "size": {"x": 209, "y": 455},
+    "position": {"x": 740, "y": 675},
+    "buttonBackgroundImage": {"sourceImage": "Image/Button/청년.png"}
   },
   "primeOfLifeButton": {
     "name": "Button_PrimeOfLife",
-    "size": { "x": 209, "y": 455 },
-    "position": { "x": 960, "y": 675 },
-    "buttonBackgroundImage": { "sourceImage": "Image/Button/장년.png" }
+    "size": {"x": 209, "y": 455},
+    "position": {"x": 960, "y": 675},
+    "buttonBackgroundImage": {"sourceImage": "Image/Button/장년.png"}
   },
   "lastButton": {
     "name": "Button_Last",
-    "size": { "x": 209, "y": 455 },
-    "position": { "x": 1180, "y": 675 },
-    "buttonBackgroundImage": { "sourceImage": "Image/Button/말년.png" }
+    "size": {"x": 209, "y": 455},
+    "position": {"x": 1180, "y": 675},
+    "buttonBackgroundImage": {"sourceImage": "Image/Button/말년.png"}
   },
   "deathButton": {
     "name": "Button_Death",
-    "size": { "x": 209, "y": 455 },
-    "position": { "x": 1400, "y": 675 },
-    "buttonBackgroundImage": { "sourceImage": "Image/Button/죽음.png" }
+    "size": {"x": 209, "y": 455},
+    "position": {"x": 1400, "y": 675},
+    "buttonBackgroundImage": {"sourceImage": "Image/Button/죽음.png"}
   },
   "afterDeathButton": {
     "name": "Button_AfterDeath",
-    "size": { "x": 209, "y": 455 },
-    "position": { "x": 1620, "y": 675 },
-    "buttonBackgroundImage": { "sourceImage": "Image/Button/사후.png" }
+    "size": {"x": 209, "y": 455},
+    "position": {"x": 1620, "y": 675},
+    "buttonBackgroundImage": {"sourceImage": "Image/Button/사후.png"}
   },
-  "whatIsPage": { "name": "WhatIsPage" },
-  "childhoodPage": { "name": "ChildhoodPage" },
-  "youthPage": { "name": "YouthPage" },
-  "primeOfLifePage": { "name": "PrimeOfLifePage" },
-  "lastPage": { "name": "LastPage" },
-  "deathPage": { "name": "DeathPage" },
-  "afterDeathPage": { "name": "AfterDeathPage" }
+  "whatIsPage": {"name": "WhatIsPage"},
+  "childhoodPage": {"name": "ChildhoodPage"},
+  "youthPage": {"name": "YouthPage"},
+  "primeOfLifePage": {"name": "PrimeOfLifePage"},
+  "lastPage": {"name": "LastPage"},
+  "deathPage": {"name": "DeathPage"},
+  "afterDeathPage": {"name": "AfterDeathPage"}
 }

@@ -3,9 +3,9 @@
 /workspace.xml
 # Rider에서 무시된 파일
 /contentModel.xml
-/modules.xml
 /projectSettingsUpdater.xml
-/.idea.PlantingLeeSoonSin.iml
+/modules.xml
+/.idea.PlantingYi_Sun-Sin.iml
 # 에디터 기반 HTTP 클라이언트 요청
 /httpRequests/
 # Datasource local storage ignored files
