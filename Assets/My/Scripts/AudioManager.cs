@@ -25,7 +25,6 @@ public class AudioManager : MonoBehaviour
         else if (Instance != this)
         {
             Destroy(gameObject);
-            return;
         }        
     }
 
@@ -56,20 +55,18 @@ public class AudioManager : MonoBehaviour
             if (ext == ".ogg") type = AudioType.OGGVORBIS;
             else if (ext == ".mp3") type = AudioType.MPEG;
 
-            using (var www = UnityWebRequestMultimedia.GetAudioClip(url, type))
+            using var www = UnityWebRequestMultimedia.GetAudioClip(url, type);
+            yield return www.SendWebRequest();
+            if (www.result == UnityWebRequest.Result.Success)
             {
-                yield return www.SendWebRequest();
-                if (www.result == UnityWebRequest.Result.Success)
-                {
-                    var clip = DownloadHandlerAudioClip.GetContent(www);
-                    clip.name = entry.key;
-                    soundMap[entry.key] = clip;
-                    soundVolumeMap[entry.key] = entry.volume;
-                }
-                else
-                {
-                    Debug.LogWarning($"[AudioManager] Load failed: {entry.clipPath} - {www.error}");
-                }
+                var clip = DownloadHandlerAudioClip.GetContent(www);
+                clip.name = entry.key;
+                soundMap[entry.key] = clip;
+                soundVolumeMap[entry.key] = entry.volume;
+            }
+            else
+            {
+                Debug.LogWarning($"[AudioManager] Load failed: {entry.clipPath} - {www.error}");
             }
         }
     }

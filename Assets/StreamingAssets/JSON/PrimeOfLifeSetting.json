@@ -936,7 +936,7 @@
 						"position": {"x": 45, "y": -5},
 						"text": "조선 함선의 위상",
 						"fontName": "font1",
-						"fontSize": 28,
+						"fontSize": 32,
 						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
 						"alignment": 4097
 					}
