@@ -24,10 +24,11 @@ public class UIManager : MonoBehaviour
 
     // Addressable.InstantiateAsync로 만든 동적 오브젝트 추적
     public readonly List<GameObject> addrInstances = new List<GameObject>();
-    public CancellationTokenSource cts;
+    private CancellationTokenSource cts;
     [HideInInspector] public GameObject mainBackground;
 
     #region Unity life-cycle
+
     private void Awake()
     {
         if (Instance == null)
@@ -149,7 +150,7 @@ public class UIManager : MonoBehaviour
     {
         if (mainBackground is null || idlePage is null) return;
         try
-        {   
+        {
             float fadeTime = JsonLoader.Instance.settings.fadeTime;
             await FadeManager.Instance.FadeOutAsync(fadeTime, true);
 
@@ -162,6 +163,7 @@ public class UIManager : MonoBehaviour
                 if (childGo == idlePage || !childGo.activeSelf) continue;
                 childGo.SetActive(false);
             }
+
             // IdlePage만 다시 활성화
             if (!idlePage.activeSelf) idlePage.SetActive(true);
 
@@ -277,7 +279,7 @@ public class UIManager : MonoBehaviour
             rt.localRotation = Quaternion.Euler(setting.rotation);
             rt.sizeDelta = setting.size;
         }
-        
+
         return go;
     }
 
@@ -332,6 +334,7 @@ public class UIManager : MonoBehaviour
             rt.localRotation = Quaternion.Euler(setting.rotation);
         }
     }
+
     /// <summary>
     /// 여러 개의 ButtonSetting 배열을 기반으로 버튼들을 비동기 생성하는 함수
     /// </summary>
@@ -339,7 +342,7 @@ public class UIManager : MonoBehaviour
         ButtonSetting[] settings, GameObject parent, CancellationToken token)
     {
         // 반환할 결과 리스트 초기화
-        var results = new List<(GameObject button, GameObject addImage)>(); 
+        var results = new List<(GameObject button, GameObject addImage)>();
         if (settings == null || settings.Length == 0)
             return results;
 
@@ -532,6 +535,7 @@ public class UIManager : MonoBehaviour
         if (!popupRoot) return null;
 
         popupRoot.transform.SetParent(parent.transform, false);
+        popupRoot.AddComponent<PopupObject>();
 
         // 팝업 배경 이미지 설정
         var popupBg = await CreateBackgroundImageAsync(setting.popupBackgroundImage, popupRoot, token);
@@ -580,7 +584,7 @@ public class UIManager : MonoBehaviour
         foreach (var (btnGo2, _) in popup2Btns)
         {
             if (btnGo2 != null && btnGo2.TryGetComponent<Button>(out var btn2))
-            {   
+            {
                 // 팝업 내 버튼2 세팅을 가져옴
                 var buttonSetting = setting.popup2Buttons.FirstOrDefault(b => b.name == btnGo2.name);
                 if (buttonSetting == null) continue;
@@ -624,11 +628,7 @@ public class UIManager : MonoBehaviour
                 btn.onClick.AddListener(() =>
                 {
                     onClose?.Invoke(popupRoot);
-
-                    foreach (Transform child in popupRoot.transform)
-                        SafeReleaseInstance(child.gameObject);
-
-                    Destroy(popupRoot);
+                    popupRoot.SetActive(false); // OnDisable에서 해제/파괴 처리
                 });
             }
         }
@@ -680,12 +680,14 @@ public class UIManager : MonoBehaviour
         }
         // 모든 생성 작업 완료 대기
         await Task.WhenAll(jobs);
-        
+
         return pageRoot;
     }
+
     #endregion
 
     #region Utilities (Addressables, Fonts, Materials, Files)
+
     /// <summary>
     ///  Addressable를 사용해 비동기로 프리팹을 인스턴스화(Instantiate)
     /// </summary>
@@ -711,7 +713,7 @@ public class UIManager : MonoBehaviour
                 Addressables.ReleaseInstance(handle.Result);
             throw;
         }
-        catch (Exception e) 
+        catch (Exception e)
         {
             Debug.LogWarning($"[UIManager] Instantiate failed: {key}\n{e}");
 
@@ -734,8 +736,7 @@ public class UIManager : MonoBehaviour
         var handle = Addressables.LoadAssetAsync<T>(key);
         try
         {
-            // 취소 가능 대기
-            return await AwaitWithCancellation(handle, token);
+            return await AwaitWithCancellation(handle, token); // 취소 가능 대기
         }
         finally
         {
@@ -773,11 +774,10 @@ public class UIManager : MonoBehaviour
     private Texture2D LoadTexture(string relativePath)
     {
         if (string.IsNullOrEmpty(relativePath)) return null;
-        
+
         var fullPath = Path.Combine(Application.streamingAssetsPath, relativePath);
         if (!File.Exists(fullPath)) return null;
 
-        // 바이너리로 읽어서 Texture2D 생성
         byte[] fileData = File.ReadAllBytes(fullPath);
         var texture = new Texture2D(2, 2); // 임시 크기, LoadImage 시 자동 변경
         texture.LoadImage(fileData);
@@ -791,11 +791,9 @@ public class UIManager : MonoBehaviour
     private string ResolveFont(string key)
     {
         var fontMap = JsonLoader.Instance.settings.fontMap;
+        if (fontMap == null) return key; // fontMap이 없으면 변환 없이 반환
 
-        // fontMap이 없으면 변환 없이 반환
-        if (fontMap == null) return key;
-
-        // fontMap에서 해당 키에 해당하는 필드 찾기
+        // fontMap에서 해당 키에 해당하는 필드 찾음
         var field = typeof(FontMaps).GetField(key);
         if (field != null)
             return field.GetValue(fontMap) as string ?? key;
@@ -815,7 +813,6 @@ public class UIManager : MonoBehaviour
         string mappedFontName = ResolveFont(fontKey);
         try
         {
-            // Addressable에서 TMP_FontAsset 로드
             var font = await LoadAssetAsync<TMP_FontAsset>(mappedFontName, token);
             token.ThrowIfCancellationRequested(); // 로드 도중 취소되었는지 최종 확인
 
@@ -824,11 +821,10 @@ public class UIManager : MonoBehaviour
             uiText.color = fontColor;
             uiText.alignment = alignment;
             uiText.text = textValue; // 폰트 속성 적용
-
         }
         catch (OperationCanceledException)
         {
-            Debug.Log("load failed");
+            Debug.LogWarning($"[UIManager] Font load canceled: {mappedFontName}\n{textValue}");
         }
         catch (Exception e)
         {
@@ -839,33 +835,24 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Addressable에서 Material을 비동기로 로드하여 지정한 Image 컴포넌트에 적용
     /// </summary>
-    private async Task<bool> LoadMaterialAndApplyAsync(Image targetImage, string materialKey, CancellationToken token)
+    private async Task LoadMaterialAndApplyAsync(Image targetImage, string materialKey, CancellationToken token)
     {
         // 대상 이미지 또는 키가 없으면 바로 실패 처리
-        if (!targetImage || string.IsNullOrEmpty(materialKey)) return false;
-
+        if (!targetImage || string.IsNullOrEmpty(materialKey)) return;
         try
         {
             // Addressable에서 Material 로드
             var mat = await LoadAssetAsync<Material>(materialKey, token);
-
-            // 로드 도중 취소 요청이 있었는지 최종 확인
             token.ThrowIfCancellationRequested();
-
-            // 머티리얼을 이미지에 적용
             targetImage.material = mat;
-            return true;
         }
         catch (OperationCanceledException)
         {
-            // 취소된 경우 false 반환
-            return false;
+            Debug.LogWarning($"[UIManager] Material load canceled: {materialKey}");
         }
         catch (Exception e)
         {
-            // 로드 실패 시 경고 출력
             Debug.LogWarning($"[UIManager] Material load failed: {materialKey}\n{e}");
-            return false;
         }
     }
 
@@ -885,13 +872,10 @@ public class UIManager : MonoBehaviour
     private CancellationToken MergeToken(CancellationToken external)
     {
         if (cts == null) return external; // 내부 토큰이 없으면 외부 토큰 그대로 사용
-
         if (!external.CanBeCanceled)
             return cts.Token; // 외부 토큰이 취소 불가능하면 내부 토큰만 사용
 
-        // 두 토큰을 병합하여 하나의 LinkedToken 생성
         var linked = CancellationTokenSource.CreateLinkedTokenSource(cts.Token, external);
-
         return linked.Token;
     }
 

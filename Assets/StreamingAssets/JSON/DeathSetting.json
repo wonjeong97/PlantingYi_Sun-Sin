@@ -1,1140 +1,1140 @@
 {
-  "backgroundImage": {
-    "name": "DeathPageBackground",
-    "size": {"x": 1920, "y": 1080},
-    "sourceImage": "Image/Page/Death/DeathPage.png",
-    "color": {"r": 1, "g": 1, "b": 1, "a": 1.0}
-  },
-  "backToIdleButton": {
-    "name": "Button_BackToIdle",
-    "size": {"x": 100, "y": 100},
-    "position": {"x": 300, "y": 985},
-    "buttonBackgroundImage": {"sourceImage": "Image/Button/home.png"}
-  },
-  "backButton": {
-    "name": "Button_Back",
-    "size": {"x": 100, "y": 100},
-    "position": {"x": 175, "y": 985},
-    "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-  },
-  "deathBtns": [
-    {
-      "name": "Button_Death_0",
-      "size": {"x": 518, "y": 121},
-      "position": {"x": 990, "y": 365},
-      "buttonBackgroundImage": {"sourceImage": "Image/Page/Death/14.png"}
-    },
-    {
-      "name": "Button_Death_1",
-      "size": {"x": 518, "y": 121},
-      "position": {"x": 990, "y": 480},
-      "buttonBackgroundImage": {"sourceImage": "Image/Page/Death/15.png"}
-    },
-    {
-      "name": "Button_Death_2",
-      "size": {"x": 518, "y": 121},
-      "position": {"x": 990, "y": 595},
-      "buttonBackgroundImage": {"sourceImage": "Image/Page/Death/16.png"}
-    },
-    {
-      "name": "Button_Death_3",
-      "size": {"x": 518, "y": 164},
-      "position": {"x": 990, "y": 737},
-      "buttonBackgroundImage": {"sourceImage": "Image/Page/Death/17.png"}
-    },
-    {
-      "name": "Button_Death_4",
-      "size": {"x": 518, "y": 121},
-      "position": {"x": 1535, "y": 365},
-      "buttonBackgroundImage": {"sourceImage": "Image/Page/Death/18.png"}
-    },
-    {
-      "name": "Button_Death_5",
-      "size": {"x": 518, "y": 164},
-      "position": {"x": 1535, "y": 500},
-      "buttonBackgroundImage": {"sourceImage": "Image/Page/Death/19.png"}
-    },
-    {
-      "name": "Button_Death_6",
-      "size": {"x": 518, "y": 164},
-      "position": {"x": 1535, "y": 622},
-      "buttonBackgroundImage": {"sourceImage": "Image/Page/Death/24.png"}
-    },
-    {
-      "name": "Button_Death_7",
-      "size": {"x": 518, "y": 121},
-      "position": {"x": 1535, "y": 720},
-      "buttonBackgroundImage": {"sourceImage": "Image/Page/Death/37.png"}
-    }
-  ],
-  "deathPopups": [
-    {
-      "name": "Popup_Death_0",
-      "popupBackgroundImage": {
-        "size": {"x": 1920, "y": 1080},
-        "sourceImage": "Image/Page/Death/Popup/14.png",
-        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-      },
-      "popup2Buttons": [
-        {
-          "name": "14-1",
-          "targetPopupName": "14-1 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 400},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "이순신을 잃은 백성들",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "14-2",
-          "targetPopupName": "14-2 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 550},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "이순신 운구",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "14-3",
-          "targetPopupName": "14-3 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 700},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "아산 금성산 처음 묘소",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "14-4",
-          "targetPopupName": "14-4 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 850},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "어라산 묘소 이장",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 960, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
-        }
-      }
-    },
-    {
-      "name": "Popup_Death_1",
-      "popupBackgroundImage": {
-        "size": {"x": 1920, "y": 1080},
-        "sourceImage": "Image/Page/Death/Popup/15.png",
-        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-      },
-      "popup2Buttons": [
-        {
-          "name": "15-1",
-          "targetPopupName": "15-1 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 400},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "이순신의 광팬",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "15-2",
-          "targetPopupName": "15-2 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 550},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "어제신도비",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "15-3",
-          "targetPopupName": "15-3 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 700},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "정조의 이순신 사랑",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 960, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
-        }
-      }
-    },
-    {
-      "name": "Popup_Death_2",
-      "popupBackgroundImage": {
-        "size": {"x": 1920, "y": 1080},
-        "sourceImage": "Image/Page/Death/Popup/16.png",
-        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-      },
-      "popup2Buttons": [
-        {
-          "name": "16-1",
-          "targetPopupName": "16-1 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1000, "y": 350},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "봉분, 곡장",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "16-2",
-          "targetPopupName": "16-2 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1500, "y": 350},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "상석, 혼유석",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "16-3",
-          "targetPopupName": "16-3 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1000, "y": 500},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "동자석, 석양",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "16-4",
-          "targetPopupName": "16-4 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1500, "y": 500},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "망주석, 문인석",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "16-5",
-          "targetPopupName": "16-5 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1000, "y": 650},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "장명등",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "16-6",
-          "targetPopupName": "16-6 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1500, "y": 650},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "묘비 1, 묘비 2",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 960, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
-        }
-      }
-    },
-    {
-      "name": "Popup_Death_3",
-      "popupBackgroundImage": {
-        "size": {"x": 1920, "y": 1080},
-        "sourceImage": "Image/Page/Death/Popup/17.png",
-        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-      },
-      "popup2Buttons": [
-        {
-          "name": "17-1",
-          "targetPopupName": "17-1 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 400},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "이순신 자살설의 시초",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "17-2",
-          "targetPopupName": "17-2 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 550},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "이순신 전사에 대한 기록",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "17-3",
-          "targetPopupName": "17-3 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 700},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "이순신의 죽음",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 960, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
-        }
-      }
-    },
-    {
-      "name": "Popup_Death_4",
-      "popupBackgroundImage": {
-        "size": {"x": 1920, "y": 1080},
-        "sourceImage": "Image/Page/Death/Popup/18.png",
-        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-      },
-      "popup2Buttons": [
-        {
-          "name": "18-1",
-          "targetPopupName": "18-1 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 400},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "이순신의 유언",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "18-2",
-          "targetPopupName": "18-2 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 550},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "노량해전 결과",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "18-3",
-          "targetPopupName": "18-3 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 700},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "치열한 노량해전",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 960, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
-        }
-      }
-    },
-    {
-      "name": "Popup_Death_5",
-      "popupBackgroundImage": {
-        "size": {"x": 1920, "y": 1080},
-        "sourceImage": "Image/Page/Death/Popup/19.png",
-        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-      },
-      "popup2Buttons": [
-        {
-          "name": "19-1",
-          "targetPopupName": "19-1 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 400},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "이순신 노제",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "19-2",
-          "targetPopupName": "19-2 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 550},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "위충암",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 960, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
-        }
-      }
-    },
-    {
-      "name": "Popup_Death_6",
-      "popupBackgroundImage": {
-        "size": {"x": 1920, "y": 1080},
-        "sourceImage": "Image/Page/Death/Popup/24.png",
-        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-      },
-      "popup2Buttons": [
-        {
-          "name": "24-1",
-          "targetPopupName": "24-1 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 350},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "백의종군길",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "24-2",
-          "targetPopupName": "24-2 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 475},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "효의길",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "24-3",
-          "targetPopupName": "24-3 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 600},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "통곡의길",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "24-4",
-          "targetPopupName": "24-4 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 725},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "충의길",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "24-5",
-          "targetPopupName": "24-5 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 850},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "아산시 이순신 백의종군길",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 960, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
-        }
-      }
-    },
-    {
-      "name": "Popup_Death_7",
-      "popupBackgroundImage": {
-        "size": {"x": 1920, "y": 1080},
-        "sourceImage": "Image/Page/Death/Popup/37.png",
-        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-      },
-      "popup2Buttons": [
-        {
-          "name": "37-1",
-          "targetPopupName": "37-1 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 350},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "사당 건립",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "37-2",
-          "targetPopupName": "37-2 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 475},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "치제",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "37-3",
-          "targetPopupName": "37-3 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 600},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "기념비 건립",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "37-4",
-          "targetPopupName": "37-4 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 725},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "이순신 후손들의 등용",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 960, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {
-          "sourceImage": "Image/Button/back.png"
-        }
-      }
-    }
-  ],
-  "subPopups": [
-    {
-      "name": "14-1 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/14-1.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "14-2 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/14-2.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "14-3 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/14-3.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "14-4 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/14-4.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "15-1 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/15-1.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "15-2 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/15-2.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "15-3 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/15-3.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "16-1 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/16-1.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "16-2 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/16-2.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "16-3 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/16-3.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "16-4 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/16-4.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "16-5 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/16-5.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "16-6 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/16-6.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "17-1 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/17-1.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "17-2 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/17-2.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "17-3 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/17-3.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "18-1 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/18-1.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "18-2 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/18-2.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "18-3 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/18-3.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "19-1 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/19-1.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "19-2 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/19-2.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "24-1 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/24-1.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "24-2 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/24-2.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "24-3 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/24-3.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "24-4 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/24-4.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "24-5 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/24-5.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "37-1 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/37-1.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "37-2 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/37-2.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "37-3 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/37-3.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "37-4 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Death/SubPopup/37-4.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    }
-  ]
+	"backgroundImage": {
+		"name": "DeathPageBackground",
+		"size": {"x": 1920, "y": 1080},
+		"sourceImage": "Image/Page/Death/DeathPage.png",
+		"color": {"r": 1, "g": 1, "b": 1, "a": 1.0}
+	},
+	"backToIdleButton": {
+		"name": "Button_BackToIdle",
+		"size": {"x": 100, "y": 100},
+		"position": {"x": 300, "y": 985},
+		"buttonBackgroundImage": {"sourceImage": "Image/Button/home.png"}
+	},
+	"backButton": {
+		"name": "Button_Back",
+		"size": {"x": 100, "y": 100},
+		"position": {"x": 175, "y": 985},
+		"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+	},
+	"deathBtns": [
+		{
+			"name": "Button_Death_0",
+			"size": {"x": 518, "y": 121},
+			"position": {"x": 990, "y": 365},
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/14.png"}
+		},
+		{
+			"name": "Button_Death_1",
+			"size": {"x": 518, "y": 121},
+			"position": {"x": 990, "y": 480},
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/15.png"}
+		},
+		{
+			"name": "Button_Death_2",
+			"size": {"x": 518, "y": 121},
+			"position": {"x": 990, "y": 595},
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/16.png"}
+		},
+		{
+			"name": "Button_Death_3",
+			"size": {"x": 518, "y": 164},
+			"position": {"x": 990, "y": 737},
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/17.png"}
+		},
+		{
+			"name": "Button_Death_4",
+			"size": {"x": 518, "y": 121},
+			"position": {"x": 1535, "y": 365},
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/18.png"}
+		},
+		{
+			"name": "Button_Death_5",
+			"size": {"x": 518, "y": 164},
+			"position": {"x": 1535, "y": 500},
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/19.png"}
+		},
+		{
+			"name": "Button_Death_6",
+			"size": {"x": 518, "y": 164},
+			"position": {"x": 1535, "y": 622},
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/24.png"}
+		},
+		{
+			"name": "Button_Death_7",
+			"size": {"x": 518, "y": 121},
+			"position": {"x": 1535, "y": 720},
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/37.png"}
+		}
+	],
+	"deathPopups": [
+		{
+			"name": "Popup_Death_0",
+			"popupBackgroundImage": {
+				"size": {"x": 1920, "y": 1080},
+				"sourceImage": "Image/Page/Death/Popup/14.png",
+				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+			},
+			"popup2Buttons": [
+				{
+					"name": "14-1",
+					"targetPopupName": "14-1 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 400},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "이순신을 잃은 백성들",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "14-2",
+					"targetPopupName": "14-2 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 550},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "이순신 운구",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "14-3",
+					"targetPopupName": "14-3 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 700},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "아산 금성산 처음 묘소",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "14-4",
+					"targetPopupName": "14-4 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 850},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "어라산 묘소 이장",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 960, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {
+					"sourceImage": "Image/Button/back.png"
+				}
+			}
+		},
+		{
+			"name": "Popup_Death_1",
+			"popupBackgroundImage": {
+				"size": {"x": 1920, "y": 1080},
+				"sourceImage": "Image/Page/Death/Popup/15.png",
+				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+			},
+			"popup2Buttons": [
+				{
+					"name": "15-1",
+					"targetPopupName": "15-1 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 400},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "이순신의 광팬",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "15-2",
+					"targetPopupName": "15-2 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 550},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "어제신도비",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "15-3",
+					"targetPopupName": "15-3 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 700},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "정조의 이순신 사랑",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 960, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {
+					"sourceImage": "Image/Button/back.png"
+				}
+			}
+		},
+		{
+			"name": "Popup_Death_2",
+			"popupBackgroundImage": {
+				"size": {"x": 1920, "y": 1080},
+				"sourceImage": "Image/Page/Death/Popup/16.png",
+				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+			},
+			"popup2Buttons": [
+				{
+					"name": "16-1",
+					"targetPopupName": "16-1 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1000, "y": 350},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "봉분, 곡장",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "16-2",
+					"targetPopupName": "16-2 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1500, "y": 350},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "상석, 혼유석",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "16-3",
+					"targetPopupName": "16-3 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1000, "y": 500},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "동자석, 석양",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "16-4",
+					"targetPopupName": "16-4 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1500, "y": 500},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "망주석, 문인석",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "16-5",
+					"targetPopupName": "16-5 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1000, "y": 650},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "장명등",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "16-6",
+					"targetPopupName": "16-6 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1500, "y": 650},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "묘비 1, 묘비 2",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 960, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {
+					"sourceImage": "Image/Button/back.png"
+				}
+			}
+		},
+		{
+			"name": "Popup_Death_3",
+			"popupBackgroundImage": {
+				"size": {"x": 1920, "y": 1080},
+				"sourceImage": "Image/Page/Death/Popup/17.png",
+				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+			},
+			"popup2Buttons": [
+				{
+					"name": "17-1",
+					"targetPopupName": "17-1 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 400},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "이순신 자살설의 시초",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "17-2",
+					"targetPopupName": "17-2 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 550},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "이순신 전사에 대한 기록",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "17-3",
+					"targetPopupName": "17-3 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 700},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "이순신의 죽음",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 960, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {
+					"sourceImage": "Image/Button/back.png"
+				}
+			}
+		},
+		{
+			"name": "Popup_Death_4",
+			"popupBackgroundImage": {
+				"size": {"x": 1920, "y": 1080},
+				"sourceImage": "Image/Page/Death/Popup/18.png",
+				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+			},
+			"popup2Buttons": [
+				{
+					"name": "18-1",
+					"targetPopupName": "18-1 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 400},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "이순신의 유언",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "18-2",
+					"targetPopupName": "18-2 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 550},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "노량해전 결과",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "18-3",
+					"targetPopupName": "18-3 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 700},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "치열한 노량해전",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 960, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {
+					"sourceImage": "Image/Button/back.png"
+				}
+			}
+		},
+		{
+			"name": "Popup_Death_5",
+			"popupBackgroundImage": {
+				"size": {"x": 1920, "y": 1080},
+				"sourceImage": "Image/Page/Death/Popup/19.png",
+				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+			},
+			"popup2Buttons": [
+				{
+					"name": "19-1",
+					"targetPopupName": "19-1 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 400},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "이순신 노제",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "19-2",
+					"targetPopupName": "19-2 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 550},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "위충암",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 960, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {
+					"sourceImage": "Image/Button/back.png"
+				}
+			}
+		},
+		{
+			"name": "Popup_Death_6",
+			"popupBackgroundImage": {
+				"size": {"x": 1920, "y": 1080},
+				"sourceImage": "Image/Page/Death/Popup/24.png",
+				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+			},
+			"popup2Buttons": [
+				{
+					"name": "24-1",
+					"targetPopupName": "24-1 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 350},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "백의종군길",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "24-2",
+					"targetPopupName": "24-2 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 475},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "효의길",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "24-3",
+					"targetPopupName": "24-3 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 600},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "통곡의길",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "24-4",
+					"targetPopupName": "24-4 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 725},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "충의길",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "24-5",
+					"targetPopupName": "24-5 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 850},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "아산시 이순신 백의종군길",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 960, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {
+					"sourceImage": "Image/Button/back.png"
+				}
+			}
+		},
+		{
+			"name": "Popup_Death_7",
+			"popupBackgroundImage": {
+				"size": {"x": 1920, "y": 1080},
+				"sourceImage": "Image/Page/Death/Popup/37.png",
+				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+			},
+			"popup2Buttons": [
+				{
+					"name": "37-1",
+					"targetPopupName": "37-1 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 350},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "사당 건립",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "37-2",
+					"targetPopupName": "37-2 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 475},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "치제",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "37-3",
+					"targetPopupName": "37-3 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 600},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "기념비 건립",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "37-4",
+					"targetPopupName": "37-4 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 725},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "이순신 후손들의 등용",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 960, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {
+					"sourceImage": "Image/Button/back.png"
+				}
+			}
+		}
+	],
+	"subPopups": [
+		{
+			"name": "14-1 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/14-1.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "14-2 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/14-2.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "14-3 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/14-3.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "14-4 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/14-4.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "15-1 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/15-1.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "15-2 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/15-2.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "15-3 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/15-3.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "16-1 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/16-1.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "16-2 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/16-2.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "16-3 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/16-3.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "16-4 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/16-4.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "16-5 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/16-5.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "16-6 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/16-6.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "17-1 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/17-1.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "17-2 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/17-2.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "17-3 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/17-3.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "18-1 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/18-1.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "18-2 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/18-2.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "18-3 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/18-3.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "19-1 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/19-1.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "19-2 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/19-2.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "24-1 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/24-1.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "24-2 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/24-2.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "24-3 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/24-3.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "24-4 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/24-4.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "24-5 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/24-5.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "37-1 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/37-1.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "37-2 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/37-2.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "37-3 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/37-3.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "37-4 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/37-4.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		}
+	]
 }

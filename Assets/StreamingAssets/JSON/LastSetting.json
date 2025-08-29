@@ -1,1267 +1,1267 @@
 {
-  "backgroundImage": {
-    "name": "LastPageBackground",
-    "size": {"x": 1920, "y": 1080},
-    "sourceImage": "Image/Page/Last/LastPage.png",
-    "color": {"r": 1, "g": 1, "b": 1, "a": 1.0}
-  },
-  "backToIdleButton": {
-    "name": "Button_BackToIdle",
-    "size": {"x": 100, "y": 100},
-    "position": {"x": 300, "y": 985},
-    "buttonBackgroundImage": {"sourceImage": "Image/Button/home.png"}
-  },
-  "backButton": {
-    "name": "Button_Back",
-    "size": {"x": 100, "y": 100},
-    "position": {"x": 175, "y": 985},
-    "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-  },
-  "lastBtns": [
-    {
-      "name": "Button_Last_0",
-      "size": {"x": 518, "y": 121},
-      "position": {"x": 1025, "y": 280},
-      "buttonBackgroundImage": {"sourceImage": "Image/Page/Last/20.png"}
-    },
-    {
-      "name": "Button_Last_1",
-      "size": {"x": 518, "y": 121},
-      "position": {"x": 1025, "y": 420},
-      "buttonBackgroundImage": {"sourceImage": "Image/Page/Last/27.png"}
-    },
-    {
-      "name": "Button_Last_2",
-      "size": {"x": 518, "y": 121},
-      "position": {"x": 1025, "y": 560},
-      "buttonBackgroundImage": {"sourceImage": "Image/Page/Last/29.png"}
-    },
-    {
-      "name": "Button_Last_3",
-      "size": {"x": 518, "y": 121},
-      "position": {"x": 1025, "y": 700},
-      "buttonBackgroundImage": {"sourceImage": "Image/Page/Last/43.png"}
-    },
-    {
-      "name": "Button_Last_4",
-      "size": {"x": 518, "y": 121},
-      "position": {"x": 1025, "y": 840},
-      "buttonBackgroundImage": {"sourceImage": "Image/Page/Last/44.png"}
-    },
-    {
-      "name": "Button_Last_5",
-      "size": {"x": 518, "y": 121},
-      "position": {"x": 1575, "y": 350},
-      "buttonBackgroundImage": {"sourceImage": "Image/Page/Last/45.png"}
-    },
-    {
-      "name": "Button_Last_6",
-      "size": {"x": 518, "y": 121},
-      "position": {"x": 1575, "y": 490},
-      "buttonBackgroundImage": {"sourceImage": "Image/Page/Last/47.png"}
-    },
-    {
-      "name": "Button_Last_7",
-      "size": {"x": 518, "y": 121},
-      "position": {"x": 1575, "y": 630},
-      "buttonBackgroundImage": {"sourceImage": "Image/Page/Last/48.png"}
-    },
-    {
-      "name": "Button_Last_8",
-      "size": {"x": 518, "y": 121},
-      "position": {"x": 1575, "y": 770},
-      "buttonBackgroundImage": {"sourceImage": "Image/Page/Last/49.png"}
-    }
-  ],
-  "lastPopups": [
-    {
-      "name": "Popup_Last_0",
-      "popupBackgroundImage": {
-        "size": {"x": 1920, "y": 1080},
-        "sourceImage": "Image/Page/Last/Popup/20.png",
-        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-      },
-      "popup2Buttons": [
-        {
-          "name": "20-1",
-          "targetPopupName": "20-1 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 400},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "어머니의 죽음",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "20-2",
-          "targetPopupName": "20-2 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 550},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "게바위에서 만난 어머니",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "20-3",
-          "targetPopupName": "20-3 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 700},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "게바위 유래",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "20-4",
-          "targetPopupName": "20-4 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 850},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "이순신의 어머니 사랑",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 960, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "Popup_Last_1",
-      "popupBackgroundImage": {
-        "size": {"x": 1920, "y": 1080},
-        "sourceImage": "Image/Page/Last/Popup/27.png",
-        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-      },
-      "popup2Buttons": [
-        {
-          "name": "27-1",
-          "targetPopupName": "27-1 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1350, "y": 350},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "이순신이 파직된 사유",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "27-2",
-          "targetPopupName": "27-2 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1350, "y": 475},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "백의종군",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "27-3",
-          "targetPopupName": "27-3 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1350, "y": 600},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "완전히 무너지다",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "27-4",
-          "targetPopupName": "27-4 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1350, "y": 725},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "수군재건",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "27-5",
-          "targetPopupName": "27-5 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1350, "y": 850},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "노량해전과 죽음",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 960, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "Popup_Last_2",
-      "popupBackgroundImage": {
-        "size": {"x": 1920, "y": 1080},
-        "sourceImage": "Image/Page/Last/Popup/29.png",
-        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-      },
-      "popup2Buttons": [
-        {
-          "name": "29-1",
-          "targetPopupName": "29-1 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 400},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "이순신 제거",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "29-2",
-          "targetPopupName": "29-2 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 550},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "칠천량해전 대패",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "29-3",
-          "targetPopupName": "29-3 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 700},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "최악의 상황",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "29-4",
-          "targetPopupName": "29-4 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 850},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "명량해전 대승, 승리의 비결",
-            "fontName": "font1",
-            "fontSize": 28,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 960, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "Popup_Last_3",
-      "popupBackgroundImage": {
-        "size": {"x": 1920, "y": 1080},
-        "sourceImage": "Image/Page/Last/Popup/43.png",
-        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-      },
-      "popup2Buttons": [
-        {
-          "name": "43-1",
-          "targetPopupName": "43-1 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 400},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "첫 번째 백의종군",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "43-2",
-          "targetPopupName": "43-2 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 550},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "두 번째 백의 종군",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 960, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "Popup_Last_4",
-      "popupBackgroundImage": {
-        "size": {"x": 1920, "y": 1080},
-        "sourceImage": "Image/Page/Last/Popup/44.png",
-        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-      },
-      "popupCloseButton": {
-        "position": {"x": 960, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "Popup_Last_5",
-      "popupBackgroundImage": {
-        "size": {"x": 1920, "y": 1080},
-        "sourceImage": "Image/Page/Last/Popup/45.png",
-        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-      },
-      "popup2Buttons": [
-        {
-          "name": "45-1",
-          "targetPopupName": "45-1 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 400},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "철쇄 설화의 시작",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "45-2",
-          "targetPopupName": "45-2 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 550},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "중요 사료를 통한 검증",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "45-3",
-          "targetPopupName": "45-3 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 700},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "명량해전 승리 요인",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 960, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "Popup_Last_6",
-      "popupBackgroundImage": {
-        "size": {"x": 1920, "y": 1080},
-        "sourceImage": "Image/Page/Last/Popup/47.png",
-        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-      },
-      "popup2Buttons": [
-        {
-          "name": "47-1",
-          "targetPopupName": "47-1 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1000, "y": 350},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "원균의 내력",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "47-2",
-          "targetPopupName": "47-2 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1500, "y": 350},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "원균의 전투",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "47-3",
-          "targetPopupName": "47-3 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1000, "y": 500},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "1차 출정 때의 충돌",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "47-4",
-          "targetPopupName": "47-4 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1500, "y": 500},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "2차 출정 때의 비열함",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "47-5",
-          "targetPopupName": "47-5 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1000, "y": 650},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "웅천해전 때의 패악",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "47-6",
-          "targetPopupName": "47-6 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1500, "y": 650},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "원균의 모함",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "47-7",
-          "targetPopupName": "47-7 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1000, "y": 800},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "대장이 된 원균",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 960, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "Popup_Last_7",
-      "popupBackgroundImage": {
-        "size": {"x": 1920, "y": 1080},
-        "sourceImage": "Image/Page/Last/Popup/48.png",
-        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-      },
-      "popup2Buttons": [
-        {
-          "name": "48-1",
-          "targetPopupName": "48-1 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1350, "y": 350},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "1차 백의종군 때",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "48-2",
-          "targetPopupName": "48-2 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1350, "y": 475},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "전라좌수사 발탁",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "48-3",
-          "targetPopupName": "48-3 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1350, "y": 600},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "증오의 시작",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "48-4",
-          "targetPopupName": "48-4 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1350, "y": 725},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "선조의 사과",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "48-5",
-          "targetPopupName": "48-5 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1350, "y": 850},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "선조를 대하는 이순신",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 960, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "Popup_Last_8",
-      "popupBackgroundImage": {
-        "size": {"x": 1920, "y": 1080},
-        "sourceImage": "Image/Page/Last/Popup/49.png",
-        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-      },
-      "popup2Buttons": [
-        {
-          "name": "49-1",
-          "targetPopupName": "49-1 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 400},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "명나라 진린의 위세",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "49-2",
-          "targetPopupName": "49-2 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 550},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "이순신의 놀라운 처세술",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "49-3",
-          "targetPopupName": "49-3 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 700},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "조명연합군의 대승",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        },
-        {
-          "name": "49-4",
-          "targetPopupName": "49-4 Popup",
-          "size": {"x": 455, "y": 85},
-          "position": {"x": 1275, "y": 850},
-          "buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
-          "buttonText": {
-            "position": {"x": 45, "y": -5},
-            "text": "진린의 이순신 존경",
-            "fontName": "font1",
-            "fontSize": 32,
-            "fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
-            "alignment": 4097
-          }
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 960, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    }
-  ],
-  "subPopups": [
-    {
-      "name": "20-1 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/20-1.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "20-2 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/20-2.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "20-3 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/20-3.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "20-4 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/20-4.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "27-1 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/27-1.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "27-2 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/27-2.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "27-3 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/27-3.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "27-4 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/27-4.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "27-5 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/27-5.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "29-1 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/29-1.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "29-2 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/29-2.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "29-3 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/29-3.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "29-4 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/29-4.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "43-1 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1614, "y": 1202},
-          "position": {"x": 1265, "y": 600},
-          "sourceImage": "Image/Page/Last/SubPopup/43-1.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "43-2 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/43-2.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "45-1 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/45-1.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "45-2 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/45-2.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "45-3 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/45-3.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "47-1 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/47-1.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "47-2 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/47-2.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "47-3 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/47-3.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "47-4 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/47-4.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "47-5 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/47-5.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "47-6 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/47-6.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "47-7 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/47-7.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "48-1 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/48-1.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "48-2 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1614, "y": 1202},
-          "position": {"x": 1265, "y": 600},
-          "sourceImage": "Image/Page/Last/SubPopup/48-2.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "48-3 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/48-3.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "48-4 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/48-4.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "48-5 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/48-5.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "49-1 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/49-1.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "49-2 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/49-2.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "49-3 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/49-3.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    },
-    {
-      "name": "49-4 Popup",
-      "popupImages": [
-        {
-          "size": {"x": 1025, "y": 1255},
-          "position": {"x": 1280, "y": 565},
-          "sourceImage": "Image/Page/Last/SubPopup/49-4.png",
-          "color": {"r": 1, "g": 1, "b": 1, "a": 1}
-        }
-      ],
-      "popupCloseButton": {
-        "position": {"x": 1280, "y": 1035},
-        "size": {"x": 80, "y": 80},
-        "buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-      }
-    }
-  ]
+	"backgroundImage": {
+		"name": "LastPageBackground",
+		"size": {"x": 1920, "y": 1080},
+		"sourceImage": "Image/Page/Last/LastPage.png",
+		"color": {"r": 1, "g": 1, "b": 1, "a": 1.0}
+	},
+	"backToIdleButton": {
+		"name": "Button_BackToIdle",
+		"size": {"x": 100, "y": 100},
+		"position": {"x": 300, "y": 985},
+		"buttonBackgroundImage": {"sourceImage": "Image/Button/home.png"}
+	},
+	"backButton": {
+		"name": "Button_Back",
+		"size": {"x": 100, "y": 100},
+		"position": {"x": 175, "y": 985},
+		"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+	},
+	"lastBtns": [
+		{
+			"name": "Button_Last_0",
+			"size": {"x": 518, "y": 121},
+			"position": {"x": 1025, "y": 280},
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Last/20.png"}
+		},
+		{
+			"name": "Button_Last_1",
+			"size": {"x": 518, "y": 121},
+			"position": {"x": 1025, "y": 420},
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Last/27.png"}
+		},
+		{
+			"name": "Button_Last_2",
+			"size": {"x": 518, "y": 121},
+			"position": {"x": 1025, "y": 560},
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Last/29.png"}
+		},
+		{
+			"name": "Button_Last_3",
+			"size": {"x": 518, "y": 121},
+			"position": {"x": 1025, "y": 700},
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Last/43.png"}
+		},
+		{
+			"name": "Button_Last_4",
+			"size": {"x": 518, "y": 121},
+			"position": {"x": 1025, "y": 840},
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Last/44.png"}
+		},
+		{
+			"name": "Button_Last_5",
+			"size": {"x": 518, "y": 121},
+			"position": {"x": 1575, "y": 350},
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Last/45.png"}
+		},
+		{
+			"name": "Button_Last_6",
+			"size": {"x": 518, "y": 121},
+			"position": {"x": 1575, "y": 490},
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Last/47.png"}
+		},
+		{
+			"name": "Button_Last_7",
+			"size": {"x": 518, "y": 121},
+			"position": {"x": 1575, "y": 630},
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Last/48.png"}
+		},
+		{
+			"name": "Button_Last_8",
+			"size": {"x": 518, "y": 121},
+			"position": {"x": 1575, "y": 770},
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Last/49.png"}
+		}
+	],
+	"lastPopups": [
+		{
+			"name": "Popup_Last_0",
+			"popupBackgroundImage": {
+				"size": {"x": 1920, "y": 1080},
+				"sourceImage": "Image/Page/Last/Popup/20.png",
+				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+			},
+			"popup2Buttons": [
+				{
+					"name": "20-1",
+					"targetPopupName": "20-1 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 400},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "어머니의 죽음",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "20-2",
+					"targetPopupName": "20-2 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 550},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "게바위에서 만난 어머니",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "20-3",
+					"targetPopupName": "20-3 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 700},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "게바위 유래",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "20-4",
+					"targetPopupName": "20-4 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 850},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "이순신의 어머니 사랑",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 960, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "Popup_Last_1",
+			"popupBackgroundImage": {
+				"size": {"x": 1920, "y": 1080},
+				"sourceImage": "Image/Page/Last/Popup/27.png",
+				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+			},
+			"popup2Buttons": [
+				{
+					"name": "27-1",
+					"targetPopupName": "27-1 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1350, "y": 350},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "이순신이 파직된 사유",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "27-2",
+					"targetPopupName": "27-2 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1350, "y": 475},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "백의종군",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "27-3",
+					"targetPopupName": "27-3 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1350, "y": 600},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "완전히 무너지다",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "27-4",
+					"targetPopupName": "27-4 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1350, "y": 725},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "수군재건",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "27-5",
+					"targetPopupName": "27-5 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1350, "y": 850},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "노량해전과 죽음",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 960, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "Popup_Last_2",
+			"popupBackgroundImage": {
+				"size": {"x": 1920, "y": 1080},
+				"sourceImage": "Image/Page/Last/Popup/29.png",
+				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+			},
+			"popup2Buttons": [
+				{
+					"name": "29-1",
+					"targetPopupName": "29-1 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 400},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "이순신 제거",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "29-2",
+					"targetPopupName": "29-2 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 550},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "칠천량해전 대패",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "29-3",
+					"targetPopupName": "29-3 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 700},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "최악의 상황",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "29-4",
+					"targetPopupName": "29-4 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 850},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "명량해전 대승, 승리의 비결",
+						"fontName": "font1",
+						"fontSize": 28,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 960, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "Popup_Last_3",
+			"popupBackgroundImage": {
+				"size": {"x": 1920, "y": 1080},
+				"sourceImage": "Image/Page/Last/Popup/43.png",
+				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+			},
+			"popup2Buttons": [
+				{
+					"name": "43-1",
+					"targetPopupName": "43-1 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 400},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "첫 번째 백의종군",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "43-2",
+					"targetPopupName": "43-2 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 550},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "두 번째 백의 종군",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 960, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "Popup_Last_4",
+			"popupBackgroundImage": {
+				"size": {"x": 1920, "y": 1080},
+				"sourceImage": "Image/Page/Last/Popup/44.png",
+				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+			},
+			"popupCloseButton": {
+				"position": {"x": 960, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "Popup_Last_5",
+			"popupBackgroundImage": {
+				"size": {"x": 1920, "y": 1080},
+				"sourceImage": "Image/Page/Last/Popup/45.png",
+				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+			},
+			"popup2Buttons": [
+				{
+					"name": "45-1",
+					"targetPopupName": "45-1 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 400},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "철쇄 설화의 시작",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "45-2",
+					"targetPopupName": "45-2 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 550},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "중요 사료를 통한 검증",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "45-3",
+					"targetPopupName": "45-3 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 700},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "명량해전 승리 요인",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 960, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "Popup_Last_6",
+			"popupBackgroundImage": {
+				"size": {"x": 1920, "y": 1080},
+				"sourceImage": "Image/Page/Last/Popup/47.png",
+				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+			},
+			"popup2Buttons": [
+				{
+					"name": "47-1",
+					"targetPopupName": "47-1 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1000, "y": 350},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "원균의 내력",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "47-2",
+					"targetPopupName": "47-2 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1500, "y": 350},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "원균의 전투",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "47-3",
+					"targetPopupName": "47-3 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1000, "y": 500},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "1차 출정 때의 충돌",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "47-4",
+					"targetPopupName": "47-4 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1500, "y": 500},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "2차 출정 때의 비열함",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "47-5",
+					"targetPopupName": "47-5 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1000, "y": 650},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "웅천해전 때의 패악",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "47-6",
+					"targetPopupName": "47-6 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1500, "y": 650},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "원균의 모함",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "47-7",
+					"targetPopupName": "47-7 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1000, "y": 800},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "대장이 된 원균",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 960, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "Popup_Last_7",
+			"popupBackgroundImage": {
+				"size": {"x": 1920, "y": 1080},
+				"sourceImage": "Image/Page/Last/Popup/48.png",
+				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+			},
+			"popup2Buttons": [
+				{
+					"name": "48-1",
+					"targetPopupName": "48-1 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1350, "y": 350},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "1차 백의종군 때",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "48-2",
+					"targetPopupName": "48-2 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1350, "y": 475},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "전라좌수사 발탁",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "48-3",
+					"targetPopupName": "48-3 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1350, "y": 600},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "증오의 시작",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "48-4",
+					"targetPopupName": "48-4 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1350, "y": 725},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "선조의 사과",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "48-5",
+					"targetPopupName": "48-5 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1350, "y": 850},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "선조를 대하는 이순신",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 960, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "Popup_Last_8",
+			"popupBackgroundImage": {
+				"size": {"x": 1920, "y": 1080},
+				"sourceImage": "Image/Page/Last/Popup/49.png",
+				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+			},
+			"popup2Buttons": [
+				{
+					"name": "49-1",
+					"targetPopupName": "49-1 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 400},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "명나라 진린의 위세",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "49-2",
+					"targetPopupName": "49-2 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 550},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "이순신의 놀라운 처세술",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "49-3",
+					"targetPopupName": "49-3 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 700},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "조명연합군의 대승",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				},
+				{
+					"name": "49-4",
+					"targetPopupName": "49-4 Popup",
+					"size": {"x": 455, "y": 85},
+					"position": {"x": 1275, "y": 850},
+					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
+					"buttonText": {
+						"position": {"x": 45, "y": -5},
+						"text": "진린의 이순신 존경",
+						"fontName": "font1",
+						"fontSize": 32,
+						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+						"alignment": 4097
+					}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 960, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		}
+	],
+	"subPopups": [
+		{
+			"name": "20-1 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/20-1.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "20-2 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/20-2.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "20-3 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/20-3.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "20-4 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/20-4.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "27-1 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/27-1.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "27-2 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/27-2.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "27-3 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/27-3.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "27-4 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/27-4.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "27-5 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/27-5.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "29-1 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/29-1.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "29-2 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/29-2.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "29-3 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/29-3.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "29-4 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/29-4.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "43-1 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1614, "y": 1202},
+					"position": {"x": 1265, "y": 600},
+					"sourceImage": "Image/Page/Last/SubPopup/43-1.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "43-2 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/43-2.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "45-1 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/45-1.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "45-2 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/45-2.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "45-3 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/45-3.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "47-1 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/47-1.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "47-2 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/47-2.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "47-3 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/47-3.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "47-4 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/47-4.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "47-5 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/47-5.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "47-6 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/47-6.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "47-7 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/47-7.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "48-1 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/48-1.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "48-2 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1614, "y": 1202},
+					"position": {"x": 1265, "y": 600},
+					"sourceImage": "Image/Page/Last/SubPopup/48-2.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "48-3 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/48-3.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "48-4 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/48-4.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "48-5 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/48-5.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "49-1 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/49-1.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "49-2 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/49-2.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "49-3 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/49-3.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "49-4 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Last/SubPopup/49-4.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		}
+	]
 }
