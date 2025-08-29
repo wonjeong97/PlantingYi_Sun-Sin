@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 5139714746766680410}
   - component: {fileID: -4705216384088073938}
   - component: {fileID: 6231386473546943637}
-  - component: {fileID: 8838529098630575311}
+  - component: {fileID: 8943915019601971288}
   m_Layer: 5
   m_Name: ButtonPrefab
   m_TagString: Untagged
@@ -424,7 +424,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8838529098630575311
+--- !u!114 &8943915019601971288
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -436,6 +436,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7882353}
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1

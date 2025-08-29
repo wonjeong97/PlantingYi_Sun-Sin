@@ -26,13 +26,14 @@ public abstract class BasePage<T> : MonoBehaviour, IUICreate, IPageWithSubPopups
         if (setting == null) return null;
 
         // T 타입 안에 subPopups 필드가 있으면 리턴
-        var field = typeof(T).GetField("subPopups", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+        var field = typeof(T).GetField("subPopups",
+            BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
         if (field != null)
             return field.GetValue(setting) as PopupSetting[];
 
         return null;
     }
-    
+
     protected abstract string JsonPath { get; } // 각 파생 페이지에서 JSON 경로만 지정
     protected abstract Task BuildContentAsync(); // 각 파생 페이지의 전용 콘텐츠    
 
@@ -41,18 +42,13 @@ public abstract class BasePage<T> : MonoBehaviour, IUICreate, IPageWithSubPopups
     {
         try
         {
-            // JSON 데이터 로드
             setting = JsonLoader.Instance.LoadJsonData<T>(JsonPath);
             if (setting == null)
             {
                 Debug.LogError($"[{GetType().Name}] Settings not found at {JsonPath}");
                 return;
             }
-
-            // UI 생성
             await CreateUI();
-
-            // 공통 페이드 인
             await FadeManager.Instance.FadeInAsync(JsonLoader.Instance.settings.fadeTime, true);
         }
         catch (OperationCanceledException)
@@ -73,12 +69,12 @@ public abstract class BasePage<T> : MonoBehaviour, IUICreate, IPageWithSubPopups
     // 공통 UI 생성 로직
     public async Task CreateUI()
     {
-        // 1) 배경 생성
+        // 배경 생성
         var background = GetFieldOrProperty<ImageSetting>(setting, "backgroundImage");
         if (background != null)
             await UIManager.Instance.CreateBackgroundImageAsync(background, gameObject, CancellationToken.None);
 
-        // 2) 처음으로 버튼 (Idle 복귀)
+        // 처음으로 버튼 (Idle 복귀)
         var backToIdle = GetFieldOrProperty<ButtonSetting>(setting, "backToIdleButton");
         if (backToIdle != null)
         {
@@ -91,7 +87,7 @@ public abstract class BasePage<T> : MonoBehaviour, IUICreate, IPageWithSubPopups
             }
         }
 
-        // 3) 뒤로가기 버튼 (메뉴 페이지 복귀)
+        //뒤로가기 버튼 (메뉴 페이지 복귀)
         var backButtonSetting = GetFieldOrProperty<ButtonSetting>(setting, "backButton");
         if (backButtonSetting != null)
         {
@@ -105,7 +101,7 @@ public abstract class BasePage<T> : MonoBehaviour, IUICreate, IPageWithSubPopups
             }
         }
 
-        // 4) 페이지별 전용 콘텐츠 생성
+        //페이지별 전용 콘텐츠 생성
         await BuildContentAsync();
     }
 
@@ -148,13 +144,10 @@ public abstract class BasePage<T> : MonoBehaviour, IUICreate, IPageWithSubPopups
         var go = created.button;
         if (go != null && go.TryGetComponent<Button>(out var btn))
         {
-            btn.onClick.AddListener(() =>
-            {
-                _ = UIManager.Instance.CreatePopupChainAsync(popups, index, parent);
-            });
+            btn.onClick.AddListener(() => { _ = UIManager.Instance.CreatePopupChainAsync(popups, index, parent); });
         }
     }
-    
+
     /// <summary>
     /// 지정한 이름의 필드나 프로퍼티 값을 가져오는 유틸 메서드
     /// (JSON 세팅에서 필드/프로퍼티 구분 없이 접근 가능)

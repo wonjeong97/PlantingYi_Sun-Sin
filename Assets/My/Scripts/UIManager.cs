@@ -28,7 +28,6 @@ public class UIManager : MonoBehaviour
     [HideInInspector] public GameObject mainBackground;
 
     #region Unity life-cycle
-
     private void Awake()
     {
         if (Instance == null)
@@ -210,27 +209,6 @@ public class UIManager : MonoBehaviour
         // Canvas 프리팹 인스턴스 생성
         var go = await InstantiateAsync("Prefabs/CanvasPrefab.prefab", null, MergeToken(token));
         if (!go) return null;
-
-        // Canvas 컴포넌트 보장
-        if (!go.TryGetComponent<Canvas>(out var canvas))
-        {
-            canvas = go.AddComponent<Canvas>();
-            canvas.renderMode = RenderMode.ScreenSpaceOverlay; // 화면 오버레이 모드
-        }
-
-        // CanvasScaler 컴포넌트 보장
-        if (!go.TryGetComponent<CanvasScaler>(out var scaler))
-        {
-            scaler = go.AddComponent<CanvasScaler>();
-            scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-            scaler.referenceResolution = new Vector2(1920, 1080); // 해상도 기준
-        }
-
-        // GraphicRaycaster 컴포넌트 보장 (UI 클릭/터치 감지)
-        if (!go.TryGetComponent<GraphicRaycaster>(out var raycaster))
-        {
-            go.AddComponent<GraphicRaycaster>();
-        }
 
         return go;
     }
@@ -569,7 +547,7 @@ public class UIManager : MonoBehaviour
         };
         await Task.WhenAll(allTasks);
 
-        // 3. Next 버튼
+        // Next 버튼
         /*if (setting.popupNextButton != null && index < allPopups.Length - 1)
         {
             var (btnGo, _) = await CreateSingleButtonAsync(setting.popupNextButton, popupBg, token);
@@ -583,7 +561,7 @@ public class UIManager : MonoBehaviour
             }
         }*/
 
-        // 4. Prev 버튼
+        // Prev 버튼
         /*if (setting.popupPreviousButton != null && index > 0)
         {
             var (btnGo, _) = await CreateSingleButtonAsync(setting.popupPreviousButton, popupBg, token);
@@ -637,8 +615,7 @@ public class UIManager : MonoBehaviour
             }
         }
 
-
-        // 5. Close 버튼
+        // Close 버튼
         if (setting.popupCloseButton != null)
         {
             var (btnGo, _) = await CreateSingleButtonAsync(setting.popupCloseButton, popupBg, token);
@@ -828,11 +805,11 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Addressable에서 폰트를 비동기로 로드하여 지정한 TextMeshProUGUI에 적용
     /// </summary>
-    private async Task<bool> LoadFontAndApplyAsync(TextMeshProUGUI uiText, string fontKey, string textValue,
+    private async Task LoadFontAndApplyAsync(TextMeshProUGUI uiText, string fontKey, string textValue,
         float fontSize,
         Color fontColor, TextAlignmentOptions alignment, CancellationToken token)
     {
-        if (!uiText || string.IsNullOrEmpty(fontKey)) return false;
+        if (!uiText || string.IsNullOrEmpty(fontKey)) return;
 
         // fontKey를 fontMap에서 실제 리소스 키로 변환
         string mappedFontName = ResolveFont(fontKey);
@@ -848,17 +825,14 @@ public class UIManager : MonoBehaviour
             uiText.alignment = alignment;
             uiText.text = textValue; // 폰트 속성 적용
 
-            return true;
         }
         catch (OperationCanceledException)
         {
             Debug.Log("load failed");
-            return false;
         }
         catch (Exception e)
         {
             Debug.LogWarning($"[UIManager] Font load failed: {mappedFontName}\n{e}");
-            return false;
         }
     }
 
