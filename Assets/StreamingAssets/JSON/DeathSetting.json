@@ -22,49 +22,49 @@
 			"name": "Button_Death_0",
 			"size": {"x": 518, "y": 121},
 			"position": {"x": 990, "y": 365},
-			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/14.png"}
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/32.png"}
 		},
 		{
 			"name": "Button_Death_1",
 			"size": {"x": 518, "y": 121},
 			"position": {"x": 990, "y": 480},
-			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/15.png"}
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/33.png"}
 		},
 		{
 			"name": "Button_Death_2",
 			"size": {"x": 518, "y": 121},
 			"position": {"x": 990, "y": 595},
-			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/16.png"}
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/34.png"}
 		},
 		{
 			"name": "Button_Death_3",
 			"size": {"x": 518, "y": 164},
 			"position": {"x": 990, "y": 737},
-			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/17.png"}
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/35.png"}
 		},
 		{
 			"name": "Button_Death_4",
 			"size": {"x": 518, "y": 121},
 			"position": {"x": 1535, "y": 365},
-			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/18.png"}
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/36.png"}
 		},
 		{
 			"name": "Button_Death_5",
 			"size": {"x": 518, "y": 164},
 			"position": {"x": 1535, "y": 500},
-			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/19.png"}
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/37.png"}
 		},
 		{
 			"name": "Button_Death_6",
 			"size": {"x": 518, "y": 164},
 			"position": {"x": 1535, "y": 622},
-			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/24.png"}
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/38.png"}
 		},
 		{
 			"name": "Button_Death_7",
 			"size": {"x": 518, "y": 121},
 			"position": {"x": 1535, "y": 720},
-			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/37.png"}
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Death/39.png"}
 		}
 	],
 	"deathPopups": [
@@ -72,13 +72,13 @@
 			"name": "Popup_Death_0",
 			"popupBackgroundImage": {
 				"size": {"x": 1920, "y": 1080},
-				"sourceImage": "Image/Page/Death/Popup/14.png",
+				"sourceImage": "Image/Page/Death/Popup/32.png",
 				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 			},
 			"popup2Buttons": [
 				{
-					"name": "14-1",
-					"targetPopupName": "14-1 Popup",
+					"name": "32-1",
+					"targetPopupName": "32-1 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 400},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -92,8 +92,8 @@
 					}
 				},
 				{
-					"name": "14-2",
-					"targetPopupName": "14-2 Popup",
+					"name": "32-2",
+					"targetPopupName": "32-2 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 550},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -107,8 +107,8 @@
 					}
 				},
 				{
-					"name": "14-3",
-					"targetPopupName": "14-3 Popup",
+					"name": "32-3",
+					"targetPopupName": "32-3 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 700},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -122,8 +122,8 @@
 					}
 				},
 				{
-					"name": "14-4",
-					"targetPopupName": "14-4 Popup",
+					"name": "32-4",
+					"targetPopupName": "32-4 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 850},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -149,13 +149,13 @@
 			"name": "Popup_Death_1",
 			"popupBackgroundImage": {
 				"size": {"x": 1920, "y": 1080},
-				"sourceImage": "Image/Page/Death/Popup/15.png",
+				"sourceImage": "Image/Page/Death/Popup/33.png",
 				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 			},
 			"popup2Buttons": [
 				{
-					"name": "15-1",
-					"targetPopupName": "15-1 Popup",
+					"name": "33-1",
+					"targetPopupName": "33-1 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 400},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -169,8 +169,8 @@
 					}
 				},
 				{
-					"name": "15-2",
-					"targetPopupName": "15-2 Popup",
+					"name": "33-2",
+					"targetPopupName": "33-2 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 550},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -184,8 +184,8 @@
 					}
 				},
 				{
-					"name": "15-3",
-					"targetPopupName": "15-3 Popup",
+					"name": "33-3",
+					"targetPopupName": "33-3 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 700},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -211,13 +211,13 @@
 			"name": "Popup_Death_2",
 			"popupBackgroundImage": {
 				"size": {"x": 1920, "y": 1080},
-				"sourceImage": "Image/Page/Death/Popup/16.png",
+				"sourceImage": "Image/Page/Death/Popup/34.png",
 				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 			},
 			"popup2Buttons": [
 				{
-					"name": "16-1",
-					"targetPopupName": "16-1 Popup",
+					"name": "34-1",
+					"targetPopupName": "34-1 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1000, "y": 350},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -231,8 +231,8 @@
 					}
 				},
 				{
-					"name": "16-2",
-					"targetPopupName": "16-2 Popup",
+					"name": "34-2",
+					"targetPopupName": "34-2 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1500, "y": 350},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -246,8 +246,8 @@
 					}
 				},
 				{
-					"name": "16-3",
-					"targetPopupName": "16-3 Popup",
+					"name": "34-3",
+					"targetPopupName": "34-3 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1000, "y": 500},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -261,8 +261,8 @@
 					}
 				},
 				{
-					"name": "16-4",
-					"targetPopupName": "16-4 Popup",
+					"name": "34-4",
+					"targetPopupName": "34-4 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1500, "y": 500},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -276,8 +276,8 @@
 					}
 				},
 				{
-					"name": "16-5",
-					"targetPopupName": "16-5 Popup",
+					"name": "34-5",
+					"targetPopupName": "34-5 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1000, "y": 650},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -291,8 +291,8 @@
 					}
 				},
 				{
-					"name": "16-6",
-					"targetPopupName": "16-6 Popup",
+					"name": "34-6",
+					"targetPopupName": "34-6 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1500, "y": 650},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -318,13 +318,13 @@
 			"name": "Popup_Death_3",
 			"popupBackgroundImage": {
 				"size": {"x": 1920, "y": 1080},
-				"sourceImage": "Image/Page/Death/Popup/17.png",
+				"sourceImage": "Image/Page/Death/Popup/35.png",
 				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 			},
 			"popup2Buttons": [
 				{
-					"name": "17-1",
-					"targetPopupName": "17-1 Popup",
+					"name": "35-1",
+					"targetPopupName": "35-1 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 400},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -338,8 +338,8 @@
 					}
 				},
 				{
-					"name": "17-2",
-					"targetPopupName": "17-2 Popup",
+					"name": "35-2",
+					"targetPopupName": "35-2 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 550},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -353,8 +353,8 @@
 					}
 				},
 				{
-					"name": "17-3",
-					"targetPopupName": "17-3 Popup",
+					"name": "35-3",
+					"targetPopupName": "35-3 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 700},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -380,13 +380,13 @@
 			"name": "Popup_Death_4",
 			"popupBackgroundImage": {
 				"size": {"x": 1920, "y": 1080},
-				"sourceImage": "Image/Page/Death/Popup/18.png",
+				"sourceImage": "Image/Page/Death/Popup/36.png",
 				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 			},
 			"popup2Buttons": [
 				{
-					"name": "18-1",
-					"targetPopupName": "18-1 Popup",
+					"name": "36-1",
+					"targetPopupName": "36-1 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 400},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -400,8 +400,8 @@
 					}
 				},
 				{
-					"name": "18-2",
-					"targetPopupName": "18-2 Popup",
+					"name": "36-2",
+					"targetPopupName": "36-2 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 550},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -415,8 +415,8 @@
 					}
 				},
 				{
-					"name": "18-3",
-					"targetPopupName": "18-3 Popup",
+					"name": "36-3",
+					"targetPopupName": "36-3 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 700},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -442,13 +442,13 @@
 			"name": "Popup_Death_5",
 			"popupBackgroundImage": {
 				"size": {"x": 1920, "y": 1080},
-				"sourceImage": "Image/Page/Death/Popup/19.png",
+				"sourceImage": "Image/Page/Death/Popup/37.png",
 				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 			},
 			"popup2Buttons": [
 				{
-					"name": "19-1",
-					"targetPopupName": "19-1 Popup",
+					"name": "37-1",
+					"targetPopupName": "37-1 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 400},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -462,8 +462,8 @@
 					}
 				},
 				{
-					"name": "19-2",
-					"targetPopupName": "19-2 Popup",
+					"name": "37-2",
+					"targetPopupName": "37-2 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 550},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -489,13 +489,13 @@
 			"name": "Popup_Death_6",
 			"popupBackgroundImage": {
 				"size": {"x": 1920, "y": 1080},
-				"sourceImage": "Image/Page/Death/Popup/24.png",
+				"sourceImage": "Image/Page/Death/Popup/38.png",
 				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 			},
 			"popup2Buttons": [
 				{
-					"name": "24-1",
-					"targetPopupName": "24-1 Popup",
+					"name": "38-1",
+					"targetPopupName": "38-1 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 350},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -509,8 +509,8 @@
 					}
 				},
 				{
-					"name": "24-2",
-					"targetPopupName": "24-2 Popup",
+					"name": "38-2",
+					"targetPopupName": "38-2 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 475},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -524,8 +524,8 @@
 					}
 				},
 				{
-					"name": "24-3",
-					"targetPopupName": "24-3 Popup",
+					"name": "38-3",
+					"targetPopupName": "38-3 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 600},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -539,8 +539,8 @@
 					}
 				},
 				{
-					"name": "24-4",
-					"targetPopupName": "24-4 Popup",
+					"name": "38-4",
+					"targetPopupName": "38-4 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 725},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -554,8 +554,8 @@
 					}
 				},
 				{
-					"name": "24-5",
-					"targetPopupName": "24-5 Popup",
+					"name": "38-5",
+					"targetPopupName": "38-5 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 850},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -581,13 +581,13 @@
 			"name": "Popup_Death_7",
 			"popupBackgroundImage": {
 				"size": {"x": 1920, "y": 1080},
-				"sourceImage": "Image/Page/Death/Popup/37.png",
+				"sourceImage": "Image/Page/Death/Popup/39.png",
 				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 			},
 			"popup2Buttons": [
 				{
-					"name": "37-1",
-					"targetPopupName": "37-1 Popup",
+					"name": "39-1",
+					"targetPopupName": "39-1 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 350},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -601,8 +601,8 @@
 					}
 				},
 				{
-					"name": "37-2",
-					"targetPopupName": "37-2 Popup",
+					"name": "39-2",
+					"targetPopupName": "39-2 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 475},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -616,8 +616,8 @@
 					}
 				},
 				{
-					"name": "37-3",
-					"targetPopupName": "37-3 Popup",
+					"name": "39-3",
+					"targetPopupName": "39-3 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 600},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -631,8 +631,8 @@
 					}
 				},
 				{
-					"name": "37-4",
-					"targetPopupName": "37-4 Popup",
+					"name": "39-4",
+					"targetPopupName": "39-4 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 725},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -657,12 +657,12 @@
 	],
 	"subPopups": [
 		{
-			"name": "14-1 Popup",
+			"name": "32-1 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/14-1.png",
+					"sourceImage": "Image/Page/Death/SubPopup/32-1.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -673,12 +673,12 @@
 			}
 		},
 		{
-			"name": "14-2 Popup",
+			"name": "32-2 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/14-2.png",
+					"sourceImage": "Image/Page/Death/SubPopup/32-2.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -689,12 +689,12 @@
 			}
 		},
 		{
-			"name": "14-3 Popup",
+			"name": "32-3 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/14-3.png",
+					"sourceImage": "Image/Page/Death/SubPopup/32-3.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -705,12 +705,12 @@
 			}
 		},
 		{
-			"name": "14-4 Popup",
+			"name": "32-4 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/14-4.png",
+					"sourceImage": "Image/Page/Death/SubPopup/32-4.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -721,12 +721,12 @@
 			}
 		},
 		{
-			"name": "15-1 Popup",
+			"name": "33-1 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/15-1.png",
+					"sourceImage": "Image/Page/Death/SubPopup/33-1.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -737,12 +737,12 @@
 			}
 		},
 		{
-			"name": "15-2 Popup",
+			"name": "33-2 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/15-2.png",
+					"sourceImage": "Image/Page/Death/SubPopup/33-2.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -753,12 +753,12 @@
 			}
 		},
 		{
-			"name": "15-3 Popup",
+			"name": "33-3 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/15-3.png",
+					"sourceImage": "Image/Page/Death/SubPopup/33-3.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -769,12 +769,12 @@
 			}
 		},
 		{
-			"name": "16-1 Popup",
+			"name": "34-1 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/16-1.png",
+					"sourceImage": "Image/Page/Death/SubPopup/34-1.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -785,12 +785,12 @@
 			}
 		},
 		{
-			"name": "16-2 Popup",
+			"name": "34-2 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/16-2.png",
+					"sourceImage": "Image/Page/Death/SubPopup/34-2.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -801,12 +801,12 @@
 			}
 		},
 		{
-			"name": "16-3 Popup",
+			"name": "34-3 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/16-3.png",
+					"sourceImage": "Image/Page/Death/SubPopup/34-3.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -817,12 +817,12 @@
 			}
 		},
 		{
-			"name": "16-4 Popup",
+			"name": "34-4 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/16-4.png",
+					"sourceImage": "Image/Page/Death/SubPopup/34-4.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -833,12 +833,12 @@
 			}
 		},
 		{
-			"name": "16-5 Popup",
+			"name": "34-5 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/16-5.png",
+					"sourceImage": "Image/Page/Death/SubPopup/34-5.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -849,12 +849,12 @@
 			}
 		},
 		{
-			"name": "16-6 Popup",
+			"name": "34-6 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/16-6.png",
+					"sourceImage": "Image/Page/Death/SubPopup/34-6.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -865,12 +865,12 @@
 			}
 		},
 		{
-			"name": "17-1 Popup",
+			"name": "35-1 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/17-1.png",
+					"sourceImage": "Image/Page/Death/SubPopup/35-1.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -881,12 +881,12 @@
 			}
 		},
 		{
-			"name": "17-2 Popup",
+			"name": "35-2 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/17-2.png",
+					"sourceImage": "Image/Page/Death/SubPopup/35-2.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -897,12 +897,12 @@
 			}
 		},
 		{
-			"name": "17-3 Popup",
+			"name": "35-3 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/17-3.png",
+					"sourceImage": "Image/Page/Death/SubPopup/35-3.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -913,12 +913,12 @@
 			}
 		},
 		{
-			"name": "18-1 Popup",
+			"name": "36-1 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/18-1.png",
+					"sourceImage": "Image/Page/Death/SubPopup/36-1.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -929,12 +929,12 @@
 			}
 		},
 		{
-			"name": "18-2 Popup",
+			"name": "36-2 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/18-2.png",
+					"sourceImage": "Image/Page/Death/SubPopup/36-2.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -945,124 +945,12 @@
 			}
 		},
 		{
-			"name": "18-3 Popup",
+			"name": "36-3 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/18-3.png",
-					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
-				}
-			],
-			"popupCloseButton": {
-				"position": {"x": 1280, "y": 1035},
-				"size": {"x": 80, "y": 80},
-				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-			}
-		},
-		{
-			"name": "19-1 Popup",
-			"popupImages": [
-				{
-					"size": {"x": 1025, "y": 1255},
-					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/19-1.png",
-					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
-				}
-			],
-			"popupCloseButton": {
-				"position": {"x": 1280, "y": 1035},
-				"size": {"x": 80, "y": 80},
-				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-			}
-		},
-		{
-			"name": "19-2 Popup",
-			"popupImages": [
-				{
-					"size": {"x": 1025, "y": 1255},
-					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/19-2.png",
-					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
-				}
-			],
-			"popupCloseButton": {
-				"position": {"x": 1280, "y": 1035},
-				"size": {"x": 80, "y": 80},
-				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-			}
-		},
-		{
-			"name": "24-1 Popup",
-			"popupImages": [
-				{
-					"size": {"x": 1025, "y": 1255},
-					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/24-1.png",
-					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
-				}
-			],
-			"popupCloseButton": {
-				"position": {"x": 1280, "y": 1035},
-				"size": {"x": 80, "y": 80},
-				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-			}
-		},
-		{
-			"name": "24-2 Popup",
-			"popupImages": [
-				{
-					"size": {"x": 1025, "y": 1255},
-					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/24-2.png",
-					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
-				}
-			],
-			"popupCloseButton": {
-				"position": {"x": 1280, "y": 1035},
-				"size": {"x": 80, "y": 80},
-				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-			}
-		},
-		{
-			"name": "24-3 Popup",
-			"popupImages": [
-				{
-					"size": {"x": 1025, "y": 1255},
-					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/24-3.png",
-					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
-				}
-			],
-			"popupCloseButton": {
-				"position": {"x": 1280, "y": 1035},
-				"size": {"x": 80, "y": 80},
-				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-			}
-		},
-		{
-			"name": "24-4 Popup",
-			"popupImages": [
-				{
-					"size": {"x": 1025, "y": 1255},
-					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/24-4.png",
-					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
-				}
-			],
-			"popupCloseButton": {
-				"position": {"x": 1280, "y": 1035},
-				"size": {"x": 80, "y": 80},
-				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
-			}
-		},
-		{
-			"name": "24-5 Popup",
-			"popupImages": [
-				{
-					"size": {"x": 1025, "y": 1255},
-					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/24-5.png",
+					"sourceImage": "Image/Page/Death/SubPopup/36-3.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -1105,12 +993,12 @@
 			}
 		},
 		{
-			"name": "37-3 Popup",
+			"name": "38-1 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/37-3.png",
+					"sourceImage": "Image/Page/Death/SubPopup/38-1.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -1121,12 +1009,124 @@
 			}
 		},
 		{
-			"name": "37-4 Popup",
+			"name": "38-2 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Death/SubPopup/37-4.png",
+					"sourceImage": "Image/Page/Death/SubPopup/38-2.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "38-3 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/38-3.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "38-4 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/38-4.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "38-5 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/38-5.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "39-1 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/39-1.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "39-2 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/39-2.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "39-3 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/39-3.png",
+					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
+				}
+			],
+			"popupCloseButton": {
+				"position": {"x": 1280, "y": 1035},
+				"size": {"x": 80, "y": 80},
+				"buttonBackgroundImage": {"sourceImage": "Image/Button/back.png"}
+			}
+		},
+		{
+			"name": "39-4 Popup",
+			"popupImages": [
+				{
+					"size": {"x": 1025, "y": 1255},
+					"position": {"x": 1280, "y": 565},
+					"sourceImage": "Image/Page/Death/SubPopup/39-4.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],

@@ -2,13 +2,13 @@
   "backgroundImage": {
     "name": "IdlePageBackground",
     "size": {"x": 1920, "y": 1080},
-    "sourceImage": "Image/Background/1_Idle.png",
+    "sourceImage": "Image/Background/cover_bg.png",
     "color": {"r": 1, "g": 1, "b": 1, "a": 1.0}
   },
   "startButton": {
     "name": "StartButton",
     "size": {"x": 230, "y": 230},
-    "position": {"x": 960, "y": 825},
+    "position": {"x": 960, "y": 905},
     "buttonBackgroundImage": {
       "sourceImage": "Image/Button/start.png"
     },

@@ -580,8 +580,8 @@ public class UIManager : MonoBehaviour
         }*/
 
         // 내부 팝업 버튼들 생성
-        var popup2Btns = await CreateButtonsAsync(setting.popup2Buttons, popupBg, token);
-        foreach (var (btnGo2, _) in popup2Btns)
+        var popup2Buttons = await CreateButtonsAsync(setting.popup2Buttons, popupBg, token);
+        foreach (var (btnGo2, _) in popup2Buttons)
         {
             if (btnGo2 != null && btnGo2.TryGetComponent<Button>(out var btn2))
             {

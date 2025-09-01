@@ -22,25 +22,25 @@
 			"name": "Button_Childhood_0",
 			"size": {"x": 666, "y": 180},
 			"position": {"x": 1275, "y": 355},
-			"buttonBackgroundImage": {"sourceImage": "Image/Page/Childhood/9.png"}
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Childhood/1.png"}
 		},
 		{
 			"name": "Button_Childhood_1",
 			"size": {"x": 666, "y": 147},
 			"position": {"x": 1275, "y": 485},
-			"buttonBackgroundImage": {"sourceImage": "Image/Page/Childhood/10.png"}
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Childhood/2.png"}
 		},
 		{
 			"name": "Button_Childhood_2",
 			"size": {"x": 666, "y": 147},
 			"position": {"x": 1275, "y": 630},
-			"buttonBackgroundImage": {"sourceImage": "Image/Page/Childhood/11.png"}
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Childhood/3.png"}
 		},
 		{
 			"name": "Button_Childhood_3",
 			"size": {"x": 666, "y": 148},
 			"position": {"x": 1275, "y": 775},
-			"buttonBackgroundImage": {"sourceImage": "Image/Page/Childhood/13.png"}
+			"buttonBackgroundImage": {"sourceImage": "Image/Page/Childhood/4.png"}
 		}
 	],
 	"childhoodPopups": [
@@ -48,13 +48,13 @@
 			"name": "Popup_Childhood_0",
 			"popupBackgroundImage": {
 				"size": {"x": 1920, "y": 1080},
-				"sourceImage": "Image/Page/Childhood/Popup/9.png",
+				"sourceImage": "Image/Page/Childhood/Popup/1.png",
 				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 			},
 			"popup2Buttons": [
 				{
-					"name": "9-1",
-					"targetPopupName": "9-1 Popup",
+					"name": "1-1",
+					"targetPopupName": "1-1 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 350},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -68,8 +68,8 @@
 					}
 				},
 				{
-					"name": "9-2",
-					"targetPopupName": "9-2 Popup",
+					"name": "1-2",
+					"targetPopupName": "1-2 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 475},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -83,8 +83,8 @@
 					}
 				},
 				{
-					"name": "9-3",
-					"targetPopupName": "9-3 Popup",
+					"name": "1-3",
+					"targetPopupName": "1-3 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 600},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -98,8 +98,8 @@
 					}
 				},
 				{
-					"name": "9-4",
-					"targetPopupName": "9-4 Popup",
+					"name": "1-4",
+					"targetPopupName": "1-4 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 725},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -113,8 +113,8 @@
 					}
 				},
 				{
-					"name": "9-5",
-					"targetPopupName": "9-5 Popup",
+					"name": "1-5",
+					"targetPopupName": "1-5 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 850},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -143,8 +143,8 @@
 			},
 			"popup2Buttons": [
 				{
-					"name": "10-1",
-					"targetPopupName": "10-1 Popup",
+					"name": "2-1",
+					"targetPopupName": "2-1 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 350},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -158,8 +158,8 @@
 					}
 				},
 				{
-					"name": "10-2",
-					"targetPopupName": "10-2 Popup",
+					"name": "2-2",
+					"targetPopupName": "2-2 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 475},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -173,8 +173,8 @@
 					}
 				},
 				{
-					"name": "10-3",
-					"targetPopupName": "10-3 Popup",
+					"name": "2-3",
+					"targetPopupName": "2-3 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 600},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -188,8 +188,8 @@
 					}
 				},
 				{
-					"name": "10-4",
-					"targetPopupName": "10-4 Popup",
+					"name": "2-4",
+					"targetPopupName": "2-4 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 725},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -203,8 +203,8 @@
 					}
 				},
 				{
-					"name": "10-5",
-					"targetPopupName": "10-5 Popup",
+					"name": "2-5",
+					"targetPopupName": "2-5 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 850},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -233,8 +233,8 @@
 			},
 			"popup2Buttons": [
 				{
-					"name": "11-1",
-					"targetPopupName": "11-1 Popup",
+					"name": "3-1",
+					"targetPopupName": "3-1 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 350},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -248,8 +248,8 @@
 					}
 				},
 				{
-					"name": "11-2",
-					"targetPopupName": "11-2 Popup",
+					"name": "3-2",
+					"targetPopupName": "3-2 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 475},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -263,8 +263,8 @@
 					}
 				},
 				{
-					"name": "11-3",
-					"targetPopupName": "11-3 Popup",
+					"name": "3-3",
+					"targetPopupName": "3-3 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 600},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -278,8 +278,8 @@
 					}
 				},
 				{
-					"name": "11-4",
-					"targetPopupName": "11-4 Popup",
+					"name": "3-4",
+					"targetPopupName": "3-4 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 725},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -293,8 +293,8 @@
 					}
 				},
 				{
-					"name": "11-5",
-					"targetPopupName": "11-5 Popup",
+					"name": "3-5",
+					"targetPopupName": "3-5 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1275, "y": 850},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -323,8 +323,8 @@
 			},
 			"popup2Buttons": [
 				{
-					"name": "13-1",
-					"targetPopupName": "13-1 Popup",
+					"name": "4-1",
+					"targetPopupName": "4-1 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1000, "y": 350},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -338,8 +338,8 @@
 					}
 				},
 				{
-					"name": "13-2",
-					"targetPopupName": "13-2 Popup",
+					"name": "4-2",
+					"targetPopupName": "4-2 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1500, "y": 350},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -353,8 +353,8 @@
 					}
 				},
 				{
-					"name": "13-3",
-					"targetPopupName": "13-3 Popup",
+					"name": "4-3",
+					"targetPopupName": "4-3 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1000, "y": 500},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -368,8 +368,8 @@
 					}
 				},
 				{
-					"name": "13-4",
-					"targetPopupName": "13-4 Popup",
+					"name": "4-4",
+					"targetPopupName": "4-4 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1500, "y": 500},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -383,8 +383,8 @@
 					}
 				},
 				{
-					"name": "13-5",
-					"targetPopupName": "13-5 Popup",
+					"name": "4-5",
+					"targetPopupName": "4-5 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1000, "y": 650},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -398,8 +398,8 @@
 					}
 				},
 				{
-					"name": "13-6",
-					"targetPopupName": "13-6 Popup",
+					"name": "4-6",
+					"targetPopupName": "4-6 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1500, "y": 650},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -413,8 +413,8 @@
 					}
 				},
 				{
-					"name": "13-7",
-					"targetPopupName": "13-7 Popup",
+					"name": "4-7",
+					"targetPopupName": "4-7 Popup",
 					"size": {"x": 455, "y": 85},
 					"position": {"x": 1000, "y": 800},
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
@@ -437,12 +437,12 @@
 	],
 	"subPopups": [
 		{
-			"name": "9-1 Popup",
+			"name": "1-1 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/9-1.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/1-1.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -453,12 +453,12 @@
 			}
 		},
 		{
-			"name": "9-2 Popup",
+			"name": "1-2 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/9-2.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/1-2.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -469,12 +469,12 @@
 			}
 		},
 		{
-			"name": "9-3 Popup",
+			"name": "1-3 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/9-3.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/1-3.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -485,12 +485,12 @@
 			}
 		},
 		{
-			"name": "9-4 Popup",
+			"name": "1-4 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/9-4.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/1-4.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -501,12 +501,12 @@
 			}
 		},
 		{
-			"name": "9-5 Popup",
+			"name": "1-5 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/9-5.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/1-5.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -517,12 +517,12 @@
 			}
 		},
 		{
-			"name": "10-1 Popup",
+			"name": "2-1 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/10-1.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/2-1.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -533,12 +533,12 @@
 			}
 		},
 		{
-			"name": "10-2 Popup",
+			"name": "2-2 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/10-2.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/2-2.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -549,12 +549,12 @@
 			}
 		},
 		{
-			"name": "10-3 Popup",
+			"name": "2-3 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/10-3.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/2-3.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -565,12 +565,12 @@
 			}
 		},
 		{
-			"name": "10-4 Popup",
+			"name": "2-4 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/10-4.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/2-4.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -581,12 +581,12 @@
 			}
 		},
 		{
-			"name": "10-5 Popup",
+			"name": "2-5 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/10-5.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/2-5.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -597,12 +597,12 @@
 			}
 		},
 		{
-			"name": "11-1 Popup",
+			"name": "3-1 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/11-1.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/3-1.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -613,12 +613,12 @@
 			}
 		},
 		{
-			"name": "11-2 Popup",
+			"name": "3-2 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/11-2.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/3-2.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -629,12 +629,12 @@
 			}
 		},
 		{
-			"name": "11-3 Popup",
+			"name": "3-3 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/11-3.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/3-3.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -645,12 +645,12 @@
 			}
 		},
 		{
-			"name": "11-4 Popup",
+			"name": "3-4 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/11-4.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/3-4.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -661,12 +661,12 @@
 			}
 		},
 		{
-			"name": "11-5 Popup",
+			"name": "3-5 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/11-5.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/3-5.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -677,12 +677,12 @@
 			}
 		},
 		{
-			"name": "13-1 Popup",
+			"name": "4-1 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/13-1.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/4-1.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -693,12 +693,12 @@
 			}
 		},
 		{
-			"name": "13-2 Popup",
+			"name": "4-2 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/13-2.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/4-2.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -709,12 +709,12 @@
 			}
 		},
 		{
-			"name": "13-3 Popup",
+			"name": "4-3 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/13-3.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/4-3.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -725,12 +725,12 @@
 			}
 		},
 		{
-			"name": "13-4 Popup",
+			"name": "4-4 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/13-4.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/4-4.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -741,12 +741,12 @@
 			}
 		},
 		{
-			"name": "13-5 Popup",
+			"name": "4-5 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/13-5.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/4-5.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -757,12 +757,12 @@
 			}
 		},
 		{
-			"name": "13-6 Popup",
+			"name": "4-6 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/13-6.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/4-6.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
@@ -773,12 +773,12 @@
 			}
 		},
 		{
-			"name": "13-7 Popup",
+			"name": "4-7 Popup",
 			"popupImages": [
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 565},
-					"sourceImage": "Image/Page/Childhood/SubPopup/13-7.png",
+					"sourceImage": "Image/Page/Childhood/SubPopup/4-7.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],
