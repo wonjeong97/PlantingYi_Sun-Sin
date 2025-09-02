@@ -514,7 +514,7 @@
 					"buttonBackgroundImage": {"sourceImage": "Image/Button/button.png"},
 					"buttonText": {
 						"position": {"x": 45, "y": -5},
-						"text": "<b>이순신</b>이 접한 조총",
+						"text": "이순신이 접한 조총",
 						"fontName": "font1",
 						"fontSize": 32,
 						"fontColor": {"r": 1, "g": 1, "b": 1, "a": 1},
@@ -1842,7 +1842,7 @@
 				{
 					"size": {"x": 1025, "y": 1255},
 					"position": {"x": 1280, "y": 545},
-					"sourceImage": "Image/Page/PrimeOfLife/SubPopup/4222-1.png",
+					"sourceImage": "Image/Page/PrimeOfLife/SubPopup/22-1.png",
 					"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 				}
 			],

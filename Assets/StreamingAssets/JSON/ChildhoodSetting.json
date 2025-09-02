@@ -138,7 +138,7 @@
 			"name": "Popup_Childhood_1",
 			"popupBackgroundImage": {
 				"size": {"x": 1920, "y": 1080},
-				"sourceImage": "Image/Page/Childhood/Popup/10.png",
+				"sourceImage": "Image/Page/Childhood/Popup/2.png",
 				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 			},
 			"popup2Buttons": [
@@ -228,7 +228,7 @@
 			"name": "Popup_Childhood_2",
 			"popupBackgroundImage": {
 				"size": {"x": 1920, "y": 1080},
-				"sourceImage": "Image/Page/Childhood/Popup/11.png",
+				"sourceImage": "Image/Page/Childhood/Popup/3.png",
 				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 			},
 			"popup2Buttons": [
@@ -318,7 +318,7 @@
 			"name": "Popup_Childhood_3",
 			"popupBackgroundImage": {
 				"size": {"x": 1920, "y": 1080},
-				"sourceImage": "Image/Page/Childhood/Popup/13.png",
+				"sourceImage": "Image/Page/Childhood/Popup/4.png",
 				"color": {"r": 1, "g": 1, "b": 1, "a": 1}
 			},
 			"popup2Buttons": [

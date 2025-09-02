@@ -489,6 +489,11 @@ public class Reporter : MonoBehaviour
     {
         int paddingX = (int)(size.x * 0.2f);
         int paddingY = (int)(size.y * 0.2f);
+        
+        Texture2D whiteTex = new Texture2D(1, 1);
+        whiteTex.SetPixel(0, 0, Color.white);
+        whiteTex.Apply();
+        
         nonStyle = new GUIStyle
         {
             clipping = TextClipping.Clip,
@@ -500,7 +505,7 @@ public class Reporter : MonoBehaviour
             fontSize = (int)(size.y / 2),
             alignment = TextAnchor.MiddleCenter
         };
-
+        
         lowerLeftFontStyle = new GUIStyle
         {
             clipping = TextClipping.Clip,
@@ -548,7 +553,7 @@ public class Reporter : MonoBehaviour
             fontSize = (int)(size.y / 2)
         };
 
-        backStyle = new GUIStyle
+       backStyle = new GUIStyle
         {
             normal =
             {

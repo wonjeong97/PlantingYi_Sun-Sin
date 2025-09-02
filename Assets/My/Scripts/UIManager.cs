@@ -307,8 +307,7 @@ public class UIManager : MonoBehaviour
     public async Task CreateSingleTextAsync(TextSetting setting, GameObject parent, CancellationToken token)
     {
         // Text 프리팹 생성 (Addressable)
-        var go = await InstantiateAsync("Prefabs/TextPrefab.prefab", parent.transform, token);
-        if (!go) return;
+        var go = await InstantiateAsync("Prefabs/TextPrefab.prefab", parent.transform, token); 
 
         go.name = setting.name;
 
