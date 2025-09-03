@@ -25,10 +25,10 @@ public class LastPage : BasePage<LastPageSetting>
     protected override async Task BuildContentAsync()
     {
         if (setting.lastImage != null)
-            await UIManager.Instance.CreateImageAsync(setting.lastImage, gameObject, CancellationToken.None);
+            await UICreator.Instance.CreateSingleImageAsync(setting.lastImage, gameObject, CancellationToken.None);
 
         if (setting.lastExplainImage != null)
-            await UIManager.Instance.CreateImageAsync(setting.lastExplainImage, gameObject, CancellationToken.None);
+            await UICreator.Instance.CreateSingleImageAsync(setting.lastExplainImage, gameObject, CancellationToken.None);
 
         for (int i = 0; i < setting.lastBtns.Length; i++)
         {

@@ -14,7 +14,7 @@ public class PrimeOfLifeSetting
 
     public ButtonSetting[] primeOfLifeBtns;
     public PopupSetting[] primeOfLifePopups;
-    
+
     public PopupSetting[] subPopups;
 }
 
@@ -25,10 +25,11 @@ public class PrimeOfLifePage : BasePage<PrimeOfLifeSetting>
     protected override async Task BuildContentAsync()
     {
         if (setting.primeOfLifeImage != null)
-            await UIManager.Instance.CreateImageAsync(setting.primeOfLifeImage, gameObject, CancellationToken.None);
+            await UICreator.Instance.CreateSingleImageAsync(setting.primeOfLifeImage, gameObject,
+                CancellationToken.None);
 
         if (setting.primeOfLifeExplainImage != null)
-            await UIManager.Instance.CreateImageAsync(setting.primeOfLifeExplainImage, gameObject,
+            await UICreator.Instance.CreateSingleImageAsync(setting.primeOfLifeExplainImage, gameObject,
                 CancellationToken.None);
 
         for (int i = 0; i < setting.primeOfLifeBtns.Length; i++)

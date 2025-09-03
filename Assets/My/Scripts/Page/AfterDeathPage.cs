@@ -25,10 +25,10 @@ public class AfterDeathPage : BasePage<AfterDeathSetting>
     protected override async Task BuildContentAsync()
     {
         if (setting.afterDeathImage != null)
-            await UIManager.Instance.CreateImageAsync(setting.afterDeathImage, gameObject, CancellationToken.None);
+            await UICreator.Instance.CreateSingleImageAsync(setting.afterDeathImage, gameObject, CancellationToken.None);
 
         if (setting.afterDeathExplainImage != null)
-            await UIManager.Instance.CreateImageAsync(setting.afterDeathExplainImage, gameObject,
+            await UICreator.Instance.CreateSingleImageAsync(setting.afterDeathExplainImage, gameObject,
                 CancellationToken.None);
 
         for (int i = 0; i < setting.afterDeathBtns.Length; i++)

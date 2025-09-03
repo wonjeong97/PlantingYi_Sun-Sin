@@ -24,11 +24,11 @@ public class IdlePage : BasePage<IdleSetting>
     protected override async Task BuildContentAsync()
     {
         // 타이틀 텍스트 생성
-        await UIManager.Instance.CreateSingleTextAsync(
+        await UICreator.Instance.CreateSingleTextAsync(
             setting.titleText, gameObject, CancellationToken.None);
 
         // 시작 버튼 생성
-        var created = await UIManager.Instance.CreateSingleButtonAsync(
+        var created = await UICreator.Instance.CreateSingleButtonAsync(
             setting.startButton, gameObject, CancellationToken.None);
 
         // 생성된 오브젝트 중 button 오브젝트만 가져옴
@@ -50,8 +50,8 @@ public class IdlePage : BasePage<IdleSetting>
             if (menuPageObject == null)
             {
                 // 메뉴 페이지 생성 및 표시
-                GameObject parent = UIManager.Instance.mainBackground;
-                menuPageObject = await UIManager.Instance.CreatePageAsync(setting.menuPage, parent);
+                GameObject parent = UIManager.Instance.MainBackground;
+                menuPageObject = await UICreator.Instance.CreatePageAsync(setting.menuPage, parent, CancellationToken.None);
                 if (menuPageObject != null)
                 {
                     menuPageObject.AddComponent<MenuPage>();

@@ -28,9 +28,9 @@ public class ChildhoodPage : BasePage<ChildhoodSetting>
     {
         // 페이지 전용 이미지
         if (setting.childhoodImage != null)
-            await UIManager.Instance.CreateImageAsync(setting.childhoodImage, gameObject, CancellationToken.None);
+            await UICreator.Instance.CreateSingleImageAsync(setting.childhoodImage, gameObject, CancellationToken.None);
         if (setting.childhoodExplainImage != null)
-            await UIManager.Instance.CreateImageAsync(setting.childhoodExplainImage, gameObject, CancellationToken.None);
+            await UICreator.Instance.CreateSingleImageAsync(setting.childhoodExplainImage, gameObject, CancellationToken.None);
 
         for (int i = 0; i < setting.childhoodBtns.Length; i++)
         {

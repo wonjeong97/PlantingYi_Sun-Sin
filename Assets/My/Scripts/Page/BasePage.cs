@@ -72,14 +72,14 @@ public abstract class BasePage<T> : MonoBehaviour, IUICreate, IPageWithSubPopups
         // 배경 생성
         var background = GetFieldOrProperty<ImageSetting>(setting, "backgroundImage");
         if (background != null)
-            await UIManager.Instance.CreateBackgroundImageAsync(background, gameObject, CancellationToken.None);
+            await UICreator.Instance.CreateBackgroundImageAsync(background, gameObject, CancellationToken.None);
 
         // 처음으로 버튼 (Idle 복귀)
         var backToIdle = GetFieldOrProperty<ButtonSetting>(setting, "backToIdleButton");
         if (backToIdle != null)
         {
             var created =
-                await UIManager.Instance.CreateSingleButtonAsync(backToIdle, gameObject, CancellationToken.None);
+                await UICreator.Instance.CreateSingleButtonAsync(backToIdle, gameObject, CancellationToken.None);
             var go = created.button;
             if (go != null && go.TryGetComponent<Button>(out var btn))
             {
@@ -92,7 +92,7 @@ public abstract class BasePage<T> : MonoBehaviour, IUICreate, IPageWithSubPopups
         if (backButtonSetting != null)
         {
             var created =
-                await UIManager.Instance.CreateSingleButtonAsync(backButtonSetting, gameObject, CancellationToken.None);
+                await UICreator.Instance.CreateSingleButtonAsync(backButtonSetting, gameObject, CancellationToken.None);
 
             var go = created.button;
             if (go != null && go.TryGetComponent<Button>(out var btn))
@@ -140,11 +140,11 @@ public abstract class BasePage<T> : MonoBehaviour, IUICreate, IPageWithSubPopups
     {
         if (bs == null || popups == null || index < 0 || index >= popups.Length) return;
 
-        var created = await UIManager.Instance.CreateSingleButtonAsync(bs, parent, CancellationToken.None);
+        var created = await UICreator.Instance.CreateSingleButtonAsync(bs, parent, CancellationToken.None);
         var go = created.button;
         if (go != null && go.TryGetComponent<Button>(out var btn))
         {
-            btn.onClick.AddListener(() => { _ = UIManager.Instance.CreatePopupChainAsync(popups, index, parent); });
+            btn.onClick.AddListener(() => { _ = UICreator.Instance.CreatePopupsAsync(popups, index, parent); });
         }
     }
 

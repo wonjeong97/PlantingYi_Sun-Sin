@@ -24,7 +24,7 @@ public class WhatIsPage : BasePage<WhatIsSetting>
     {
         if (setting.video != null)
         {
-            videoPlayer = await UIManager.Instance.CreateVideoPlayerAsync(
+            videoPlayer = await UICreator.Instance.CreateVideoPlayerAsync(
                 setting.video, gameObject, CancellationToken.None);            
         }
     }

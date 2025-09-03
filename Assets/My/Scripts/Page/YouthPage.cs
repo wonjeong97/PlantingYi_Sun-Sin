@@ -14,7 +14,7 @@ public class YouthSetting
 
     public ButtonSetting[] youthBtns;
     public PopupSetting[] youthPopups;
-    
+
     public PopupSetting[] subPopups;
 }
 
@@ -25,10 +25,10 @@ public class YouthPage : BasePage<YouthSetting>
     protected override async Task BuildContentAsync()
     {
         if (setting.youthImage != null)
-            await UIManager.Instance.CreateImageAsync(setting.youthImage, gameObject, CancellationToken.None);
+            await UICreator.Instance.CreateSingleImageAsync(setting.youthImage, gameObject, CancellationToken.None);
 
         if (setting.youthExplainImage != null)
-            await UIManager.Instance.CreateImageAsync(setting.youthExplainImage, gameObject,
+            await UICreator.Instance.CreateSingleImageAsync(setting.youthExplainImage, gameObject,
                 CancellationToken.None);
 
         for (int i = 0; i < setting.youthBtns.Length; i++)

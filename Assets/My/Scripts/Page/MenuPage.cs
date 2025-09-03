@@ -137,7 +137,7 @@ public class MenuPage : BasePage<MenuSetting>
         if (buttonSetting == null || targetPageSetting == null) return;
 
         // UIManager를 통해 버튼 생성
-        var createdBtn = await UIManager.Instance.CreateSingleButtonAsync(
+        var createdBtn = await UICreator.Instance.CreateSingleButtonAsync(
             buttonSetting, gameObject, CancellationToken.None);
 
         var btnGo = createdBtn.button;
@@ -168,8 +168,8 @@ public class MenuPage : BasePage<MenuSetting>
             var cached = getCache();
             if (cached == null)
             {
-                GameObject parent = UIManager.Instance.mainBackground;
-                var pageGo = await UIManager.Instance.CreatePageAsync(targetPageSetting, parent);
+                GameObject parent = UIManager.Instance.MainBackground;
+                var pageGo = await UICreator.Instance.CreatePageAsync(targetPageSetting, parent, CancellationToken.None);
                 if (pageGo != null)
                 {
                     onCreatedAttach?.Invoke(pageGo);
